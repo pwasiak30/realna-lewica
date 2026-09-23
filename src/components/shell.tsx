@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { PARTY } from "@/data/program";
 import { Mark } from "@/components/mark";
+import { PortfolioLink, SocialFab, SocialLinks } from "@/components/social";
 
 const NAV = [
   { to: "/postulaty", label: "Postulaty" },
@@ -27,7 +28,7 @@ export function Shell({ children }: { children: ReactNode }) {
   }, [path]);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pb-20 md:pb-0">
       <a
         href="#tresc"
         className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-cream focus:px-3 focus:py-2"
@@ -145,7 +146,21 @@ export function Shell({ children }: { children: ReactNode }) {
             </p>
           </div>
         </div>
+        {/* Profile autora + portfolio */}
+        <div className="border-t border-cream/15">
+          <div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-6 text-sm text-cream/70 sm:px-8 md:flex-row md:items-center md:justify-between">
+            <SocialLinks />
+            <div className="md:text-right">
+              <p>© {new Date().getFullYear()} Paweł Wasiak</p>
+              <p>
+                Zobacz więcej projektów na{" "}
+                <PortfolioLink className="font-semibold text-gold underline underline-offset-4 hover:text-cream" />
+              </p>
+            </div>
+          </div>
+        </div>
       </footer>
+      <SocialFab />
     </div>
   );
 }
