@@ -178,7 +178,8 @@ function Skala() {
               </li>
               <li className="border-t border-cream/15 pt-3">
                 Zerowy PIT do 26. roku życia i dla pracujących seniorów deklaracja likwiduje. Ulga na dzieci dostaje
-                próg dochodowy. Tego tu nie widać.
+                próg dochodowy. Ulga na powrót zostaje tylko dla zawodów deficytowych i pracy w Polsce. Tego tu nie
+                widać.
               </li>
               <li className="border-t border-cream/15 pt-3">
                 Danina solidarnościowa jest doliczona do tego samego dochodu. W zeznaniu baza bywa szersza.
