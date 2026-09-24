@@ -121,6 +121,11 @@ export function Shell({ children }: { children: ReactNode }) {
                 </Link>
               </li>
               <li>
+                <Link to="/" hash="spot" className="hover:text-gold">
+                  Spot
+                </Link>
+              </li>
+              <li>
                 <Link to="/o-nas" className="hover:text-gold">
                   Kim jesteśmy
                 </Link>
