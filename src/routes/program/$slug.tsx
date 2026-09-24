@@ -1,6 +1,7 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Prose } from "@/components/prose";
+import { ProgramDownload } from "@/components/program-download";
 import { Shell } from "@/components/shell";
 import { CHAPTERS, chapterBySlug, neighbors } from "@/data/program";
 
@@ -92,6 +93,9 @@ function ChapterPage() {
           </p>
           <h1 className="mt-3 font-display text-5xl leading-tight">{chapter.title}</h1>
           <p className="mt-5 max-w-3xl text-xl text-graphite">{chapter.lead}</p>
+          <div className="mt-4">
+            <ProgramDownload tone="text" />
+          </div>
 
           {withTitles.length > 0 ? (
             <nav className="mt-8 border-y border-line py-4" aria-label="Punkty rozdziału">

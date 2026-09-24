@@ -2,7 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Shell } from "@/components/shell";
-import { CHAPTERS, chapterCountWord, fold, type PartId } from "@/data/program";
+import { ProgramDownload } from "@/components/program-download";
+import { CHAPTERS, chapterCountWord, fold, PARTY, type PartId } from "@/data/program";
 
 export const Route = createFileRoute("/program/")({
   head: () => ({
@@ -56,8 +57,14 @@ function ProgramIndex() {
         <h1 className="mt-3 max-w-3xl font-display text-5xl leading-tight">Program, rozdział po rozdziale.</h1>
         <p className="mt-4 max-w-2xl text-lg text-muted">
           {chapterCountWord(CHAPTERS.length)} rozdziałów polityki i ustroju. Szukaj po haśle — płaca, aborcja, atom, euro, mieszkanie — bez
-          zgadywania, w którym akapicie to jest.
+          zgadywania, w którym akapicie to jest. Albo weź całość jednym plikiem.
         </p>
+        <div className="mt-6 flex flex-col items-start gap-2">
+          <ProgramDownload />
+          <p className="text-sm text-muted">
+            {PARTY.versionNote}: {PARTY.version}.
+          </p>
+        </div>
 
         <div className="mt-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <label className="relative block w-full max-w-xl">
