@@ -19,7 +19,15 @@ export const PARTY = {
   slogan: ["Twoja pensja.", "Twoje ciało.", "Twoje mieszkanie.", "Twoje bezpieczeństwo."],
   version: "23 września 2026",
   versionNote: "Wersja złożona",
+  disclaimer: "To deklaracja programowa — nie rejestracja komitetu, nie zbiórka podpisów ani pieniędzy.",
 };
+
+/** Kolory znaku — te same wartości co w src/styles.css i src/components/mark.tsx. */
+export const BRAND_COLORS = [
+  { name: "Bordo", hex: "#7A1E3C", role: "sygnał, nie krzyk" },
+  { name: "Grafit", hex: "#2B3038", role: "ciężar instytucji" },
+  { name: "Złoto", hex: "#D4A63C", role: "koniec ruchu: zrobione" },
+];
 
 export const INTRO = {
   title: "Kim jesteśmy",
@@ -1039,12 +1047,12 @@ export const CHAPTERS: Chapter[] = [
       {
         n: "2",
         title: "Kolory",
-        body: "Przygaszona czerwień i grafit, z akcentem musztardowego złota. Czerwień jest sygnałem, nie krzykiem. Grafit jest ciężarem instytucji. Złoto jest haczykiem na końcu linii: zrobione, nie tylko ogłoszone.",
+        body: "Bordo i grafit, z akcentem musztardowego złota. Bordo jest sygnałem, nie krzykiem. Grafit jest ciężarem instytucji. Złoto jest końcem ruchu: zrobione, nie tylko ogłoszone.",
       },
       {
         n: "3",
         title: "Znak",
-        body: "Wznosząca się linia przechodząca w haczyk. Jednocześnie wzrost i potwierdzenie, że coś zostało zrobione, nie tylko obiecane na plakacie.",
+        body: "Ptaszek — ten sam, który stawia się na karcie do głosowania i przy punkcie odhaczonym z listy. Długie ramię wznosi się i przechodzi z bordo w złoto: od oddanego głosu do rzeczy zrobionej, nie tylko obiecanej na plakacie.",
       },
     ],
   },
