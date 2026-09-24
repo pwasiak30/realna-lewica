@@ -3,6 +3,8 @@ import { ArrowRight } from "lucide-react";
 import { Shell } from "@/components/shell";
 import { CHAPTERS, chapterCountWord, HONEST, INTRO, LEDGER, PILLARS, POSTULATES } from "@/data/program";
 
+const BASE = import.meta.env.BASE_URL;
+
 export const Route = createFileRoute("/")({
   component: Home,
 });
@@ -42,6 +44,9 @@ function Home() {
               >
                 Pełny program
               </Link>
+              <a href="#spot" className="inline-flex min-h-11 items-center justify-center px-1 font-semibold text-red">
+                Spot
+              </a>
             </div>
           </div>
           <aside className="bg-graphite p-6 text-cream sm:p-8 lg:col-span-5">
@@ -58,6 +63,32 @@ function Home() {
               spina. Mówimy to tutaj, nie w przypisie.
             </p>
           </aside>
+        </div>
+      </section>
+
+      <section id="spot" className="border-b border-line bg-ink text-cream" aria-labelledby="spot-tytul">
+        <div className="mx-auto grid max-w-6xl items-center gap-8 px-5 py-14 sm:px-8 lg:grid-cols-12 lg:py-16">
+          <div className="lg:col-span-4">
+            <p className="text-xs font-semibold tracking-widest text-gold uppercase">Spot</p>
+            <h2 id="spot-tytul" className="mt-3 font-display text-4xl leading-tight">
+              Dość obietnic bez ceny.
+            </h2>
+            <p className="mt-4 text-cream/75">
+              Czterdzieści jeden sekund. Pensja, ciało, mieszkanie, granica — i zdanie, ile to kosztuje.
+            </p>
+          </div>
+          <figure className="lg:col-span-8">
+            <video
+              className="aspect-video w-full bg-black"
+              controls
+              playsInline
+              preload="metadata"
+              poster={`${BASE}spot-wyborczy.jpg`}
+            >
+              <source src={`${BASE}spot-wyborczy.mp4`} type="video/mp4" />
+            </video>
+            <figcaption className="mt-3 text-sm text-cream/60">Spot wyborczy. Napisy są w obrazie.</figcaption>
+          </figure>
         </div>
       </section>
 
