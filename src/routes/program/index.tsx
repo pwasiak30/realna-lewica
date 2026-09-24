@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Shell } from "@/components/shell";
-import { CHAPTERS, fold, type PartId } from "@/data/program";
+import { CHAPTERS, chapterCountWord, fold, type PartId } from "@/data/program";
 
 export const Route = createFileRoute("/program/")({
   head: () => ({
@@ -55,7 +55,7 @@ function ProgramIndex() {
         <p className="text-xs font-semibold tracking-widest text-red uppercase">Deklaracja</p>
         <h1 className="mt-3 max-w-3xl font-display text-5xl leading-tight">Program, rozdział po rozdziale.</h1>
         <p className="mt-4 max-w-2xl text-lg text-muted">
-          Szesnaście rozdziałów polityki i ustroju. Szukaj po haśle — płaca, aborcja, atom, euro, mieszkanie — bez
+          {chapterCountWord(CHAPTERS.length)} rozdziałów polityki i ustroju. Szukaj po haśle — płaca, aborcja, atom, euro, mieszkanie — bez
           zgadywania, w którym akapicie to jest.
         </p>
 

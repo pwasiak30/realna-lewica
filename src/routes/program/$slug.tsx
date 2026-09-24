@@ -115,6 +115,11 @@ function ChapterPage() {
                 id={pointId(point.n)}
                 className="grid scroll-mt-36 gap-3 border-b border-line py-7 sm:grid-cols-[4.5rem_1fr] sm:gap-6"
               >
+                {point.group ? (
+                  <p className="text-xs font-semibold tracking-widest text-gold-ink uppercase sm:col-span-2">
+                    {point.group}
+                  </p>
+                ) : null}
                 <p className="font-display text-2xl text-red">{point.n}</p>
                 <div>
                   {point.title ? <h2 className="mb-3 font-display text-2xl">{point.title}</h2> : null}
