@@ -1,0 +1,14 @@
+Podmiana na GitHub (gałąź main), repo pwasiak30/realna-lewica.
+
+1. src/data/program.ts
+   — zastąp cały plik tym z tego archiwum.
+2. src/routes/skala.tsx
+   — zastąp cały plik tym z tego archiwum.
+3. DEKLARACJA_Realna_Lewica_v5.pdf
+   — w katalogu głównym repozytorium, w miejsce starego PDF (499 KB).
+   Nowy plik ma 464 KB.
+
+Nie podmieniaj DEKLARACJA_Realna_Lewica_v5.docx — nadal ma starą wersję
+(„ulgi dla powracających znikają”).
+
+Po wgraniu na main workflow „pages” sam przebuduje stronę.
