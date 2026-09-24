@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { PARTY } from "@/data/program";
 import { Wordmark } from "@/components/mark";
+import { ProgramDownload } from "@/components/program-download";
 import { PortfolioLink, SocialFab, SocialLinks } from "@/components/social";
 
 const NAV = [
@@ -122,8 +123,11 @@ export function Shell({ children }: { children: ReactNode }) {
               </li>
               <li>
                 <Link to="/" hash="spot" className="hover:text-gold">
-                  Spot
+                  Spoty
                 </Link>
+              </li>
+              <li>
+                <ProgramDownload tone="footer" />
               </li>
               <li>
                 <Link to="/o-nas" className="hover:text-gold">
