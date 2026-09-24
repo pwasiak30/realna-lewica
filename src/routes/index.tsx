@@ -124,7 +124,7 @@ function Home() {
             <p key={paragraph}>{paragraph}</p>
           ))}
           <Link to="/o-nas" className="inline-flex min-h-11 items-center font-semibold text-red">
-            Całość i znak partii
+            Kim jesteśmy i co znaczy znak
             <ArrowRight className="ml-2 size-4" aria-hidden="true" />
           </Link>
         </div>

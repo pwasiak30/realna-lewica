@@ -5,7 +5,7 @@ import { HONEST, LEDGER } from "@/data/program";
 
 export const Route = createFileRoute("/rachunek")({
   head: () => ({
-    meta: [{ title: "Rachunek kosztów — Realna Lewica" }],
+    meta: [{ title: "Aneks kosztów — Realna Lewica" }],
   }),
   component: Rachunek,
 });

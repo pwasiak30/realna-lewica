@@ -4,6 +4,10 @@ import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "Realna Lewica";
+const BASE = import.meta.env.BASE_URL;
+const SITE_URL = "https://realna-lewica.wasiakpawel.pl";
+const DESCRIPTION =
+  "Deklaracja programowa Realnej Lewicy. Pensja, ciało, mieszkanie i bezpieczeństwo — z jawnym rachunkiem, bez obietnic, których nie da się sfinansować w tej kadencji.";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -11,18 +15,24 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: `${APP_NAME} — socjaldemokracja realistyczna` },
-      {
-        name: "description",
-        content:
-          "Deklaracja programowa Realnej Lewicy. Pensja, ciało, mieszkanie i bezpieczeństwo — z jawnym rachunkiem, bez obietnic, których nie da się sfinansować w tej kadencji.",
-      },
-      { name: "theme-color", content: "#1a1714" },
+      { name: "description", content: DESCRIPTION },
+      { name: "theme-color", content: "#2b3038" },
+      { property: "og:type", content: "website" },
+      { property: "og:site_name", content: APP_NAME },
+      { property: "og:title", content: `${APP_NAME} — socjaldemokracja realistyczna` },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:image", content: `${SITE_URL}/og.jpg` },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:locale", content: "pl_PL" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "icon", type: "image/svg+xml", href: `${import.meta.env.BASE_URL}favicon.svg` },
+      { rel: "icon", type: "image/svg+xml", href: `${BASE}favicon.svg` },
+      { rel: "icon", type: "image/png", sizes: "32x32", href: `${BASE}favicon-32.png` },
       { rel: "stylesheet", href: appCss },
-      { rel: "manifest", href: "/__grok/manifest.webmanifest" },
-      { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
+      { rel: "manifest", href: `${BASE}manifest.webmanifest` },
+      { rel: "apple-touch-icon", href: `${BASE}apple-touch-icon.png` },
       {
         rel: "preconnect",
         href: "https://fonts.googleapis.com",

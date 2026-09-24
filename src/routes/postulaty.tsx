@@ -47,19 +47,18 @@ function Postulaty() {
         </ol>
 
         <p className="mt-10 max-w-2xl text-sm text-muted">
-          {PARTY.versionNote}: {PARTY.version}. To deklaracja programowa, nie rejestracja komitetu i nie zbiórka
-          pieniędzy.
+          {PARTY.versionNote}: {PARTY.version}. {PARTY.disclaimer}
         </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <Link
             to="/program"
-            className="inline-flex min-h-11 items-center justify-center bg-red px-5 font-semibold text-cream"
+            className="inline-flex min-h-11 items-center justify-center bg-red px-5 font-semibold text-cream hover:bg-red-deep"
           >
             Pełny program
           </Link>
           <Link
             to="/skala"
-            className="inline-flex min-h-11 items-center justify-center border border-ink px-5 font-semibold"
+            className="inline-flex min-h-11 items-center justify-center border border-ink px-5 font-semibold hover:bg-ink hover:text-cream"
           >
             Sprawdź skalę PIT
           </Link>
