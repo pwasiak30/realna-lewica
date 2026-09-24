@@ -457,7 +457,12 @@ export const CHAPTERS: Chapter[] = [
       {
         n: "18",
         title: "Naukowcy i specjaliści",
-        body: "Zagraniczni naukowcy i specjaliści przez pierwsze 7 lat pracy w Polsce płacą podatek od 75% dochodu — ale tylko w części mieszczącej się w drugim progu PIT. Nie dotyczy to obywateli polskich ani osób, które mieszkały w Polsce w ciągu ostatnich 5 lat. Specjalne ulgi dla powracających z emigracji znikają: Polak wracający do kraju korzysta z tych samych usług publicznych co każdy — i to one mają być powodem powrotu.",
+        body: "Zagraniczni naukowcy i specjaliści przez pierwsze 7 lat pracy w Polsce płacą podatek od 75% dochodu — ale tylko w części dochodu mieszczącej się w drugim progu PIT (rozdział o gospodarce, punkt 1).",
+      },
+      {
+        n: "19",
+        title: "Ulga na powrót",
+        body: "Ulga na powrót zostaje, ale nie jako prezent za samą zmianę rezydencji. Przysługuje wyłącznie osobie, która wraca do zawodu z listy deficytowej — lekarz, pielęgniarka, nauczyciel, inżynier; lista jak przy zezwoleniach na pracę — i tylko od wynagrodzenia za pracę wykonywaną w Polsce, u polskiego pracodawcy albo w publicznej ochronie zdrowia lub oświacie. Limit i cztery lata zwolnienia zostają jak dziś. Kto wraca, a pracuje zdalnie dla zagranicznej firmy albo poza listą, rozlicza się na ogólnych zasadach.",
       },
     ],
   },
@@ -503,7 +508,7 @@ export const CHAPTERS: Chapter[] = [
       {
         n: "7",
         title: "Ulgi zależne od dochodu",
-        body: "Likwidujemy zerowy PIT dla młodych do 26. roku życia, dla pracujących seniorów i dla osób wracających z emigracji. Ulga na dzieci dostaje próg dochodowy dla wszystkich rodzin, nie tylko tych z jednym dzieckiem. Ulgi niezależne od dochodu najbardziej opłacają się tym, którzy zarabiają najwięcej.",
+        body: "Likwidujemy zerowy PIT dla młodych do 26. roku życia i dla pracujących seniorów. Ulga na dzieci dostaje próg dochodowy dla wszystkich rodzin, nie tylko tych z jednym dzieckiem. Ulga na powrót zostaje, ale tylko dla zawodów deficytowych i pracy w Polsce (rozdział o migracji, punkt 19).",
       },
       {
         n: "8",
@@ -1172,7 +1177,7 @@ export const LEDGER = {
   housing:
     "Danina 1% (około 15–18 mld) zamyka 25–40 tys. mieszkań rocznie. Nie zamyka unijnego kryterium 3% deficytu. Dlatego euro nie ma kalendarza.",
   added:
-    "Nowe pozycje wersji z 24 września: Krajowa Agencja Migracyjna, Sąd Migracyjny, bezpłatne kursy polskiego i etaty w publicznych instytucjach kultury — wydatki rzędu pojedynczych miliardów rocznie. Po stronie dochodów: koniec ulgi dla wracających z emigracji. Mieszczą się w podanym rozrzucie; dokładna wycena — w projekcie ustawy.",
+    "Nowe pozycje tej wersji: Krajowa Agencja Migracyjna, Sąd Migracyjny, bezpłatne kursy języka polskiego i etaty w publicznych instytucjach kultury — wydatki rzędu pojedynczych miliardów zł rocznie. Po stronie dochodów: zwężenie ulgi na powrót do zawodów deficytowych. Mieszczą się w podanym rozrzucie; dokładna wycena — w projekcie ustawy.",
   atom: "Atom: dług Funduszu Inwestycji Strategicznych, 12 GW w horyzoncie 20–25 lat. W statystyce długu będzie widoczny, nie schowany.",
   excise:
     "Przyrost akcyzy alkoholowej i konopnej ponad poziom z 2027 (około 3–5 mld rocznie) idzie na psychiatrię, nie na łatanie deficytu.",
