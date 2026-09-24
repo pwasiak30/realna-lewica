@@ -143,7 +143,7 @@ function About() {
             params={{ slug: "nazwa" }}
             className="inline-flex min-h-11 items-center justify-center border border-ink px-5 font-semibold hover:bg-ink hover:text-cream"
           >
-            Rozdział 16: Nazwa i symbolika
+            Rozdział {symbolika?.num}: {symbolika?.title}
           </Link>
         </div>
       </div>

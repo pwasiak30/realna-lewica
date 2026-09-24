@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { Shell } from "@/components/shell";
+import { chapterBySlug } from "@/data/program";
 import { compareIncome, formatEffective, formatPct, formatPln, REDUCTION, SLIDER_MAX } from "@/lib/pit";
 
 export const Route = createFileRoute("/skala")({
@@ -24,7 +25,9 @@ function Skala() {
   return (
     <Shell>
       <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-16">
-        <p className="text-xs font-semibold tracking-widest text-red uppercase">Rozdział 3 · punkt 1</p>
+        <p className="text-xs font-semibold tracking-widest text-red uppercase">
+          Rozdział {chapterBySlug("gospodarka")?.num} · punkt 1
+        </p>
         <h1 className="mt-3 max-w-3xl font-display text-5xl leading-tight">Skala, nie hasło. Wpisz dochód.</h1>
         <p className="mt-4 max-w-2xl text-lg text-muted">
           Do 300 tysięcy złotych rocznie progi zostają: 12% i 32%. Powyżej stawka rośnie, ale tylko od nadwyżki.

@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Shell } from "@/components/shell";
-import { CHAPTERS, HONEST, INTRO, LEDGER, PILLARS, POSTULATES } from "@/data/program";
+import { CHAPTERS, chapterCountWord, HONEST, INTRO, LEDGER, PILLARS, POSTULATES } from "@/data/program";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -135,7 +135,9 @@ function Home() {
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="text-xs font-semibold tracking-widest text-red uppercase">Część I i II</p>
-              <h2 className="mt-2 font-display text-4xl">Szesnaście rozdziałów. Żadnego wstępu zamiast treści.</h2>
+              <h2 className="mt-2 font-display text-4xl">
+                {chapterCountWord(CHAPTERS.length)} rozdziałów. Żadnego wstępu zamiast treści.
+              </h2>
             </div>
             <Link to="/program" className="inline-flex min-h-11 items-center font-semibold">
               Otwórz spis
@@ -182,7 +184,7 @@ function Home() {
           <dl className="grid gap-px bg-line sm:grid-cols-3 lg:col-span-7">
             {[
               { k: "Dodatkowe wydatki, rok 5", v: "~125 mld" },
-              { k: "Dziura programu, rok 5", v: "~0,8% PKB" },
+              { k: "Dziura programu, rok 5", v: "~1% PKB" },
               { k: "Mieszkania z daniny", v: "25–40 tys." },
             ].map((item) => (
               <div key={item.k} className="bg-paper p-5">
