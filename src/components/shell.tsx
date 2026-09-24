@@ -3,13 +3,13 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { PARTY } from "@/data/program";
-import { Mark } from "@/components/mark";
+import { Wordmark } from "@/components/mark";
 import { PortfolioLink, SocialFab, SocialLinks } from "@/components/social";
 
 const NAV = [
   { to: "/postulaty", label: "Postulaty" },
   { to: "/program", label: "Program" },
-  { to: "/rachunek", label: "Rachunek" },
+  { to: "/rachunek", label: "Aneks kosztów" },
   { to: "/skala", label: "Skala PIT" },
   { to: "/o-nas", label: "Kim jesteśmy" },
 ] as const;
@@ -45,14 +45,8 @@ export function Shell({ children }: { children: ReactNode }) {
           </div>
         </div>
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
-          <Link to="/" className="flex items-center gap-3">
-            <Mark />
-            <span className="leading-none">
-              <span className="block font-display text-xl font-semibold tracking-tight">Realna Lewica</span>
-              <span className="mt-1 hidden text-xs tracking-wide text-muted uppercase sm:block">
-                {PARTY.label}
-              </span>
-            </span>
+          <Link to="/" className="shrink-0" aria-label="Realna Lewica — strona główna">
+            <Wordmark />
           </Link>
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Główne">
             {NAV.map((item) => (
@@ -97,13 +91,10 @@ export function Shell({ children }: { children: ReactNode }) {
       <footer className="mt-20 border-t border-ink bg-ink text-cream">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 sm:px-8 md:grid-cols-12">
           <div className="md:col-span-5">
-            <div className="flex items-center gap-3">
-              <Mark />
-              <p className="font-display text-2xl">Realna Lewica</p>
-            </div>
+            <Wordmark tone="dark" size="lg" />
+            <p className="mt-3 text-xs tracking-widest text-cream/60 uppercase">{PARTY.label}</p>
             <p className="mt-4 max-w-sm text-cream/80">
-              Twoja pensja. Twoje ciało. Twoje mieszkanie. Twoje bezpieczeństwo. Państwo, które słucha — i mówi
-              Ci cenę.
+              {PARTY.slogan.join(" ")} Państwo, które słucha — i mówi Ci cenę.
             </p>
           </div>
           <div className="md:col-span-3">
@@ -116,7 +107,7 @@ export function Shell({ children }: { children: ReactNode }) {
               </li>
               <li>
                 <Link to="/program" className="hover:text-gold">
-                  Spis programu
+                  Program
                 </Link>
               </li>
               <li>
@@ -139,7 +130,8 @@ export function Shell({ children }: { children: ReactNode }) {
           <div className="md:col-span-4">
             <p className="text-xs tracking-widest text-gold uppercase">Na pierwszej stronie</p>
             <p className="mt-3 text-cream/80">
-              W tej kadencji nie ma daty euro ani skoku obrony do 6% PKB. Pełne 7% PKB na zdrowie to dwie kadencje.
+              W tej kadencji nie ma daty euro ani skoku obrony do 6% PKB. Pełne 7% PKB na zdrowie to cel na dwie
+              kadencje.
             </p>
             <p className="mt-4 text-sm text-gold">
               {PARTY.versionNote}: {PARTY.version}
