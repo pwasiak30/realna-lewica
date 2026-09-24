@@ -17,6 +17,14 @@ function pad(n: number) {
   return String(n).padStart(2, "0");
 }
 
+/** Polska odmiana: 1 rozdział, 2–4 rozdziały, 5+ rozdziałów (ale 12–14 rozdziałów). */
+function chapterWord(n: number) {
+  if (n === 1) return "rozdział";
+  const last = n % 10;
+  const lastTwo = n % 100;
+  return last >= 2 && last <= 4 && (lastTwo < 12 || lastTwo > 14) ? "rozdziały" : "rozdziałów";
+}
+
 function ProgramIndex() {
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState<Filter>("all");
@@ -83,7 +91,7 @@ function ProgramIndex() {
         <p className="mt-6 text-sm text-muted">
           {results.length === CHAPTERS.length && !needle
             ? `${CHAPTERS.length} rozdziałów`
-            : `${results.length} ${results.length === 1 ? "rozdział" : "rozdziałów"}`}
+            : `${results.length} ${chapterWord(results.length)}`}
           {needle ? ` dla „${query.trim()}”` : ""}
         </p>
 
