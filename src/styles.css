@@ -1,22 +1,23 @@
 @import "tailwindcss";
 
 @theme {
+  /* Paleta znaku: grafit #2B3038, bordo #7A1E3C, złoto #D4A63C (patrz src/components/mark.tsx) */
   --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
 
   --color-paper: #f4efe6;
   --color-paper-2: #ebe3d6;
   --color-cream: #faf7f2;
-  --color-ink: #1a1714;
-  --color-graphite: #2c2824;
-  --color-muted: #6a6258;
+  --color-ink: #2b3038;
+  --color-graphite: #353b45;
+  --color-muted: #5f616a;
   --color-line: #ddd4c6;
   --color-line-strong: #c9bfb0;
-  --color-red: #8b2e2a;
-  --color-red-deep: #641f1c;
-  --color-red-soft: #f3e6e3;
-  --color-gold: #a67c2d;
-  --color-gold-ink: #6e5010;
+  --color-red: #7a1e3c;
+  --color-red-deep: #5c1530;
+  --color-red-soft: #f3e3e8;
+  --color-gold: #d4a63c;
+  --color-gold-ink: #7a5712;
   --color-gold-soft: #f3ead4;
 
   --radius-sm: 0.125rem;
