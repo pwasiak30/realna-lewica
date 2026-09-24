@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Shell } from "@/components/shell";
+import { ProgramDownload } from "@/components/program-download";
 import { CHAPTERS, chapterCountWord, HONEST, INTRO, LEDGER, PILLARS, POSTULATES } from "@/data/program";
 
 const BASE = import.meta.env.BASE_URL;
@@ -30,7 +31,7 @@ function Home() {
               <span className="text-red">Twoje bezpieczeństwo.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-graphite">{INTRO.paragraphs[2]}</p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
                 to="/postulaty"
                 className="inline-flex min-h-11 items-center justify-center bg-red px-5 font-semibold text-cream hover:bg-red-deep"
@@ -38,6 +39,7 @@ function Home() {
                 Dwanaście postulatów
                 <ArrowRight className="ml-2 size-4" aria-hidden="true" />
               </Link>
+              <ProgramDownload tone="line" />
               <Link
                 to="/program"
                 className="inline-flex min-h-11 items-center justify-center border border-ink px-5 font-semibold hover:bg-ink hover:text-cream"
@@ -45,7 +47,7 @@ function Home() {
                 Pełny program
               </Link>
               <a href="#spot" className="inline-flex min-h-11 items-center justify-center px-1 font-semibold text-red">
-                Spot
+                Spoty
               </a>
             </div>
           </div>
@@ -67,28 +69,43 @@ function Home() {
       </section>
 
       <section id="spot" className="border-b border-line bg-ink text-cream" aria-labelledby="spot-tytul">
-        <div className="mx-auto grid max-w-6xl items-center gap-8 px-5 py-14 sm:px-8 lg:grid-cols-12 lg:py-16">
-          <div className="lg:col-span-4">
-            <p className="text-xs font-semibold tracking-widest text-gold uppercase">Spot</p>
-            <h2 id="spot-tytul" className="mt-3 font-display text-4xl leading-tight">
-              Dość obietnic bez ceny.
-            </h2>
-            <p className="mt-4 text-cream/75">
-              Czterdzieści jeden sekund. Pensja, ciało, mieszkanie, granica — i zdanie, ile to kosztuje.
-            </p>
+        <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:py-16">
+          <p className="text-xs font-semibold tracking-widest text-gold uppercase">Spoty</p>
+          <h2 id="spot-tytul" className="mt-3 max-w-xl font-display text-4xl leading-tight">
+            Dwa zdania. Bez przypisu na końcu.
+          </h2>
+          <div className="mt-8 grid gap-10 lg:grid-cols-2">
+            <figure>
+              <video
+                className="aspect-video w-full bg-black"
+                controls
+                playsInline
+                preload="metadata"
+                poster={`${BASE}spot-wyborczy.jpg`}
+              >
+                <source src={`${BASE}spot-wyborczy.mp4`} type="video/mp4" />
+              </video>
+              <figcaption className="mt-3 text-sm text-cream/70">
+                <span className="block font-semibold text-cream">Dość obietnic bez ceny.</span>
+                41 sekund. Pensja, ciało, mieszkanie, granica — i zdanie, ile to kosztuje.
+              </figcaption>
+            </figure>
+            <figure>
+              <video
+                className="aspect-video w-full bg-black"
+                controls
+                playsInline
+                preload="metadata"
+                poster={`${BASE}spot-prawa-i-glos.jpg`}
+              >
+                <source src={`${BASE}spot-prawa-i-glos.mp4`} type="video/mp4" />
+              </video>
+              <figcaption className="mt-3 text-sm text-cream/70">
+                <span className="block font-semibold text-cream">Prawa i głos.</span>
+                Prezydent bez weta. 205 tysięcy podpisów zatrzymuje ustawę. 410 tysięcy zmienia konstytucję.
+              </figcaption>
+            </figure>
           </div>
-          <figure className="lg:col-span-8">
-            <video
-              className="aspect-video w-full bg-black"
-              controls
-              playsInline
-              preload="metadata"
-              poster={`${BASE}spot-wyborczy.jpg`}
-            >
-              <source src={`${BASE}spot-wyborczy.mp4`} type="video/mp4" />
-            </video>
-            <figcaption className="mt-3 text-sm text-cream/60">Spot wyborczy. Napisy są w obrazie.</figcaption>
-          </figure>
         </div>
       </section>
 
