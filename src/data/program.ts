@@ -14,6 +14,12 @@ export type Chapter = {
   points: { n: string; title?: string; body: string; group?: string }[];
 };
 
+export const PROGRAM_FILE = {
+  href: "deklaracja.pdf",
+  filename: "DEKLARACJA_Realna_Lewica.pdf",
+  label: "Pobierz program (PDF)",
+};
+
 export const PARTY = {
   name: "Realna Lewica",
   label: "Socjaldemokracja realistyczna",
@@ -157,7 +163,7 @@ export const POSTULATES: {
   {
     n: "09",
     title: "Koniec weta jednego człowieka",
-    line: "Prezydent traci weto i prawo łaski. 250 tysięcy podpisów może zawiesić ustawę — także naszą.",
+    line: "Prezydent traci weto i prawo łaski. 205 tysięcy podpisów w 100 dni zatrzymuje ustawę. Konstytucję zmieniasz Ty.",
     slug: "ustroj",
     hash: "p-15-2",
   },
@@ -457,7 +463,7 @@ export const CHAPTERS: Chapter[] = [
       {
         n: "18",
         title: "Naukowcy i specjaliści",
-        body: "Zagraniczni naukowcy i specjaliści przez pierwsze 7 lat pracy w Polsce płacą podatek od 75% dochodu — ale tylko w części dochodu mieszczącej się w drugim progu PIT (rozdział o gospodarce, punkt 1).",
+        body: "Zagraniczni naukowcy i specjaliści przez pierwsze 7 lat pracy w Polsce płacą podatek od 75% dochodu — ale tylko w części dochodu mieszczącej się w drugim progu PIT (rozdział 4, punkt 1).",
       },
       {
         n: "19",
@@ -508,7 +514,7 @@ export const CHAPTERS: Chapter[] = [
       {
         n: "7",
         title: "Ulgi zależne od dochodu",
-        body: "Likwidujemy zerowy PIT dla młodych do 26. roku życia i dla pracujących seniorów. Ulga na dzieci dostaje próg dochodowy dla wszystkich rodzin, nie tylko tych z jednym dzieckiem. Ulga na powrót zostaje, ale tylko dla zawodów deficytowych i pracy w Polsce (rozdział o migracji, punkt 19).",
+        body: "Likwidujemy zerowy PIT dla młodych do 26. roku życia i dla pracujących seniorów, a ulgę na dzieci obejmujemy progiem dochodowym dla wszystkich rodzin, nie tylko tych z jednym dzieckiem. Ulga na powrót zostaje, ale tylko dla zawodów deficytowych i pracy w Polsce (rozdział 3, punkt 19).",
       },
       {
         n: "8",
@@ -1075,7 +1081,7 @@ export const CHAPTERS: Chapter[] = [
     part: "II",
     title: "Ustrój państwa",
     kicker: "Konstytucja",
-    lead: "Nic z tego programu się nie wykona, jeśli jeden człowiek na Zamku może zawetować ustawę, na którą zagłosowały miliony. Odbieramy prezydentowi weto i łaskę, dajemy obywatelom narzędzia między wyborami i wyrównujemy wagę głosu.",
+    lead: "Nic z tego programu się nie wykona, jeśli jeden człowiek na Zamku może zawetować ustawę, na którą zagłosowały miliony. Odbieramy prezydentowi prawo weta i prawo łaski, dajemy obywatelom narzędzia działające między wyborami i zmieniamy ordynację do Sejmu tak, żeby każdy głos ważył tyle samo.",
     pillars: [],
     points: [
       {
@@ -1086,7 +1092,7 @@ export const CHAPTERS: Chapter[] = [
       {
         n: "15.2",
         title: "Głos między wyborami",
-        body: "Każda zmiana konstytucji wymaga referendum, które musi poprzeć większość głosujących. 500 tysięcy podpisów w 18 miesięcy wymusza referendum konstytucyjne nawet bez zgody Sejmu. 250 tysięcy podpisów w 100 dni od uchwalenia ustawy zawiesza jej wejście w życie i kieruje ją do referendum — weto ludowe. To narzędzie działa w obie strony, także wtedy, gdy rządzi Realna Lewica.",
+        body: "Między wyborami nie jesteś zakładnikiem Sejmu. Chcesz zmienić konstytucję — zbierasz 410 tysięcy podpisów w półtora roku i sprawa idzie pod głos, nawet jeśli Sejm jest przeciw. Sejm uchwalił ustawę, której nie chcesz — masz 100 dni i 205 tysięcy podpisów, żeby ją zatrzymać i oddać decyzję narodowi. Każda zmiana konstytucji i tak idzie do referendum: wygrywa większość tych, którzy przyszli zagłosować.\n\nReferendum obowiązkowe:\n\nDo urn idzie z urzędu, bez zbierania podpisów: każda zmiana Konstytucji; przystąpienie do organizacji bezpieczeństwa zbiorowego albo wspólnoty ponadnarodowej; ustawa nadzwyczajna bez podstawy w Konstytucji, która ma trwać dłużej niż rok. Taka ustawa musi trafić pod głos najpóźniej w ciągu roku. Do przyjęcia wystarczy większość głosujących — Polska jest państwem unitarnym, województwo nie głosuje jak kanton.\n\nInicjatywa ludowa — zmiana Konstytucji:\n\nKomitet: od 7 do 27 osób z prawem wyborczym. Tekst idzie do PKW: jeden temat, bez łamania ius cogens (zakaz tortur, niewolnictwa, ludobójstwa). Po publikacji w Monitorze Polskim masz 18 miesięcy na 410 tys. ważnych podpisów. Podpis na urzędowym formularzu; gmina poświadcza z rejestru, bez dubli. Sejm i rząd muszą się ustosunkować. Sejm może dać kontrprojekt bezpośredni (inny przepis konstytucji) albo pośredni (ustawę). Komitet może wycofać inicjatywę do dnia zarządzenia głosowania. Na karcie: inicjatywa, kontrprojekt i pytanie, które wybrać, gdyby oba przeszły. Przyjęcie: większość głosujących. Inicjatywa na poziomie państwa dotyczy Konstytucji, nie ustawy zwykłej.\n\nWeto ludowe — ustawa:\n\nOd ogłoszenia ustawy, rozporządzenia z mocą ustawy albo ratyfikacji umowy bezterminowej bądź wstąpienia do organizacji międzynarodowej biegnie 100 dni. Komitet składa 205 tys. ważnych podpisów. Ustawa stoi do dnia głosowania. Wystarczy zwykła większość. Naród odrzuci — aktu nie ma. Naród poprze — wchodzi w życie z dniem ogłoszenia wyniku.\n\nGłosowanie:\n\nNajwyżej cztery terminy w roku, data co najmniej 4 miesiące wcześniej. Pytania z inicjatyw, wet i zmian obowiązkowych idą na jedną kartę. Państwo finansuje krótką broszurę: argumenty komitetu, stanowisko Sejmu i rządu, tekst aktu. Kampania z budżetu partii i z limitu 5 000 zł od osoby (rozdział 6). To narzędzie działa też przeciwko nam.",
       },
       {
         n: "15.3",
