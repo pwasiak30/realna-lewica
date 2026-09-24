@@ -10,14 +10,15 @@ export type Chapter = {
   kicker: string;
   lead: string;
   pillars: PillarId[];
-  points: { n: string; title?: string; body: string }[];
+  /** `group` na pierwszym punkcie grupy rysuje śródtytuł (np. „Praca”, „Azyl i ochrona”). */
+  points: { n: string; title?: string; body: string; group?: string }[];
 };
 
 export const PARTY = {
   name: "Realna Lewica",
   label: "Socjaldemokracja realistyczna",
   slogan: ["Twoja pensja.", "Twoje ciało.", "Twoje mieszkanie.", "Twoje bezpieczeństwo."],
-  version: "23 września 2026",
+  version: "24 września 2026",
   versionNote: "Wersja złożona",
   disclaimer: "To deklaracja programowa — nie rejestracja komitetu, nie zbiórka podpisów ani pieniędzy.",
 };
@@ -81,6 +82,7 @@ export const HONEST = {
     "480 dni urlopu związanego z dzieckiem",
     "Płaca minimalna do 75% mediany — stopniowo",
     "Linux i polskie AI w administracji",
+    "Nowy system migracyjny",
   ],
   later: [
     "Data przyjęcia euro",
@@ -157,7 +159,7 @@ export const POSTULATES: {
     title: "Koniec weta jednego człowieka",
     line: "Prezydent traci weto i prawo łaski. 250 tysięcy podpisów może zawiesić ustawę — także naszą.",
     slug: "ustroj",
-    hash: "p-14-2",
+    hash: "p-15-2",
   },
   {
     n: "10",
@@ -215,7 +217,7 @@ export const CHAPTERS: Chapter[] = [
       {
         n: "5",
         title: "Koniec limitu 60%",
-        body: "Znosimy konstytucyjny limit, który dziś zakazuje zadłużania państwa powyżej 60% PKB. Dług zaciągnięty na budowę elektrowni atomowej czy modernizację sprzętu dla wojska jest ekonomicznie czymś innym niż dług na codzienne wydatki budżetu — inwestycja, która będzie służyć dekadami, nie powinna być traktowana tak samo jak dziura w budżecie na bieżące pensje.",
+        body: "Znosimy konstytucyjny limit, który dziś zakazuje zadłużania państwa powyżej 60% PKB. Dług zaciągnięty na budowę elektrowni atomowej czy modernizację sprzętu dla wojska jest ekonomicznie czymś innym niż dług na codzienne wydatki budżetu — inwestycja, która będzie służyć dekadami, nie powinna być traktowana tak samo jak dziura w budżecie na bieżące pensje. To zmiana konstytucji, więc — zgodnie z rozdziałem o ustroju (punkt 15.2) — rozstrzygną ją obywatele w referendum.",
       },
       {
         n: "6",
@@ -250,7 +252,7 @@ export const CHAPTERS: Chapter[] = [
       {
         n: "12",
         title: "Cyfrowa niezależność",
-        body: "Budujemy własną infrastrukturę do przechowywania danych i przechodzimy z oprogramowania Microsoftu na system Linux i pakiet openDesk: w pierwszym roku 50 tysięcy stanowisk pracy w administracji, w piątym roku co najmniej 80% całej administracji publicznej. Kod napisany za pieniądze podatnika ma być publicznie dostępny.\n\nJeden login wystarczy do załatwienia sprawy w urzędzie i w systemie zdrowia. Cyfryzujemy Państwową Inspekcję Pracy i ZUS. Uruchamiamy program „Polskie AI” — modele językowe trenowane na polskich tekstach, na krajowej infrastrukturze, z pierwszym modelem do obsługi administracji gotowym w ciągu 36 miesięcy. Zakazujemy trenowania sztucznej inteligencji na Twoich danych osobowych bez Twojej zgody.",
+        body: "Budujemy własną infrastrukturę do przechowywania danych i przechodzimy z oprogramowania Microsoftu na system Linux i otwarte oprogramowanie biurowe: w pierwszym roku 50 tysięcy stanowisk pracy w administracji, w piątym roku co najmniej 80% całej administracji publicznej. Kod napisany za pieniądze podatnika ma być publicznie dostępny.\n\nJeden login wystarczy do załatwienia sprawy w urzędzie i w systemie zdrowia. Cyfryzujemy Państwową Inspekcję Pracy i ZUS. Uruchamiamy program „Polskie AI” — modele językowe trenowane na polskich tekstach, na krajowej infrastrukturze, z pierwszym modelem do obsługi administracji gotowym w ciągu 36 miesięcy. Zakazujemy trenowania sztucznej inteligencji na Twoich danych osobowych bez Twojej zgody.",
       },
       {
         n: "13",
@@ -270,7 +272,7 @@ export const CHAPTERS: Chapter[] = [
       {
         n: "16",
         title: "Państwowy holding budowlany",
-        body: "Tworzymy państwowy holding budowlany specjalizujący się w kolei i energetyce — duże, strategiczne inwestycje infrastrukturalne państwo realizuje częściowo własnymi rękami, nie tylko zamawia u prywatnych firm. Ten holding nie zajmuje się budową mieszkań.",
+        body: "Tworzymy państwowy holding budowlany specjalizujący się w kolei i energetyce — duże, strategiczne inwestycje infrastrukturalne państwo realizuje częściowo własnymi rękami, nie tylko zamawia u prywatnych firm. Ten holding nie zajmuje się budową mieszkań — to odrębny mechanizm z rozdziału o mieszkaniu.",
       },
     ],
   },
@@ -280,7 +282,7 @@ export const CHAPTERS: Chapter[] = [
     part: "I",
     title: "Państwo po stronie pracujących",
     kicker: "Praca",
-    lead: "Miliony ludzi pracujących codziennie utrzymują ten kraj, a przez lata państwo patrzyło z boku, jak są pozbawiani stabilnej pracy, głosu w firmie i zwykłej ludzkiej ochrony przed wyzyskiem.",
+    lead: "Miliony ludzi pracujących codziennie utrzymują ten kraj, a przez lata państwo patrzyło z boku, jak są pozbawiani stabilnej pracy, głosu w firmie i zwykłej ludzkiej ochrony przed wyzyskiem. To się zmienia: realny wpływ na miejsce pracy, ochrona w chorobie i pensja, która rośnie razem z gospodarką.",
     pillars: ["pensja"],
     points: [
       {
@@ -291,7 +293,7 @@ export const CHAPTERS: Chapter[] = [
       {
         n: "2",
         title: "Inspekcja pracy",
-        body: "Bronimy prawa Państwowej Inspekcji Pracy do samodzielnego przekwalifikowania umowy cywilnoprawnej lub B2B na umowę o pracę, bez czekania na wyrok sądu — obowiązującego od lipca 2026 roku. Żeby to prawo działało w praktyce, w ciągu kadencji podwajamy liczbę inspektorów pracy.",
+        body: "Bronimy prawa Państwowej Inspekcji Pracy do samodzielnego przekwalifikowania umowy cywilnoprawnej lub B2B na umowę o pracę, bez czekania na wyrok sądu — obowiązującego od lipca 2026 roku i zaskarżonego przez prezydenta do Trybunału Konstytucyjnego. Żeby to prawo działało w praktyce, w ciągu kadencji podwajamy liczbę inspektorów pracy.",
       },
       {
         n: "3",
@@ -301,12 +303,12 @@ export const CHAPTERS: Chapter[] = [
       {
         n: "4",
         title: "Koniec darmowych staży",
-        body: "Kończymy z praktyką bezpłatnych staży i wolontariatu, które w rzeczywistości są normalną pracą bez wynagrodzenia. Sprawy pracownicze trafiają do osobnego pionu sądów pracy — wyrok w pierwszej instancji zapada w ciągu 6 miesięcy od wniesienia pozwu.",
+        body: "Kończymy z praktyką bezpłatnych staży i wolontariatu, które w rzeczywistości są normalną pracą bez wynagrodzenia. Sprawy pracownicze trafiają do osobnego pionu sądów pracy, z większą liczbą etatów sędziowskich i asystenckich — wyrok w pierwszej instancji zapada w ciągu 6 miesięcy od wniesienia pozwu.",
       },
       {
         n: "5",
         title: "Cztery dni",
-        body: "Wprowadzamy 4-dniowy tydzień pracy bez utraty wynagrodzenia, etapowo: w pierwszych dwóch latach sektor publiczny i firmy powyżej 250 osób, z oceną efektów po 18 miesiącach. W latach 3–5 dołącza reszta gospodarki, z dłuższym czasem dla firm do 50 pracowników. Prawo do odłączenia się po godzinach działa od pierwszego roku.\n\nZnosimy ustawowy zakaz handlu w niedzielę — to ma być decyzja pracownika i pracodawcy — ale za pracę w niedzielę należy się 250% zwykłej stawki. Sprzedaż alkoholu w niedzielę zostaje zakazana ze względów zdrowotnych, nie religijnych.",
+        body: "Wprowadzamy 4-dniowy tydzień pracy bez utraty wynagrodzenia, etapowo: w pierwszych dwóch latach sektor publiczny i firmy powyżej 250 osób, z oceną efektów po 18 miesiącach. W latach 3–5 dołącza reszta gospodarki, z dłuższym czasem dla firm do 50 pracowników. Prawo do odłączenia się po godzinach działa od pierwszego roku.\n\nZnosimy ustawowy zakaz handlu w niedzielę — to ma być decyzja pracownika i pracodawcy — ale za pracę w niedzielę należy się 250% zwykłej stawki. Sprzedaż alkoholu w niedzielę to osobny zakaz, uzasadniony zdrowotnie, nie religijnie — opisany w rozdziale o zdrowiu.",
       },
       {
         n: "6",
@@ -345,6 +347,11 @@ export const CHAPTERS: Chapter[] = [
       },
       {
         n: "13",
+        title: "Etat w publicznej kulturze",
+        body: "W teatrach, filharmoniach, muzeach, domach kultury i bibliotekach finansowanych z pieniędzy publicznych stała praca odbywa się na umowie o pracę, nie na dziele czy zleceniu. Umowa o dzieło zostaje tylko dla dzieł faktycznie jednorazowych: gościnnego spektaklu, kompozycji, projektu wystawy.",
+      },
+      {
+        n: "14",
         title: "Ubezpieczenie od utraty pracy",
         body: "Symboliczny zasiłek dla bezrobotnych zastępujemy ubezpieczeniem: pierwsze 6 miesięcy to 80% ostatniej pensji, kolejne 6 miesięcy — 50%, z górnym limitem takim samym jak przy zasiłku chorobowym.",
       },
@@ -352,11 +359,115 @@ export const CHAPTERS: Chapter[] = [
   },
   {
     num: 3,
+    slug: "migracja",
+    part: "I",
+    title: "Migracja",
+    kicker: "Granica i praca",
+    lead: "Granicą i azylem rządzi prawo, nie przypadek. Kto przyjeżdża do Polski pracować, ma zarabiać tyle co Polak na tym samym stanowisku — bo tani pracownik z zagranicy to broń przeciwko pensjom nas wszystkich. Kto łamie prawo, traci prawo pobytu. Kto je szanuje, może tu zbudować życie.",
+    pillars: ["bezpieczenstwo", "pensja"],
+    points: [
+      {
+        n: "1",
+        group: "Praca",
+        title: "Pensja co najmniej 90% mediany",
+        body: "Pozwolenie na pracę dostaje osoba z ofertą, w której pensja wynosi co najmniej 90% krajowej mediany wynagrodzeń. W zawodach deficytowych, z listy aktualizowanej co roku, próg to 75% mediany — tyle, ile docelowa płaca minimalna. Warunki nie mogą być gorsze niż typowe w danym zawodzie i regionie. Ofertę trzeba najpierw wystawić na 14 dni w publicznym serwisie pracy.",
+      },
+      {
+        n: "2",
+        title: "Pensja sprawdzana w ZUS",
+        body: "Urząd porównuje obiecaną pensję z danymi ZUS. Jeśli się nie zgadzają, karę płaci pracodawca, a pracownik ma 6 miesięcy na znalezienie nowej pracy bez utraty prawa pobytu.",
+      },
+      {
+        n: "3",
+        title: "Zawody z nadużyciami",
+        body: "Rząd może rozporządzeniem wyłączyć z zezwoleń zawody, w których wykryto masowe nadużycia.",
+      },
+      {
+        n: "4",
+        title: "Wyzysk jako przestępstwo",
+        body: "Dwa nowe przestępstwa: wyzysk pracy cudzoziemca i handel zezwoleniami na pracę — do 4 lat więzienia. Pracodawca podejrzany lub skazany za wyzysk, handel ludźmi albo oszustwa podatkowe nie dostaje zezwoleń. Kara za zatrudnienie osoby bez prawa do pracy rośnie dwukrotnie i obejmuje cały łańcuch podwykonawców. Pośrednik nie może pobrać od pracownika żadnej opłaty za pracę, wizę ani zakwaterowanie. Pobyt do roku wymaga pełnego ubezpieczenia zdrowotnego, łącznie z kosztem powrotu.",
+      },
+      {
+        n: "5",
+        title: "To samo prawo pracy",
+        body: "Ochrona prawa pracy przysługuje każdemu pracującemu w Polsce na tych samych zasadach, niezależnie od paszportu.",
+      },
+      {
+        n: "6",
+        group: "Azyl i ochrona",
+        title: "Jedna agencja, jeden sąd",
+        body: "Procedurę azylową prowadzi cywilna Krajowa Agencja Migracyjna, z 16 punktami przyjęć — po jednym na województwo. Odwołania rozstrzyga Sąd Migracyjny, a wydalenie wykonuje Straż Graniczna.",
+      },
+      {
+        n: "7",
+        title: "Ośrodek na czas procedury",
+        body: "Na czas procedury azylowej osoba mieszka w ośrodku państwowym, nie pod dowolnym adresem — to ułatwia kontrolę i ewentualną deportację.",
+      },
+      {
+        n: "8",
+        title: "Odmowa to wyjazd",
+        body: "Odmowa azylu oznacza obowiązek wyjazdu. Z procedury azylowej nie da się przejść na zezwolenie na pracę bez opuszczenia Polski — kto chce tu pracować, składa wniosek z zagranicy.",
+      },
+      {
+        n: "9",
+        title: "Prawo i podatki",
+        body: "Pobyt zachowuje ten, kto przestrzega prawa i płaci podatki. Naruszenie oznacza utratę zezwolenia i obowiązek powrotu.",
+      },
+      {
+        n: "10",
+        title: "Kwota ONZ uchwalana przez Sejm",
+        body: "Liczbę uchodźców z programów ONZ uchwala co roku Sejm w ustawie budżetowej. Wyznacza ją liczba miejsc, które państwo realnie zapewni w mieszkaniach, na kursach i w szkołach — na start około 3200 osób rocznie. Pierwszeństwo mają kobiety, dzieci, osoby z niepełnosprawnościami i osoby prześladowane za orientację lub tożsamość.",
+      },
+      {
+        n: "11",
+        title: "Wojna u granicy",
+        body: "Ucieczka przed wojną u naszych granic, jak Ukraińcy w 2022 roku, dostaje szybką ochronę czasową poza limitem. To solidarność sąsiedzka, nie standardowa migracja.",
+      },
+      {
+        n: "12",
+        title: "Dzieci bez opieki",
+        body: "Dzieci bez opieki dorosłych dostają kuratora w ciągu 3 dni i trafiają do rodziny zastępczej albo ośrodka dla dzieci — nigdy do warunków dla dorosłych.",
+      },
+      {
+        n: "13",
+        title: "Granica instrumentalna",
+        body: "Jeśli granicę wykorzystuje się instrumentalnie do wywołania kryzysu, jak przy Białorusi, procedurę azylową można zawiesić łącznie na maksymalnie 6 miesięcy w roku. Każde zawieszenie i przedłużenie kontroluje Sąd Najwyższy. Dziś przedłuża je Sejm bez górnego limitu — to zmieniamy.",
+      },
+      {
+        n: "14",
+        group: "Rodzina, język, obywatelstwo",
+        title: "Łączenie rodzin",
+        body: "Cudzoziemiec mieszkający legalnie w Polsce może sprowadzić małżonka lub partnera i dzieci do 18. roku życia. Warunki: mieszkanie odpowiedniej wielkości zapewnione co najmniej na rok oraz dochód, z którego po podatku i czynszu zostaje miesięcznie co najmniej 1300 zł na osobę samotną albo 2150 zł na parę, plus 700 zł na dziecko do 6 lat, 830 zł w wieku 7–10 lat, 970 zł w wieku 11–14 lat i 1110 zł od 15 lat. Kwoty są waloryzowane co roku jak inne progi dochodowe. Przy pobycie czasowym trzeba mieszkać w Polsce co najmniej 2 lata, zanim sprowadzi się rodzinę. Ten sam warunek dochodowy obowiązuje przy przedłużaniu zezwolenia. Wyjątki: dzieci, które przybyły bez opieki, oraz uchodźcy składający wniosek w ciągu 3 miesięcy od przyznania ochrony.",
+      },
+      {
+        n: "15",
+        title: "Polski za darmo",
+        body: "Każdy cudzoziemiec z prawem pobytu ma prawo do bezpłatnego kursu języka polskiego i wiedzy o Polsce przez 3 lata od zapisu.",
+      },
+      {
+        n: "16",
+        title: "Obywatelstwo",
+        body: "Obywatelstwo po 9 latach legalnego pobytu, z językiem polskim na poziomie B1, zdanym testem wiedzy o społeczeństwie i bez istotnej karalności.",
+      },
+      {
+        n: "17",
+        title: "Dobrowolny powrót",
+        body: "Osoba, która decyduje się wrócić do kraju pochodzenia, dostaje 10 tysięcy złotych wsparcia — taniej i sprawiedliwiej niż lata utrzymywania kogoś bez perspektyw na pozostanie.",
+      },
+      {
+        n: "18",
+        title: "Naukowcy i specjaliści",
+        body: "Zagraniczni naukowcy i specjaliści przez pierwsze 7 lat pracy w Polsce płacą podatek od 75% dochodu — ale tylko w części mieszczącej się w drugim progu PIT. Nie dotyczy to obywateli polskich ani osób, które mieszkały w Polsce w ciągu ostatnich 5 lat. Specjalne ulgi dla powracających z emigracji znikają: Polak wracający do kraju korzysta z tych samych usług publicznych co każdy — i to one mają być powodem powrotu.",
+      },
+    ],
+  },
+  {
+    num: 4,
     slug: "gospodarka",
     part: "I",
     title: "Gospodarka dla ludzi",
     kicker: "Podatki i własność",
-    lead: "Dziś zwykły pracujący człowiek płaci wyższy realny podatek niż wielu milionerów korzystających z ulg wylobbowanych przez lata. Odwracamy tę logikę — prosto i nisko dla większości, wyraźnie więcej od tych, którzy naprawdę mogą sobie na to pozwolić.",
+    lead: "Dziś zwykły pracujący człowiek płaci wyższy realny podatek niż wielu milionerów korzystających z ulg wylobbowanych przez lata. Odwracamy tę logikę — prosto i nisko dla większości, wyraźnie więcej od tych, którzy naprawdę mogą sobie na to pozwolić, bez świętych krów i wyjątków dla wybranych grup zawodowych.",
     pillars: ["pensja"],
     points: [
       {
@@ -392,12 +503,12 @@ export const CHAPTERS: Chapter[] = [
       {
         n: "7",
         title: "Ulgi zależne od dochodu",
-        body: "Likwidujemy zerowy PIT dla młodych do 26. roku życia i dla pracujących seniorów. Ulga na dzieci dostaje próg dochodowy dla wszystkich rodzin, nie tylko tych z jednym dzieckiem.",
+        body: "Likwidujemy zerowy PIT dla młodych do 26. roku życia, dla pracujących seniorów i dla osób wracających z emigracji. Ulga na dzieci dostaje próg dochodowy dla wszystkich rodzin, nie tylko tych z jednym dzieckiem. Ulgi niezależne od dochodu najbardziej opłacają się tym, którzy zarabiają najwięcej.",
       },
       {
         n: "8",
         title: "Uczciwy urząd",
-        body: "Przychody celowo ukryte przed fiskusem, gdy zostaną wykryte, podlegają przepadkowi. Fundacje rodzinne wykorzystywane wyłącznie do unikania podatków likwidujemy jako instrument. KAS ma być pomocą, nie organem „łapanek” — za błąd urzędu odpowiada urząd. Wpływów z uszczelnienia nie wliczamy do rachunku tego programu.",
+        body: "Przychody celowo ukryte przed fiskusem, gdy zostaną wykryte, podlegają przepadkowi. Fundacje rodzinne wykorzystywane wyłącznie do unikania podatków likwidujemy jako instrument. KAS ma być pomocą, nie organem „łapanek” — za błąd urzędu odpowiada urząd. Wzmacniamy KAS w walce z karuzelami VAT i szarą strefą — ale wpływów z uszczelnienia nie wliczamy do rachunku tego programu.",
       },
       {
         n: "9",
@@ -432,7 +543,7 @@ export const CHAPTERS: Chapter[] = [
       {
         n: "15",
         title: "Rdzeń państwowy",
-        body: "Na zawsze w rękach państwa: przesył i dystrybucja energii, elektrownie atomowe, węgiel na czas transformacji, publiczne OZE, infrastruktura kolejowa, przemysł zbrojeniowy, zasób mieszkań publicznych, BGK i banki rozrachunkowe. Cała energetyka, łącznie z obrotem i wytwarzaniem konwencjonalnym, zostaje państwowa.\n\nSprzedajemy jedynie pakiety mniejszościowe w komercyjnych bankach Skarbu Państwa — ze „złotą akcją”. Cały przychód trafia do Funduszu Inwestycji Strategicznych.",
+        body: "Na zawsze w rękach państwa: przesył i dystrybucja energii, elektrownie atomowe, węgiel na czas transformacji, publiczne OZE, infrastruktura kolejowa, przemysł zbrojeniowy, zasób mieszkań publicznych, BGK i banki rozrachunkowe. Cała energetyka, łącznie z obrotem i wytwarzaniem konwencjonalnym, zostaje państwowa.\n\nSprzedajemy jedynie pakiety mniejszościowe w komercyjnych bankach Skarbu Państwa — ze „złotą akcją”, która daje państwu weto w kluczowych sprawach: przeniesienie siedziby, infrastruktura krytyczna, wrogie przejęcie, masowe zwolnienia. Cały przychód trafia do Funduszu Inwestycji Strategicznych.",
       },
       {
         n: "16",
@@ -444,10 +555,20 @@ export const CHAPTERS: Chapter[] = [
         title: "Deregulacja bez praw pracowniczych",
         body: "Zbędne procedury upraszczamy — bez dotykania praw pracowniczych. Tam, gdzie dziś trzeba trzech koncesji, wystarczy jedna. W sprawach niskiego ryzyka: milcząca zgoda, jeśli urząd nie odpowie w terminie.",
       },
+      {
+        n: "18",
+        title: "Rezygnacja jednym kliknięciem",
+        body: "Subskrypcję i usługę zawartą przez internet można wypowiedzieć tą samą drogą i tak samo łatwo, jak się ją zawarło — bez dzwonienia na infolinię. Cena w reklamie i na pierwszym ekranie jest ceną końcową, ze wszystkimi obowiązkowymi opłatami. Darmowy okres próbny nie przechodzi w płatny bez wyraźnej zgody klienta tuż przed pierwszym obciążeniem.",
+      },
+      {
+        n: "19",
+        title: "Pozew zbiorowy od dwóch osób",
+        body: "Pozew zbiorowy mogą złożyć już dwie osoby, w każdej sprawie konsumenckiej. Organizacja konsumencka może pozwać w imieniu wszystkich poszkodowanych, którzy nie zgłosili sprzeciwu. Nieodebrane pieniądze idą na edukację konsumencką, nie wracają do firmy. UOKiK może nakazać natychmiastowe wstrzymanie praktyki, a jego ostateczna decyzja wiąże sąd w sprawie o odszkodowanie — klient nie musi drugi raz udowadniać, że firma oszukiwała.",
+      },
     ],
   },
   {
-    num: 4,
+    num: 5,
     slug: "zdrowie",
     part: "I",
     title: "Zdrowie i Twoje ciało",
@@ -478,7 +599,7 @@ export const CHAPTERS: Chapter[] = [
       {
         n: "5",
         title: "Etat, nie kontrakt",
-        body: "Umowa o pracę staje się podstawową formą zatrudnienia w ochronie zdrowia. Poszerzamy kompetencje pielęgniarek, ratowników, diagnostów i farmaceutów. Zawód psychoterapeuty dostaje odrębną ustawę. Zwiększamy liczbę miejsc na studiach medycznych.",
+        body: "Umowa o pracę staje się podstawową formą zatrudnienia w ochronie zdrowia. Poszerzamy kompetencje pielęgniarek, ratowników, diagnostów i farmaceutów. Zawód psychoterapeuty dostaje odrębną ustawę, tak jak w 2026 roku dostał ją zawód psychologa. Zwiększamy liczbę miejsc na studiach medycznych.",
       },
       {
         n: "6",
@@ -528,12 +649,12 @@ export const CHAPTERS: Chapter[] = [
     ],
   },
   {
-    num: 5,
+    num: 6,
     slug: "uczciwa-polityka",
     part: "I",
     title: "Uczciwa polityka",
     kicker: "Państwo prawa",
-    lead: "Polityka w Polsce zbyt długo była grą, w której wielkie pieniądze sponsorów i znajomości decydowały więcej niż Twój głos.",
+    lead: "Polityka w Polsce zbyt długo była grą, w której wielkie pieniądze sponsorów i znajomości decydowały więcej niż Twój głos. Kończymy z tym: jawne finanse kampanii i koniec przechodzenia z fotela ministra prosto do rady nadzorczej spółki, którą się wcześniej nadzorowało.",
     pillars: [],
     points: [
       {
@@ -569,7 +690,7 @@ export const CHAPTERS: Chapter[] = [
     ],
   },
   {
-    num: 6,
+    num: 7,
     slug: "mieszkanie",
     part: "I",
     title: "Prawo do mieszkania",
@@ -615,12 +736,12 @@ export const CHAPTERS: Chapter[] = [
     ],
   },
   {
-    num: 7,
+    num: 8,
     slug: "opieka",
     part: "I",
     title: "Państwo, na które możesz liczyć",
     kicker: "Opieka",
-    lead: "Miarą państwa jest to, jak traktuje ludzi w najtrudniejszych momentach życia — starość, choroba, samotne wychowywanie dziecka. Dziś ten ciężar zbyt często spada na rodzinę, a najczęściej na kobiety.",
+    lead: "Miarą państwa jest to, jak traktuje ludzi w najtrudniejszych momentach życia — starość, choroba, samotne wychowywanie dziecka. Dziś ten ciężar zbyt często spada na rodzinę, a najczęściej na kobiety. Bierzemy go na siebie.",
     pillars: ["bezpieczenstwo", "pensja"],
     points: [
       {
@@ -636,7 +757,7 @@ export const CHAPTERS: Chapter[] = [
       {
         n: "3",
         title: "Asystencja",
-        body: "Bezpłatna asystencja osobista: od 30 do 240 godzin miesięcznie, zależnie od potrzeb, dla wszystkich grup wiekowych od pierwszego roku. Opieka wytchnieniowa dla opiekunów. Polski Język Migowy zyskuje status języka mniejszości.",
+        body: "Osoby z niepełnosprawnościami dostają bezpłatną asystencję osobistą: od 30 do 240 godzin miesięcznie, zależnie od potrzeb, dla wszystkich grup wiekowych od pierwszego roku. Opieka wytchnieniowa dla opiekunów. Polski Język Migowy zyskuje status języka mniejszości.",
       },
       {
         n: "4",
@@ -671,7 +792,7 @@ export const CHAPTERS: Chapter[] = [
     ],
   },
   {
-    num: 8,
+    num: 9,
     slug: "nauka",
     part: "I",
     title: "Nauka",
@@ -717,7 +838,7 @@ export const CHAPTERS: Chapter[] = [
     ],
   },
   {
-    num: 9,
+    num: 10,
     slug: "szkola",
     part: "I",
     title: "Szkoła równych szans",
@@ -778,7 +899,7 @@ export const CHAPTERS: Chapter[] = [
     ],
   },
   {
-    num: 10,
+    num: 11,
     slug: "wolnosc",
     part: "I",
     title: "Wolność, równość, solidarność",
@@ -834,7 +955,7 @@ export const CHAPTERS: Chapter[] = [
     ],
   },
   {
-    num: 11,
+    num: 12,
     slug: "przyroda",
     part: "I",
     title: "Przyroda",
@@ -857,73 +978,33 @@ export const CHAPTERS: Chapter[] = [
     ],
   },
   {
-    num: 12,
+    num: 13,
     slug: "europa",
     part: "I",
     title: "Silna Polska w Europie",
-    kicker: "Granica i Unia",
-    lead: "Jesteśmy piątym krajem Unii. Granicą i azylem rządzi prawo, nie przypadek.",
+    kicker: "Unia i sojusze",
+    lead: "Jesteśmy piątym krajem Unii i zachowujemy się jak piąty kraj Unii — współtworzymy jej decyzje, zamiast tylko na nie reagować.",
     pillars: ["bezpieczenstwo"],
     points: [
       {
         n: "1",
         title: "NATO zostaje fundamentem",
-        body: "Europejskie zdolności obronne i bliższa współpraca z Niemcami i Francją — mniejsza zależność od jednego partnera. NATO zostaje fundamentem.",
+        body: "Europejskie zdolności obronne i bliższa współpraca wojskowa z Niemcami i Francją — mniejsza zależność od jednego partnera. NATO zostaje fundamentem bezpieczeństwa Polski.",
       },
       {
         n: "2",
         title: "Ukraina",
-        body: "Wsparcie dla Ukrainy, wojskowe i gospodarcze, jako inwestycja w nasze bezpieczeństwo. Ścieżka Ukrainy do NATO już teraz, bez warunku zakończenia wojny.",
+        body: "Wsparcie dla Ukrainy, wojskowe i gospodarcze, jako inwestycja w nasze bezpieczeństwo, nie tylko gest solidarności. Ścieżka Ukrainy do NATO już teraz, bez warunku zakończenia wojny.",
       },
       {
         n: "3",
-        title: "Kwota ONZ",
-        body: "Około 3200 uchodźców rocznie z programów ONZ — proporcja względem poziomu Szwecji do liczby ludności. Kwota korygowana co roku.",
-      },
-      {
-        n: "4",
-        title: "Wojna u granicy",
-        body: "Ucieczka przed wojną u granic, jak Ukraińcy w 2022, dostaje szybką ochronę czasową poza limitem. To solidarność sąsiedzka, nie standardowa migracja.",
-      },
-      {
-        n: "5",
-        title: "Jedna agencja, jeden sąd",
-        body: "Migracja zarobkowa: wysokie kwalifikacje i test rynku pracy. Azyl prowadzi cywilna Krajowa Agencja Migracyjna, 16 punktów przyjęć, Sąd Migracyjny. Wydalenie wykonuje straż graniczna.",
-      },
-      {
-        n: "6",
-        title: "Ośrodek na czas procedury",
-        body: "Na czas procedury azylowej osoba mieszka w ośrodku państwowym, nie pod dowolnym adresem.",
-      },
-      {
-        n: "7",
-        title: "Prawo i podatki",
-        body: "Pobyt zachowuje ten, kto przestrzega prawa i płaci podatki. Naruszenie oznacza utratę zezwolenia i obowiązek powrotu.",
-      },
-      {
-        n: "8",
-        title: "Powrót i obywatelstwo",
-        body: "Dobrowolny powrót: 10 tys. zł wsparcia. Obywatelstwo po 9 latach legalnego pobytu, język na B1, bez istotnej karalności.",
-      },
-      {
-        n: "9",
-        title: "Dzieci bez opieki",
-        body: "Dzieci bez opieki: kurator w 3 dni, rodzina zastępcza albo ośrodek dla dzieci — nigdy warunki dla dorosłych.",
-      },
-      {
-        n: "10",
-        title: "To samo prawo pracy",
-        body: "Prawo pracy przysługuje każdemu pracującemu w Polsce na tych samych zasadach, niezależnie od paszportu.",
-      },
-      {
-        n: "11",
-        title: "Granica instrumentalna",
-        body: "Jeśli granicę wykorzystuje się instrumentalnie, jak przy Białorusi, procedurę azylową można zawiesić łącznie na maksymalnie 6 miesięcy w roku. Każde zawieszenie kontroluje Sąd Najwyższy.",
+        title: "Granica i azyl",
+        body: "Zasady migracji, azylu i ochrony granicy opisujemy w rozdziale o migracji.",
       },
     ],
   },
   {
-    num: 13,
+    num: 14,
     slug: "obrona",
     part: "I",
     title: "Odporne społeczeństwo",
@@ -969,22 +1050,22 @@ export const CHAPTERS: Chapter[] = [
       {
         n: "8",
         title: "Komunikacja, nie ministerstwo prawdy",
-        body: "Profesjonalna komunikacja strategiczna przeciw dezinformacji — budowanie zaufania w kryzysie, nie ministerstwo prawdy.",
+        body: "Profesjonalna komunikacja strategiczna przeciw dezinformacji — budowanie zaufania społecznego w kryzysie, nie ministerstwo prawdy.",
       },
       {
         n: "9",
         title: "Kontrola służb",
-        body: "Mocniejsza sądowa kontrola policji i służb.",
+        body: "Mocniejsza sądowa kontrola policji i służb specjalnych, żeby ograniczyć ryzyko nadużyć władzy.",
       },
       {
         n: "10",
         title: "Nuclear sharing",
-        body: "Udział Polski w nuclear sharing NATO. To nie oznacza automatycznie rozmieszczenia broni jądrowej na polskim terytorium.",
+        body: "Dążymy do pełnego udziału Polski w natowskim współdzieleniu broni jądrowej (nuclear sharing), z rozmieszczeniem broni jądrowej Sojuszu na terytorium Polski. Certyfikujemy zamówione F-35 do jej przenoszenia — bez tego udział w programie byłby tylko deklaracją.",
       },
     ],
   },
   {
-    num: 14,
+    num: 15,
     slug: "ustroj",
     part: "II",
     title: "Ustrój państwa",
@@ -993,24 +1074,24 @@ export const CHAPTERS: Chapter[] = [
     pillars: [],
     points: [
       {
-        n: "14.1",
+        n: "15.1",
         title: "Prezydent",
         body: "Prezydent traci prawo weta wobec ustaw uchwalonych przez Sejm oraz prawo łaski.",
       },
       {
-        n: "14.2",
+        n: "15.2",
         title: "Głos między wyborami",
         body: "Każda zmiana konstytucji wymaga referendum, które musi poprzeć większość głosujących. 500 tysięcy podpisów w 18 miesięcy wymusza referendum konstytucyjne nawet bez zgody Sejmu. 250 tysięcy podpisów w 100 dni od uchwalenia ustawy zawiesza jej wejście w życie i kieruje ją do referendum — weto ludowe. To narzędzie działa w obie strony, także wtedy, gdy rządzi Realna Lewica.",
       },
       {
-        n: "14.3",
-        title: "Sejm jak w Niemczech, po polsku",
+        n: "15.3",
+        title: "Wybory do Sejmu",
         body: "460 posłów, system mieszany. Dwa głosy: na kandydata w jednym z 230 okręgów jednomandatowych i na listę partii. O liczbie mandatów decyduje lista — podział w pełni proporcjonalny. Próg 5%, ale partia, która wygra co najmniej 3 okręgi, wchodzi mimo progu. Jeśli partia wygra więcej okręgów, niż daje jej lista, mandatu nie dostają jej najsłabsi zwycięzcy okręgów. Granice wyznacza niezależna komisja, z tolerancją 15%, rewizja co 10 lat.",
       },
     ],
   },
   {
-    num: 15,
+    num: 16,
     slug: "media",
     part: "II",
     title: "Media publiczne",
@@ -1031,7 +1112,7 @@ export const CHAPTERS: Chapter[] = [
     ],
   },
   {
-    num: 16,
+    num: 17,
     slug: "nazwa",
     part: "II",
     title: "Nazwa i symbolika",
@@ -1072,9 +1153,9 @@ export const LEDGER = {
   rows: [
     { label: "Wydatki dodatkowe (środek)", y1: 70, y5: 125, note: "mld zł" },
     { label: "Wpływy ogólne", y1: 45, y5: 80, note: "bez daniny i earmarku akcyzy" },
-    { label: "Dziura programu", y1: 25, y5: 45, note: "ok. 0,5% → 0,8% PKB" },
+    { label: "Dziura programu", y1: 25, y5: 45, note: "ok. 0,6% → 1% PKB" },
   ],
-  deficit: { y1: "~7,3%", y5: "~7,5–8%" },
+  deficit: { y1: "~7,4%", y5: "~7,5–8%" },
   spends: [
     { name: "4-dniowy tydzień w sektorze publicznym", range: "25–45 mld" },
     { name: "Waloryzacja świadczeń poza emeryturami według płac", range: "20–25 mld" },
@@ -1090,10 +1171,25 @@ export const LEDGER = {
     "Rozrzut jest duży. Luka w 5. roku może wynieść od około zera do około 120 mld — zależnie od reakcji podatników i tempa zatrudniania w budżetówce.",
   housing:
     "Danina 1% (około 15–18 mld) zamyka 25–40 tys. mieszkań rocznie. Nie zamyka unijnego kryterium 3% deficytu. Dlatego euro nie ma kalendarza.",
+  added:
+    "Nowe pozycje wersji z 24 września: Krajowa Agencja Migracyjna, Sąd Migracyjny, bezpłatne kursy polskiego i etaty w publicznych instytucjach kultury — wydatki rzędu pojedynczych miliardów rocznie. Po stronie dochodów: koniec ulgi dla wracających z emigracji. Mieszczą się w podanym rozrzucie; dokładna wycena — w projekcie ustawy.",
   atom: "Atom: dług Funduszu Inwestycji Strategicznych, 12 GW w horyzoncie 20–25 lat. W statystyce długu będzie widoczny, nie schowany.",
   excise:
     "Przyrost akcyzy alkoholowej i konopnej ponad poziom z 2027 (około 3–5 mld rocznie) idzie na psychiatrię, nie na łatanie deficytu.",
 };
+
+/** Liczebnik z wielkiej litery do nagłówków: 17 → „Siedemnaście”. */
+export function chapterCountWord(n: number) {
+  const words: Record<number, string> = {
+    15: "Piętnaście",
+    16: "Szesnaście",
+    17: "Siedemnaście",
+    18: "Osiemnaście",
+    19: "Dziewiętnaście",
+    20: "Dwadzieścia",
+  };
+  return words[n] ?? String(n);
+}
 
 export function chapterBySlug(slug: string) {
   return CHAPTERS.find((c) => c.slug === slug);
