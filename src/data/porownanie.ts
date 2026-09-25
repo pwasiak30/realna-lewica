@@ -1,7 +1,7 @@
 /*
   Porównanie programów: Realna Lewica (deklaracja v5, 24 września 2026) wobec partii
   sejmowych X kadencji oraz Konfederacji Korony Polskiej.
-  Źródło: public/porownanie.pdf (opracowanie analityczne, 24 września 2026).
+  Źródło: public/porownanie.pdf (opracowanie analityczne, aktualizacja 25 września 2026, deklaracja v10).
   Każdy wiersz ma `chapter` — slug rozdziału programu, przy którym się wyświetla.
 */
 
@@ -26,20 +26,27 @@ export type CompareSection = {
 export const COMPARE = {
   title: "Porównanie programów",
   subtitle:
-    "Realna Lewica (deklaracja v5, 24 września 2026) wobec partii sejmowych X kadencji oraz Konfederacji Korony Polskiej",
-  date: "24 września 2026",
+    "Realna Lewica (deklaracja v10, 25 września 2026) wobec partii sejmowych X kadencji oraz Konfederacji Korony Polskiej",
+  date: "25 września 2026",
   pdf: {
     href: "porownanie.pdf",
-    filename: "Porownanie_RL_partie_sejmowe_KKP.pdf",
+    filename: "Porownanie_RL_partie_sejmowe_KKP_v10.pdf",
     label: "Pobierz porównanie (PDF)",
   },
   lead: "Ten dokument zestawia każdy rozdział deklaracji Realnej Lewicy z analogicznymi punktami Nowej Lewicy, Razem, Koalicji Obywatelskiej, PSL, Polski 2050 / Unii Centrum, PiS, Rozwoju Plus, Konfederacji (Nowa Nadzieja + RN) i Konfederacji Korony Polskiej. Tam, gdzie partia nie ma precyzyjnego odpowiednika, jest to zaznaczone. Porównanie jest analityczne, nie agitacyjne.",
   sources:
-    "RL / NL / Razem — jak w opracowaniu z 24.09.2026 (deklaracja RL v5; program KW NL 2023 + priorytety XII 2025 + „1000 dni”; deklaracja Razem XI 2025). KO: 100 konkretów 2023 + umowa koalicyjna 15.10 + praktyka rządu Tusk III do IX 2026. PSL / PL2050: program Trzeciej Drogi 2023, umowa koalicyjna, manifest Unii Centrum IX 2026. PiS: program 2023 i linia klubu 2024–26. Rozwój Plus: 10 filarów z 28.07.2026. Konfederacja: program prezydencki Mentzena 2025, stanowiska klubu 2024–26. KKP: program partii (konfederacjakoronypolskiej.pl), kampania prezydencka Brauna 2025, projekty IX 2026 (ustawa o agentach, „Polska za pokojem”).",
+    "RL / NL / Razem — jak w opracowaniu z 24.09.2026, zaktualizowane o deklarację RL v10 (25.09.2026); program KW NL 2023 + priorytety XII 2025 + „1000 dni”; deklaracja Razem XI 2025. KO: 100 konkretów 2023 + umowa koalicyjna 15.10 + praktyka rządu Tusk III do IX 2026. PSL / PL2050: program Trzeciej Drogi 2023, umowa koalicyjna, manifest Unii Centrum IX 2026. PiS: program 2023 i linia klubu 2024–26. Rozwój Plus: 10 filarów z 28.07.2026. Konfederacja: program prezydencki Mentzena 2025, stanowiska klubu 2024–26. KKP: program partii (konfederacjakoronypolskiej.pl), kampania prezydencka Brauna 2025, projekty IX 2026 (ustawa o agentach, „Polska za pokojem”).",
+  update: {
+    text: "Aktualizacja z 25 września 2026. Poprzednia wersja tego opracowania odnosiła się do deklaracji RL w wersji 5 (24 września 2026). Wersje 6–9 wprowadziły przede wszystkim zmiany redakcyjne i porządkujące (numeracja, odsyłacze między rozdziałami) oraz kilka nowych pozycji odnotowanych już w poprzedniej wersji tego opracowania (Krajowa Agencja Migracyjna i Sąd Migracyjny — v6; odrzucenie umowy UE–Mercosur, pakiet anty-SLAPP, zniesienie przywilejów łowieckich — v7). Sam trzon programowy — podatki, migracja, zdrowie, mieszkania, ustrój, obrona — pozostał w wersji 10 identyczny co do liczb i mechanizmów. Przy weryfikacji całego tekstu v10 wykryto dwie zmiany opisane niżej:",
+    bullets: [
+      "W autoprezentacji RL (“Kim jesteśmy”) dopisano, że państwo ma być “sprawne między władzą centralną a samorządem” — nowy akcent, którego nie było w opisie pozycjonowania w wersji 5.",
+      "Pozycja “B+R do 3% PKB”, którą poprzednia wersja tego opracowania przypisywała RL w rozdziale 9 (Nauka), nie znajduje potwierdzenia w tekście wersji 10 — deklaracja mówi o waloryzacji subwencji, gwarantowanym budżecie NCN/PAN i etacie dla doktorantów, ale nie stawia liczbowego celu B+R do 3% PKB. Usunięto tę pozycję z tabeli.",
+    ],
+  },
   method:
     "Partie rządzące (KO, PSL, PL2050, NL) mają program 2023 złagodzony przez kompromis koalicyjny i weto prezydenta Nawrockiego. PiS po rozłamie VII 2026 nie opublikowało nowego programu kadencyjnego — używamy linii klubu i dziedzictwa 2015–23. R+ i KKP to formacje młode: R+ ma 10 filarów, nie 155 punktów; KKP ma program tożsamościowo-katolicki, nie tabelę wydatków. Gęstość liczbowa RL pozostaje unikatowa na tle całego Sejmu.",
   footnote:
-    "Opracowanie: porównanie analityczne, 24 września 2026. Cytaty i liczby: deklaracja RL v5 (24.09.2026); program KW Nowa Lewica 2023; uchwała KK NL 14.12.2025; lewica.org.pl; „1000 dni Lewicy w rządzie” (IX 2026); deklaracja Razem 8–9.11.2025; Krytyka Polityczna 5.12.2025; 100 konkretów KO 2023; umowa koalicyjna 10.11.2023; 10 filarów Rozwoju Plus 28.07.2026; program prezydencki S. Mentzena 2025; program KKP i projekty IX 2026; skład Sejmu X kadencji na 24.09.2026 (kluby: KO, PiS, R+, PSL, PL2050/Centrum, NL, Konfederacja; koła: Razem, DB, KKP).",
+    "Opracowanie: porównanie analityczne, pierwotnie 24 września 2026 (deklaracja RL v5), zaktualizowane 25 września 2026 do deklaracji RL v10. Cytaty i liczby: deklaracja RL v10 (25.09.2026); program KW Nowa Lewica 2023; uchwała KK NL 14.12.2025; lewica.org.pl; „1000 dni Lewicy w rządzie” (IX 2026); deklaracja Razem 8–9.11.2025; Krytyka Polityczna 5.12.2025; 100 konkretów KO 2023; umowa koalicyjna 10.11.2023; 10 filarów Rozwoju Plus 28.07.2026; program prezydencki S. Mentzena 2025; program KKP i projekty IX 2026; skład Sejmu X kadencji na 25.09.2026 (kluby: KO, PiS, R+, PSL, PL2050/Centrum, NL, Konfederacja; koła: Razem, DB, KKP).",
 };
 
 /** Kolumny porównania: RL i cztery bloki sejmowe. */
@@ -63,7 +70,7 @@ export const BLOCS: { id: BlocId; short: string; parties: string[] }[] = [
 export const POSITIONING: (CompareCells & { topic: string })[] = [
   {
     topic: "Autodefinicja",
-    rl: "Socjaldemokracja realistyczna. Silne państwo przy pensji, zdrowiu, mieszkaniu i ciele; twarde na granicy i w kasie.",
+    rl: "Socjaldemokracja realistyczna. Silne państwo przy pensji, zdrowiu, mieszkaniu i ciele; sprawne między władzą centralną a samorządem; twarde na granicy i w kasie.",
     nl: "NL: socjaldemokracja + socjalliberalizm, PES/S&D. Razem: demokratyczny socjalizm / nordycka SD.",
     ko: "KO: demoliberalizm, pro-UE. PSL: agraryzm, chadecja. 2050/UC: liberalne centrum, jakość życia.",
     pis: "PiS: narodowy konserwatyzm, solidaryzm, etatyzm. R+: „nowoczesna chadecja europejska”, patriotyzm + inwestycje.",
@@ -100,12 +107,12 @@ export const COMPARE_SECTIONS: CompareSection[] = [
     id: "atom",
     chapters: ["atom-krzem-stal"],
     intro:
-      "To najbardziej „skopiowany” rozdział wobec Razem 2025. Tytuł i rdzeń industrialny RL = Razem. Na reszcie sceny atom wraca do łask (PiS, R+, częściowo KO w rządzie), ale bez pakietu 12 GW + zniesienie 60% PKB + Linux w administracji.",
+      "To najbardziej „skopiowany” rozdział wobec Razem 2025. Tytuł i rdzeń industrialny RL = Razem. Na reszcie sceny atom wraca do łask (PiS, R+, częściowo KO w rządzie), ale bez pakietu 12 GW + zniesienie 60% PKB + Linux w administracji + państwowego holdingu budowlanego.",
     rows: [
       {
         topic: "Atom",
         chapter: "atom-krzem-stal",
-        rl: "Docelowo ~12 GW, horyzont 20–25 lat (nie 15). Przyspieszenie Lubiatowo-Kopalino i Pątnów. Przegląd co 3–4 lata.",
+        rl: "Docelowo ~12 GW w 8 blokach, horyzont 20–25 lat (nie 15). Przyspieszenie Lubiatowo-Kopalino i Pątnów. Przegląd co 3–4 lata.",
         nl: "NL 2023: brak celu GW; w rządzie ministerstwo energii + sprawiedliwa transformacja. Razem: min. 8 bloków / 12 GW.",
         ko: "KO: kontynuacja programów jądrowych rządu (nie flaga 2023). 2050: OZE pierwsze, atom dopuszczalny. PSL: ostrożnie, ochrona wsi.",
         pis: "PiS 2015–23: start programu jądrowego. R+: przyspieszyć duże EJ + SMR jako priorytet państwa.",
@@ -114,11 +121,20 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "OZE / klimat",
         chapter: "atom-krzem-stal",
-        rl: "Wiatr i słońce nie czekają na atom. Nie podnosić cen „pod dyrektywę”. Dopłaty z FSK i ETS dla ubogich.",
-        nl: "NL: Zielony Ład, −50% CO₂ (starsze). Razem: OZE + atom, neutralność 2050.",
+        rl: "Wiatr i słońce nie czekają na atom. Nie podnosić cen „pod dyrektywę”. Dopłaty z FSK i ETS dla ubogich (ochrona przed ETS2).",
+        nl: "NL: Zielony Ład, −50% CO ₂ (starsze). Razem: OZE + atom, neutralność 2050.",
         ko: "KO/2050: Zielony Ład, wiatr na lądzie, KPO. PSL: hamulec wobec ETS2 i obciążeń rolników.",
         pis: "PiS: atom + węgiel transformacyjny, opór ETS2. R+: stop polityce klimatycznej UE, odejście od ETS/ETS2 i ZŁ.",
         konf: "Konf. i KKP: twarde „nie” dla Zielonego Ładu. Konf.: bezpieczeństwo energetyczne bez unijnego kalendarza.",
+      },
+      {
+        topic: "Krajowe kompetencje",
+        chapter: "atom-krzem-stal",
+        rl: "Krajowe kompetencje przemysłowe: atom, półprzewodniki, budowa maszyn — niezależność od zagranicznych wykonawców.",
+        nl: "NL/Razem: brak tak wyodrębnionego pakietu trzech branż jednocześnie.",
+        ko: "KO/2050: innowacyjność ogólnie, bez wskazania tych trzech branż.",
+        pis: "PiS/R+: atom i zbrojeniówka tak, półprzewodniki słabiej wyodrębnione.",
+        konf: "Konf./KKP: nie ten język.",
       },
       {
         topic: "Górnicy",
@@ -141,7 +157,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Fundusz strategiczny",
         chapter: "atom-krzem-stal",
-        rl: "Fundusz Inwestycji Strategicznych z długu: atom + wojsko. Mieszkania osobno (danina).",
+        rl: "Fundusz Inwestycji Strategicznych z długu: atom + wojsko. Mieszkania finansowane osobno (danina, rozdział 7).",
         nl: "NL: KPO, BGK, programy sektorowe. Razem: jeden fundusz przemysł–infra–tech.",
         ko: "KO: KPO + BGK. 2050: fundusze UE. PSL: BGK dla wsi i samorządów.",
         pis: "PiS: CPK, Via Carpatia, FWSZ. R+: przywrócić wielkie inwestycje (CPK, kolej, porty).",
@@ -150,7 +166,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Kolej / drogi / porty",
         chapter: "atom-krzem-stal",
-        rl: "KDP, regionalna, nocna, polskie tech. Jeden e-pobór. Autobus w każdej gminie + 3 kursy weekend. Jeden bilet.",
+        rl: "KDP, regionalna, nocna, polskie technologie. Jeden e-pobór na autostradach. Autobus w każdej gminie + 3 kursy weekend. Jeden bilet u wszystkich przewoźników.",
         nl: "NL: zintegrowany bilet, odbudowa kolei (projekt 2026). Razem: KDP + lokalna + nocna + centra.",
         ko: "KO: CPK w praktyce rządu sporny; kolej i drogi z KPO. 2050: kolej i klimat. PSL: drogi gminne, PKS.",
         pis: "PiS: CPK jako totem. R+: wrócić do CPK, kolei, portów.",
@@ -159,7 +175,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Linux / AI",
         chapter: "atom-krzem-stal",
-        rl: "50 tys. stanowisk Linux rok 1; ≥80% administracji rok 5. Kod publiczny. Polskie AI w 36 mies. Zakaz trenowania AI na danych bez zgody.",
+        rl: "50 tys. stanowisk Linux rok 1; ≥80% administracji rok 5. Kod publiczny. Jeden login (urząd + zdrowie). Polskie AI w 36 mies. Zakaz trenowania AI na danych bez zgody.",
         nl: "NL: PLLuM (11 modeli od V 2026), mObywatel — bez twardego odejścia od Microsoftu. Razem: suwerenność cyfrowa, bez harmonogramu Linuxa.",
         ko: "KO: mObywatel, eIDAS 2.0, chmura. Brak wymuszonego Linuxa. 2050: cyfryzacja państwa.",
         pis: "PiS: mObywatel 2017–23. R+: „Polska w smartfonie”.",
@@ -168,11 +184,20 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Węgiel w domach / rezerwy",
         chapter: "atom-krzem-stal",
-        rl: "Zakaz węgla w miastach od 2035. Sieci ciepłownicze nieprywatyzowane. Gaz 90 / ropa 60 / węgiel 30 dni.",
+        rl: "Zakaz węgla w miastach od 2035. Sieci ciepłownicze nieprywatyzowane, prawo pierwokupu gminy. Gaz 90 / ropa 60 / węgiel 30 dni.",
         nl: "NL: ciepło systemowe, kotły. Razem: priorytet ciepła publicznego. Brak tak precyzyjnych zapasów u obu.",
         ko: "KO: wymiana kotłów, smog. Brak 90/60/30.",
         pis: "PiS: węgiel w miksie, rezerwy jako suwerenność (mniej liczb). R+: tania energia, nie data zakazu.",
         konf: "Konf./KKP: sprzeciw zakazom węglowym z kalendarza UE.",
+      },
+      {
+        topic: "Holding budowlany",
+        chapter: "atom-krzem-stal",
+        rl: "Państwowy holding budowlany specjalizujący się w kolei i energetyce — państwo realizuje część inwestycji własnymi rękami, nie tylko zamawia u prywatnych firm.",
+        nl: "NL/Razem: brak tak wyodrębnionego holdingu wykonawczego.",
+        ko: "KO: zamówienia publiczne standardowo, bez holdingu.",
+        pis: "PiS: czempioni narodowi jako spółki SP, nie holding wykonawczy. R+: inwestycje SP, nie holding budowlany.",
+        konf: "Konf.: prywatyzować, nie tworzyć nowy podmiot państwowy. KKP: nie ten temat.",
       },
     ],
   },
@@ -219,13 +244,31 @@ export const COMPARE_SECTIONS: CompareSection[] = [
         konf: "Konf.: płaca min. zniekształca rynek; Mentzen historycznie za jej ograniczeniem.",
       },
       {
+        topic: "Jawność płacowa",
+        chapter: "praca",
+        rl: "Widełki wynagrodzenia obowiązkowe w każdym ogłoszeniu o pracę. Mechanizmy korygujące różnice płacowe kobiet i mężczyzn. Koniec premii frekwencyjnych (kara za L4).",
+        nl: "NL/Razem: jawność płac jako kierunek, bez tak precyzyjnego obowiązku w ogłoszeniu.",
+        ko: "KO/2050: unijna dyrektywa o jawności płac w toku implementacji, RL idzie dalej.",
+        pis: "PiS/R+: nie flaga.",
+        konf: "Konf.: dodatkowa regulacja dla pracodawców, do ograniczenia.",
+      },
+      {
         topic: "Budżetówka / automatyzacja",
         chapter: "praca",
-        rl: "Pensje = średnia + waloryzacja ≥ inflacja. Koniec outsourcingu stałych zadań. Dodatkowy CIT → Fundusz Automatyzacji.",
+        rl: "Pensje = średnia + waloryzacja ≥ inflacja. Koniec outsourcingu stałych zadań. Dodatkowy CIT firm redukujących etaty → Fundusz Automatyzacji (przekwalifikowanie).",
         nl: "NL 2023: 20% „natychmiast” + 2×/rok; w praktyce 2024 20/30%, 2025 już 5%. Razem: godne płace nauczycieli i pielęgniarek. Brak funduszu automatyzacji.",
         ko: "KO: podwyżki 2024, potem hamulec fiskalny. 2050: sprawne państwo.",
         pis: "PiS: podwyżki wybrane grupy. R+: nie ten fundusz.",
         konf: "Konf.: ciąć administrację, nie wiązać ze średnią.",
+      },
+      {
+        topic: "Twórcy i kultura",
+        chapter: "praca",
+        rl: "Pół składki dla zawodowych twórców (Fundusz Ubezpieczeń Twórców z opłaty 2% od honorariów + dotacja budżetowa). Umowa o pracę jako norma w publicznych instytucjach kultury. Praca użyteczna społecznie w regionach z bezrobociem.",
+        nl: "NL/Razem: wsparcie dla kultury ogólnie, bez tak skonstruowanego funduszu składkowego.",
+        ko: "KO/2050: granty kulturalne, bez ubezpieczeniowego mechanizmu twórców.",
+        pis: "PiS/R+: nie ten model.",
+        konf: "Konf./KKP: nie ten temat.",
       },
       {
         topic: "Bezrobocie / staże / mobbing",
@@ -233,7 +276,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
         rl: "6 mies. 80% + 6 mies. 50%, limit jak L4. Koniec bezpłatnych staży. Sądy pracy: wyrok I inst. w 6 mies. Mobbing = wypadek przy pracy.",
         nl: "NL: 100% na L4 (2023) — mocniejsze niż RL; ustawa o płatnych stażach w toku. Razem: zakaz darmowych staży od początku.",
         ko: "KO: bon, staże — słabsza precyzja. PSL: sezonowość rolnictwa.",
-        pis: "PiS: 500+ logika transferów, nie 80% pensji przez rok.",
+        pis: "PiS: 500+/800+ logika transferów, nie 80% pensji przez rok.",
         konf: "Konf.: zasiłki zniechęcają do pracy.",
       },
     ],
@@ -250,7 +293,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Praca cudzoziemców",
         chapter: "migracja",
-        rl: "Zezwolenie tylko przy pensji ≥90% mediany (75% w deficytowych). Oferta 14 dni w publicznym serwisie. Weryfikacja ZUS. Kara pracodawcy.",
+        rl: "Zezwolenie tylko przy pensji ≥90% mediany (75% w deficytowych). Oferta 14 dni w publicznym serwisie. Weryfikacja ZUS. Kara pracodawcy, nowe przestępstwa: wyzysk migranta, handel zezwoleniami.",
         nl: "NL: ochrona praw migrantów, PIP — brak progu 90%. Razem: „ucywilizowanie” zarobkowej, bez 90%.",
         ko: "KO w rządzie: strategia migracyjna 2024 (krytykowana przez Razem jako nieskonsultowana), zezwolenia sektorowe. Brak 90% mediany.",
         pis: "PiS: twarda retoryka + masowe zezwolenia 2021–23 (luka, którą RL adresuje progiem). R+: suwerenna polityka, wydalanie za rażące naruszenia, sprzeciw paktowi UE.",
@@ -277,7 +320,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Łączenie rodzin / obywatelstwo",
         chapter: "migracja",
-        rl: "Dochód po czynszu 1300/2150 + stawki na dziecko. 2 lata pobytu. Obywatelstwo po 9 latach, B1, test, niekaralność. 10 tys. za dobrowolny powrót.",
+        rl: "Dochód po czynszu 1300/2150 zł + stawki na dziecko (700/830/970/1110 zł wg wieku). 2 lata pobytu. Obywatelstwo po 9 latach, B1, test, niekaralność. 10 tys. zł za dobrowolny powrót.",
         nl: "NL/Razem: łączenie jako prawo, bez tych progów. 9 lat + B1 twardsze niż typowa lewica.",
         ko: "KO: integracja, kursy — bez 1300 zł i 10 tys. powrotu.",
         pis: "PiS: utrudnianie obywatelstwa, Karta Polaka jako wyjątek.",
@@ -286,7 +329,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Ulga powrotu / specjaliści",
         chapter: "migracja",
-        rl: "Ulga tylko dla deficytowych i pracy w PL. Naukowcy: 75% podstawy w II progu PIT przez 7 lat.",
+        rl: "Ulga tylko dla zawodów deficytowych i pracy w PL. Naukowcy zagraniczni: 75% podstawy w II progu PIT przez 7 lat. Koniec ogólnej bezwarunkowej ulgi na powrót.",
         nl: "NL 2023: zerowy PIT dla wracających — RL to zwęża.",
         ko: "KO: ulgi dla wracających w konkretach 2023.",
         pis: "PiS: Polski Ład / ulga na powrót jako flaga.",
@@ -301,7 +344,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "PIT",
         chapter: "gospodarka",
-        rl: "5 progów: 12 / 32 / 48 / 56 / 71. +4% danina od 1 mln → realnie 60% i 75%.",
+        rl: "5 progów: 12 / 32 / 48 / 56 / 71 (progi 120 tys. / 300 tys. / 800 tys. / 2 mln zł). +4% danina od 1 mln → realnie 60% i 75%.",
         nl: "NL 2023: sprawiedliwa progresja, bez 71/75. Razem: jednolita danina niska/średnia/wysoka dla 90/9/1; koniec ryczałtu i liniowego.",
         ko: "KO 2023: 0% PIT do 6 tys. brutto / emerytura 5 tys. — odwrotność RL (obniżka dołu, nie 71% góry). UC IX 2026: 12 / 22 / 32.",
         pis: "PiS: 12/32 + ulgi rodzin. R+: podnieść II próg (ulżyć średnim), uszczelnić transfer zysków za granicę.",
@@ -310,7 +353,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Majątek / spadki",
         chapter: "gospodarka",
-        rl: "Netto >7 mln: 1–8%. Spadki >2 mln/os.: 10/20/25%. Mieszkanie zamieszkałe + oszczędności do 2 mln wolne.",
+        rl: "Netto >7 mln: 1–8%, krajowy rejestr majątkowy. Spadki >2 mln/os.: 10/20/25%. Mieszkanie zamieszkałe + oszczędności do 2 mln wolne.",
         nl: "NL: podatek od 3. mieszkania (projekt). Razem: unijny podatek od fortun + progresja od nieruchomości.",
         ko: "KO/PSL/2050: brak podatku od fortuny 7 mln+. PSL broni dziedziczenia gospodarstw.",
         pis: "PiS: 500+ logika, nie podatek od fortuny. R+: uszczelnienie, nie 8% od majątku.",
@@ -328,7 +371,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "CIT / platformy / windfall",
         chapter: "gospodarka",
-        rl: "Duże (>50 mln): 22%. Małe 9%. Windfall w kryzysie. 5% obrotu reklamą i marketplace’ami w PL.",
+        rl: "Duże (>50 mln): 22%. Małe: 9%. Windfall w kryzysie (energetyka, banki). 5% obrotu reklamą i marketplace’ami w PL. Wsparcie unijnego podatku od transakcji kapitałowych.",
         nl: "NL: progresywny CIT w duchu. Razem: wielkie korporacje więcej; podatek od transakcji kapitałowych (UE).",
         ko: "KO: podatek bankowy zostaje; brak 5% od platform w tej formie.",
         pis: "PiS: CIT estoński, strefy. R+: uszczelnić wyprowadzanie zysków.",
@@ -337,7 +380,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Ulgi",
         chapter: "gospodarka",
-        rl: "Likwidacja 0% PIT do 26 lat i dla seniorów. Ulga na dzieci z progiem. Ulga powrotu zwężona.",
+        rl: "Likwidacja 0% PIT do 26 lat i dla seniorów. Ulga na dzieci z progiem dochodowym dla wszystkich rodzin. Ulga powrotu zwężona (rozdz. 3).",
         nl: "NL 2023 wręcz obiecywała ulgi dla młodych. Razem: koniec rozdawnictwa dla bogatych — zbieżne.",
         ko: "KO: 0% do 6 tys. i ulgi młodych — odwrotność. UC: premia 5 tys. do oszczędności młodych.",
         pis: "PiS: 0% PIT senior / młody jako flaga. R+: nie likwidować ulg rodzinnych.",
@@ -355,16 +398,16 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Własność państwa",
         chapter: "gospodarka",
-        rl: "Na zawsze: przesył, atom, węgiel transformacyjny, publiczne OZE, kolej, zbrojeniówka, mieszkania publiczne, BGK. Cała energetyka państwowa. Sprzedaż tylko mniejszości w bankach SP + złota akcja → Fundusz.",
+        rl: "Na zawsze: przesył, atom, węgiel transformacyjny, publiczne OZE, kolej, zbrojeniówka, mieszkania publiczne, BGK i banki rozrachunkowe. Cała energetyka państwowa. Sprzedaż tylko mniejszości w bankach SP + złota akcja → Fundusz Inwestycji Strategicznych.",
         nl: "NL: sprzeciw prywatyzacji szpitali, ciepła, mieszkań. Razem: silny sektor publiczny, fundusze zalążkowe, spółdzielnia od 3 os.",
         ko: "KO: depolityzacja SP, nie „cała energetyka państwowa”. PSL: spółdzielczość wiejska.",
         pis: "PiS: etatyzm czempionów narodowych. R+: inwestycje SP, nie wyprzedaż.",
         konf: "Konf.: prywatyzować. KKP: własność narodowa w strategicznych, nie holding RL.",
       },
       {
-        topic: "Konsument",
+        topic: "Deregulacja i konsument",
         chapter: "gospodarka",
-        rl: "Wypowiedzenie subskrypcji 1 klik. Cena końcowa w reklamie. Pozew zbiorowy od 2 os. UOKiK wstrzymuje natychmiast.",
+        rl: "Jedna koncesja, milcząca zgoda urzędu. Wypowiedzenie subskrypcji 1 klik. Cena końcowa w reklamie. Pozew zbiorowy od 2 os. UOKiK wstrzymuje natychmiast, wiążąca decyzja dla sądu.",
         nl: "NL: ochrona ogólna. Razem: platformy i ukryte opłaty — zbieżne.",
         ko: "KO: UOKiK, analogicznie słabiej doprecyzowane.",
         pis: "PiS/R+: nie flaga.",
@@ -381,7 +424,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Nakłady / organizacja",
         chapter: "zdrowie",
-        rl: "7% PKB (bieżący rok) w dwóch kadencjach. Likwidacja NFZ jako kasy — finansowanie z budżetu. Zniesienie limitów AOS od r. 2. Centralne zakupy leków.",
+        rl: "7% PKB (bieżący rok) w dwóch kadencjach. Likwidacja NFZ jako kasy — finansowanie z budżetu. Zniesienie limitów AOS od r. 2. Centralne zakupy leków, ryczałt dla placówek.",
         nl: "NL 2023: 8% PKB; 2025 SHA ~6,9% — cel nieosiągnięty. NFZ zostaje. Razem: 8% PKB, ≥6% budżetu zdrowia na psychikę; finansowanie z budżetu — zbieżne z RL.",
         ko: "KO: zniesienie limitów szpitalnych, centra powiatowe, in vitro 500 mln — NFZ zostaje. 2050: jakość i kolejki.",
         pis: "PiS: sieć szpitali, 6% ścieżka ustawowa. R+: nie 7% z datą.",
@@ -399,7 +442,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "In vitro / trans / eutanazja",
         chapter: "zdrowie",
-        rl: "Do 6 cykli, także singielki i do 45 r.ż. Bezpłatna ścieżka trans: medyczna od 18, prawna od 16 za zgodą. Wspomagane zakończenie życia — wniosek wielokrotny + komisja.",
+        rl: "Do 6 cykli, także singielki i do 45 r.ż. Bezpłatna ścieżka trans: medyczna od 18, prawna od 16 za zgodą opiekuna. Wspomagane zakończenie życia — wniosek wielokrotny + niezależna komisja.",
         nl: "NL: in vitro wdrożone 2024 (głównie pary) — RL idzie dalej. Eutanazja nie była flagą NL. Razem: pełna refundacja in vitro i antykoncepcji; trzecia płeć (RL tego nie ma).",
         ko: "KO: in vitro z budżetu — spełnione. Trans — ostrożniej. Eutanazja — nie flaga.",
         pis: "PiS: przeciw in vitro ze środków pub. jako standard; przeciw trans i eutanazji.",
@@ -432,7 +475,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Finanse kampanii",
         chapter: "uczciwa-polityka",
-        rl: "Max 5000 zł/os./rok. Zakaz płatnych billboardów i reklamy komercyjnej w przestrzeni publicznej.",
+        rl: "Max 5000 zł/os./rok. Zakaz płatnych billboardów i reklamy komercyjnej politycznej w przestrzeni publicznej.",
         nl: "NL: jawność, limity — mniej radykalny zakaz. Razem: odchudzenie kranika; 5000 pojawia się w logice RL.",
         ko: "KO: limity ustawowe, nie zakaz billboardów. 2050: nowa polityka, bez tego zakazu.",
         pis: "PiS: duże budżety, billboardy. R+: nie ten zakaz.",
@@ -467,10 +510,10 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Skala / finansowanie",
         chapter: "mieszkanie",
-        rl: "25–40 tys. komunalnych i limited-profit rocznie — tyle, ile uniesie danina 1% funduszu płac (0,5+0,5), widoczna na odcinku. Ziemia publiczna niesprzedawana. Raz zbudowane = publiczne na zawsze.",
+        rl: "25–40 tys. komunalnych i limited-profit rocznie — tyle, ile uniesie danina 1% funduszu płac (0,5+0,5), widoczna na odcinku. Ziemia publiczna nieprzedawana. Raz zbudowane = publiczne na zawsze.",
         nl: "NL 2023: 300 tys. w 5 lat (60 tys./rok); ustawa do 45 mld do 2030; realizacja 2026: budowa+remont 18 tys. Razem: program najmu z budżetu, nie danina od płacy.",
         ko: "KO: uwolnienie gruntów SP, rewitalizacja pustostanów — podaż, nie 1% daniny. 2050: mieszkania jako jakość życia. PSL: budownictwo gminne na wsi.",
-        pis: "PiS: Mieszkanie+, credyty. R+: demografia (pensja rodzicielska 0–3), nie 40 tys. komunalnych z daniny.",
+        pis: "PiS: Mieszkanie+, kredyty. R+: demografia (pensja rodzicielska 0–3), nie 40 tys. komunalnych z daniny.",
         konf: "Konf.: deregulacja, odrolnienie, mniej norm — więcej mieszkań z rynku, nie z daniny. KKP: rodzina we własnym, nie zasób publiczny.",
       },
       {
@@ -485,7 +528,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Urbanistyka",
         chapter: "mieszkanie",
-        rl: "Standardy (zieleń, szkoła, komunikacja). 20% nowych mieszkań społecznych w planach.",
+        rl: "Standardy (zieleń, szkoła, komunikacja). 20% nowych mieszkań społecznych w planach. Publiczne biuro pośrednictwa bez prowizji, rejestr cen transakcyjnych.",
         nl: "NL: osiedla z usługami. Razem: min. 25 m², stop mikroapartamentom, deweloper oddaje część do zasobu.",
         ko: "KO: plany, odrolnienie sporne z PSL.",
         pis: "PiS: specustawy.",
@@ -503,13 +546,13 @@ export const COMPARE_SECTIONS: CompareSection[] = [
         rl: "Automat 1 stycznia: inflacja albo wzrost płac — co wyższe (bez emerytur/rent w tej formule). Jeden system, wiek 65 dla wszystkich; wiek kobiet stopniowo w górę. KRUS znika.",
         nl: "NL: zachowanie KRUS w koalicji z PSL. Razem XI 2025: likwidacja KRUS — zbieżne z RL.",
         ko: "KO: nie likwiduje KRUS (warunek PSL). 2050: umiar. PSL: KRUS jako tożsamość.",
-        pis: "PiS: 13. i 14. emerytura, KRUS zostaje. R+: pensja rodzicielska 0–3 = min. krajowa; 1/8 składki dziecka na rodziców — inna oś niż 65 dla kobiet.",
+        pis: "PiS: 13. i 14. emerytura, KRUS zostaje. R+: pensja rodzicielska 0–3 = min. krajowa; inna oś niż 65 dla kobiet.",
         konf: "Konf.: dobrowolny ZUS, nie jeden system 65. KKP: rodzina i wieś, KRUS raczej zostaje.",
       },
       {
         topic: "OzN / renta / urlop / alimenty",
         chapter: "opieka",
-        rl: "Asystencja 30–240 h/mies. od r. 1, wszystkie wieku. PJM jako język mniejszości. Renta nie ginie przy dorobieniu. 480 dni do 12 r.ż.; 90 nieprzenoszalne. FA do 1000 zł + ściganie.",
+        rl: "Asystencja 30–240 h/mies. od r. 1, wszystkie wieku. PJM jako język mniejszości. Renta nie ginie przy dorobieniu. 480 dni do 12 r.ż.; 90 dni nieprzenoszalnych dla każdego rodzica. FA do 1000 zł + ściganie dłużników.",
         nl: "NL: Aktywny Rodzic wdrożony; asystencja w toku, nie w tej skali od dnia 1. 2023: alimenty jak podatki. Razem: karta OzN, dłuższy urlop.",
         ko: "KO: babciowe, alimenty, bon. PSL: rodzina tradycyjna.",
         pis: "PiS: 500+/800+, babcia. R+: Pensja Rodzicielska 0–3.",
@@ -533,16 +576,16 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Uczelnie / doktoranci / NCN",
         chapter: "nauka",
-        rl: "Waloryzacja subwencji ≥ inflacja. B+R do 3% PKB. Doktorant na umowie o pracę. NCN: ≥1 z 5 projektów. PAN: budżet bazowy. Nadzór nad „fabrykami dyplomów”.",
+        rl: "Waloryzacja subwencji ≥ inflacja. Doktorant na umowie o pracę, ze składkami i L4. NCN: gwarantowane wsparcie ≥1 z 5 projektów. PAN: ustawowy budżet bazowy. Nadzór nad „fabrykami dyplomów”.",
         nl: "NL: program dla nauki I 2025, więcej statutowego. Razem: etat zamiast śmieciówki akademickiej.",
         ko: "KO: autonomia uczelni, ewaluacja. 2050: innowacje.",
         pis: "PiS: Narodowy Program, reformy Gowina. R+: rozwój, nie umowa o pracę dla doktoranta jako flaga.",
-        konf: "Konf.: Mentzen — płatne studia (kontrowersja 2025). KKP: KINGS jako kongres, nie 3% PKB.",
+        konf: "Konf.: Mentzen — płatne studia (kontrowersja 2025). KKP: KINGS jako kongres, nie ustawowy budżet nauki.",
       },
       {
         topic: "Studenci / OA / HSS",
         chapter: "nauka",
-        rl: "Stypendium socjalne = 50% płacy min. 20 tys. miejsc w akademikach / 8 lat. Stołówki non-profit. OA ze środków pub. Osobna pula humanistyki.",
+        rl: "Stypendium socjalne = 50% płacy min. 20 tys. miejsc w akademikach / 8 lat. Stołówki non-profit. Otwarty dostęp do publikacji ze środków pub. Osobna pula humanistyki i nauk społecznych.",
         nl: "NL 2023: 1000 zł dla każdego studenta do 26 — hojniejsze. Razem: akademiki, tanie stołówki.",
         ko: "KO: kredyty, akademiki punktowo.",
         pis: "PiS: stypendia ministra.",
@@ -551,7 +594,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Szkoła: obiad, prywatne, klasy",
         chapter: "szkola",
-        rl: "Bezpłatny obiad do 150% min. socjalnego. Gwarantowane miejsce w żłobku/przedszkolu/szkole. For-profit bez dotacji. Max 20 (1–3) i 25 (starsze).",
+        rl: "Bezpłatny obiad do 150% min. socjalnego. Gwarantowane miejsce w żłobku/przedszkolu /szkole. Szkoły komercyjne bez dotacji, non-profit — na równych zasadach. Max 20 (1–3) i 25 (starsze).",
         nl: "NL 2023: bezpłatne obiady w podstawówce (szersze). Żłobek w każdej gminie — wdrożone. Razem: max 20 w oddziale — twardsze w starszych klasach.",
         ko: "KO: ograniczenie prac domowych — spełnione częściowo; podwyżki nauczycieli 2024. PSL: szkoła gminna, religia.",
         pis: "PiS: „lex Czarnek”, religia, patriotyzm. R+: tożsamość, nie 20 osób.",
@@ -560,7 +603,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Program / egzaminy",
         chapter: "szkola",
-        rl: "70–80% wspólnego rdzenia + aneks regionalny. Zniesienie egzaminu ósmoklasisty. Kl. 1–2: zabawa. Prace limitowane 4–6. Liceum nie wcześniej niż 8:30.",
+        rl: "70–80% wspólnego rdzenia + aneks regionalny. Zniesienie egzaminu ósmoklasisty. Kl. 1–2: zabawa. Prace limitowane 4–6. Liceum nie wcześniej niż 8:30. Limit czasu na dokumentację nauczyciela.",
         nl: "NL: „deczarnkizacja”, edukacja seksualna i zdrowotna, religia poza siatką. Razem: zbieżne z 8:30 i limitem prac.",
         ko: "KO: odpolitycznienie, lżejszy plecak. 2050: kompetencje.",
         pis: "PiS: egzaminy, kanon, religia w siatce.",
@@ -575,7 +618,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Kościół / Fundusz / kapelani",
         chapter: "wolnosc",
-        rl: "Fundusz wygaszany 3 lata (100/50/0). Religia całkowicie poza szkołą publiczną. Wypowiedzenie lub renegocjacja Konkordatu w części szkolnej i finansowej. Kapelani nie z budżetu.",
+        rl: "Fundusz wygaszany 3 lata (100/50/0). Religia całkowicie poza szkołą publiczną. Wypowiedzenie lub renegocjacja Konkordatu w części szkolnej i finansowej. Kapelani finansowani przez Kościół, nie z budżetu.",
         nl: "NL 2023: wypowiedzenie Konkordatu, religia do salki, opodatkowanie Kościoła. Priorytet 2030: świeckie państwo — w koalicji nierozliczone. Razem: likwidacja Funduszu, dobrowolny podatek, religia poza siatką.",
         ko: "KO: świeckość w umowie koalicyjnej, hamulec PSL. 2050: religia poza siatką jako kierunek.",
         pis: "PiS: sojusz z Kościołem, Fundusz zostaje. R+: chadecja, nie wygaszanie 100/50/0.",
@@ -584,16 +627,16 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Małżeństwo / trans",
         chapter: "wolnosc",
-        rl: "Małżeństwo i wspólna adopcja niezależnie od płci. Partnerskie jako opcja dodatkowa, nie substytut. Trans: medyczna od 18, prawna od 16 za zgodą.",
+        rl: "Małżeństwo i wspólna adopcja niezależnie od płci. Partnerskie jako opcja dodatkowa, nie substytut. Trans: medyczna od 18, prawna od 16 za zgodą opiekuna.",
         nl: "NL: pełna równość; ustawa o osobie najbliższej — Sejm+Senat, weto prezydenta VII 2026. Transkrypcja zagranicznych małżeństw jednopłciowych od VIII 2026. Razem: jedna instytucja + adopcja; trzecia płeć w dokumentach (RL nie ma).",
         ko: "KO: związki partnerskie w konkretach — zablokowane wetem. PSL: nie. 2050: tak.",
         pis: "PiS/R+: małżeństwo kobieta–mężczyzna.",
         konf: "Konf.: Mentzen przeciw „ideologii”. KKP: małżeństwo sakramentalne, przeciw trans.",
       },
       {
-        topic: "Konwersja / art. 196 / nienawiść",
+        topic: "Konwersja / art. 196, 212, 216, 135 / nienawiść",
         chapter: "wolnosc",
-        rl: "Zakaz terapii konwersyjnych. SO i tożsamość jako przesłanka hate crime. Mowa nienawiści ścigana; krytyka religii/władzy/idei — nie. Uchylenie art. 196 kk.",
+        rl: "Zakaz terapii konwersyjnych. SO i tożsamość jako przesłanka hate crime. Mowa nienawiści ścigana; krytyka religii/władzy/idei — nie. Uchylenie art. 196, 212, 216 i 135 § 2 k.k. Zakaz pozwów SLAPP (JST i Skarb Państwa bez legitymacji do takich pozwów).",
         nl: "NL: uchylenie 196 i 212; nowa definicja zgwałcenia (2025). Razem: zakaz konwersji, uchylenie 196, wolność krytyki religii.",
         ko: "KO: mowa nienawiści z urzędu (umowa) — częściowo. 196 zostaje (brak większości + weto).",
         pis: "PiS: 196 zostaje, „obraza uczuć” jako tarcza.",
@@ -602,7 +645,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Zwierzęta",
         chapter: "wolnosc",
-        rl: "Zakaz niehumanitarnego chowu/uboju, ferm futrzarskich, klatek, cyrków. Rzecznik Praw Zwierząt. Koniec współfinansowania polowań.",
+        rl: "Zakaz niehumanitarnego chowu/uboju, ferm futrzarskich, klatek, cyrków. Rzecznik Praw Zwierząt. Koniec współfinansowania polowań. Zniesienie przywilejów łowieckich (wstęp na teren, broń, elaboracja amunicji na zasadach ogólnych).",
         nl: "NL 2023 pkt 47: identyczny pakiet (futra do 2027). Razem: karta praw zwierząt.",
         ko: "KO: ustawa o psach i kotach podpisana VI 2026. PSL: łowiectwo i hodowla.",
         pis: "PiS: łowiectwo. R+: nie ten pakiet.",
@@ -613,7 +656,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
         chapter: "wolnosc",
         rl: "Model nordycki: kara dla klienta, dekryminalizacja osób świadczących + exit support.",
         nl: "NL: nie flaga 2023. Razem: raczej prawa świadczących; model nordycki nie zawsze eksponowany.",
-        ko: "KO/PSL: status quo kk.",
+        ko: "KO/PSL: status quokk.",
         pis: "PiS: penalizacja obu stron w praktyce moralnej.",
         konf: "Konf.: deregulacja albo status quo. KKP: grzech, nie nordycki model.",
       },
@@ -626,7 +669,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Lasy / wody / Bałtyk",
         chapter: "przyroda",
-        rl: "Nowe i powiększone PN. Lasy Państwowe nigdy nieprywatyzowane. Priorytet starodrzewu. Wody Polskie: ekosystem, nie żegluga. Zakaz zabudowy zalewowej. Ochrona Bałtyku, odbudowa ryb.",
+        rl: "Nowe i powiększone PN. Lasy Państwowe nigdy nieprywatyzowane. Priorytet starodrzewu. Wody Polskie: ekosystem, nie żegluga. Zakaz zabudowy zalewowej, inwestycje w retencję. Ochrona Bałtyku, odbudowa ryb. Publiczny program docieplania budynków.",
         nl: "NL: rewilding, mokradła, Fundusz Kruszenia Betonu 3 mld. Kaucja wdrożona X 2025. Razem: nowe PN (Karpaty, Jura, Mazury).",
         ko: "KO: społeczny nadzór nad lasami — ustawa w toku; zakaz spalania pełnowartościowego drewna. 2050: klimat jako DNA. PSL: gospodarka leśna, nie rewilding.",
         pis: "PiS: Lasy jako skarb + wycinka. R+: rozwój, nie nowe PN jako flaga.",
@@ -635,7 +678,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Rolnictwo",
         chapter: "przyroda",
-        rl: "Gosp. ≤50 ha: kontrakt 36 mies. z ceną min. Wsparcie na metan bez przymusu redukcji stada. Cło wyrównawcze + klauzule lustrzane (Mercosur).",
+        rl: "Gosp. ≤50 ha: kontrakt 36 mies. z ceną min. Wsparcie na metan bez przymusu redukcji stada. Cło wyrównawcze + klauzule lustrzane. Odrzucenie umowy UE–Mercosur w całości.",
         nl: "NL: opłacalne rolnictwo, sprzeciw taniego importu. Razem: przeciw UE–Mercosur (XII 2024).",
         ko: "KO: Zielony Ład vs PSL. PSL: twardy sprzeciw Mercosur i ETS2 na wieś.",
         pis: "PiS: embargo, dopłaty. R+: stop ZŁ.",
@@ -648,7 +691,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
         nl: "NL: silna PL w silnej UE, PES. Razem: suwerenistyczny język + pogłębianie UE; NATO w deklaracji 2025 słabo obecne (KP); wsparcie UA, odrzucenie tezy o winie NATO.",
         ko: "KO: trzon pro-UE i pro-UA. 2050: federalizujący ton. PSL: UE tak, federalizm nie.",
         pis: "PiS: UE jako arena, NATO + USA. R+: NATO, Intermarium, bazy USA, szacunek dla Nawrockiego.",
-        konf: "Konf.: Mentzen — dalsze wsparcie UA pod warunkiem Wołynia; nie wspólna armia UE. KKP: „Polska za pokojem”, nie być stroną wojny, krytyka eskalacji; Braun IX 2026 zrywa spotkanie z rosyjską opozycją w PE — linia niejednoznaczna wobec Kremla.",
+        konf: "Konf.: Mentzen — dalsze wsparcie UA pod warunkiem Wołynia; nie wspólna armia UE. KKP: „Polska za pokojem”, nie być stroną wojny, krytyka eskalacji.",
       },
       {
         topic: "Wydatki obronne / rezerwa",
@@ -662,7 +705,7 @@ export const COMPARE_SECTIONS: CompareSection[] = [
       {
         topic: "Schrony / leki / służby",
         chapter: "obrona",
-        rl: "Doktryna Obronowa w 12 mies. Schrony w nowych publ. i osiedlach >50 lokali. Rezerwa leków 6 mies. + państwowa wytwórnia generyków. Sądowa kontrola policji i służb.",
+        rl: "Doktryna Obronnej w 12 mies. Schrony w nowych publ. i osiedlach >50 lokali. Rezerwa leków 6 mies. + państwowa wytwórnia generyków. Łączność kryzysowa niezależna od sieci komercyjnych. Sądowa kontrola policji i służb.",
         nl: "NL: ustawa o ochronie ludności 2025, schrony 34 mld. Razem: suwerenność lekowa jako flaga 2025.",
         ko: "KO: odbudowa obrony cywilnej (umowa pkt 1).",
         pis: "PiS: WOT, schrony punktowo. R+: Bezpieczna Polska.",
@@ -753,15 +796,15 @@ export const COMPARE_LEDGER = {
       note: "Nie domyka kryterium 3% UE → dlatego brak daty euro. KO/2050 chcą ścieżki do euro bez tej tabeli.",
     },
     {
-      item: "Danina mieszkaniowa 1%",
-      y1: "15–18 mld → 25–40 tys. mieszkań",
-      y5: "to samo w skali",
+      item: "Danina mieszkaniowa",
+      y1: "1% (15–18 mld)",
+      y5: "→ 25–40 tys. mieszkań",
       note: "Unikat RL. NL finansuje z budżetu+KPO i dowozi 18 tys. w 2026. Konfederacja daniny nie wprowadzi.",
     },
     {
       item: "Akcyza alkohol+konopie ponad 2027",
-      y1: "~3–5 mld/rok na psychiatrię",
-      y5: "earmark",
+      y1: "—",
+      y5: "~3–5 mld/rok na psychiatrię (earmark)",
       note: "Nikt inny nie earmarkuje akcyzy w ten sposób. Mentzen jako browarnik jest antytezą pakietu.",
     },
     {
@@ -770,6 +813,14 @@ export const COMPARE_LEDGER = {
       y5: "12 GW / 20–25 lat",
       note: "Razem: 8 bloków/12 GW bez tabeli długu. R+: przyspieszyć EJ+SMR. KO kontynuuje budowę.",
     },
+  ],
+  /** Akapity pod tabelą. */
+  notes: [
+    "Danina 1% (~15–18 mld) zamyka 25–40 tys. mieszkań rocznie. Nie zamyka kryterium 3% deficytu unijnego. Dlatego euro nie ma kalendarza — nie da się jednocześnie obiecywać przyjęcia euro i utrzymywać deficytu ponad unijny limit. Najgrubsze nowe linie wydatków w 5. roku: 4-dniowy tydzień w sektorze publicznym (25–45 mld), waloryzacja świadczeń poza emeryturami według wzrostu płac (20–25 mld) i połowa drogi do 7% PKB na zdrowie (10–15 mld). Największe nowe dochody poza skalą PIT: zniesienie limitu 30-krotności składek (8–12 mld), CIT 22% dla dużych firm (5–8 mld) i koniec ulg niezależnych od dochodu (5–7 mld). Największa oszczędność to stopniowe zrównanie wieku emerytalnego na 65 lat: w kadencji 3–6 mld rocznie, docelowo 20–30 mld.",
+    "Nowe pozycje v6: Krajowa Agencja Migracyjna, Sąd Migracyjny, bezpłatne kursy języka polskiego i etaty w publicznych instytucjach kultury to wydatki rzędu pojedynczych miliardów zł rocznie; po stronie dochodów — zwężenie ulgi na powrót do zawodów deficytowych. Mieszczą się w podanym rozrzucie.",
+    "Nowe pozycje v7: odrzucenie umowy UE–Mercosur, zapis anty-SLAPP oraz zniesienie przywilejów łowieckich to zmiany regulacyjne i ustrojowe — bez nowej linii wydatku w tym aneksie.",
+    "Nowe pozycje v8–v10: zmiany redakcyjne i porządkujące (spis treści, numeracja, odsyłacze między rozdziałami, dopisanie „sprawne między władzą centralną a samorządem” do autoprezentacji). Bez nowych linii kosztowych względem v7 — aneks kosztów w deklaracji nie wykazuje nowej pozycji od wersji 7.",
+    "Atom: dług Funduszu Inwestycji Strategicznych, 12 GW w horyzoncie 20–25 lat — w statystyce długu publicznego widoczny, nie schowany. Przyrost akcyzy alkoholowej i konopnej ponad poziom z 2027 roku (około 3–5 mld rocznie) idzie na psychiatrię, nie na łatanie ogólnego deficytu budżetowego.",
   ],
 };
 
@@ -787,7 +838,7 @@ export const CONVERGENCE: { title: string; items: string[] }[] = [
   {
     title: "Gdzie RL ≈ Razem 2025, a nie reszta Sejmu",
     items: [
-      "Tytuł i konstrukcja „Polski z atomu, krzemu i stali”, 12 GW, zniesienie limitu 60% PKB, jeden fundusz inwestycyjny.",
+      "Tytuł i konstrukcja „Polski z atomu, krzemu i stali”, 12 GW, zniesienie limitu 60% PKB, jeden fundusz inwestycyjny, państwowy holding budowlany.",
       "Likwidacja KRUS i liniowego/ryczałtu, duchowni na zasadach ogólnych, zniesienie 30-krotności.",
       "Finansowanie zdrowia wprost z budżetu (bez NFZ jako kasy).",
     ],
@@ -813,12 +864,14 @@ export const UNIQUES: string[] = [
   "Nuclear sharing i certyfikacja F-35 jako punkt programu, nie wzmianka.",
   "Danina mieszkaniowa 1% funduszu płac jako jedyne źródło 25–40 tys. mieszkań.",
   "Skala PIT 12/32/48/56/71 + danina → 60/75% oraz podatek majątkowy 1–8% od 7 mln.",
-  "Harmonogram Linuxa: 50 tys. / 80% administracji i Polskie AI w 36 miesięcy.",
+  "Harmonogram Linuxa: 50 tys. / 80% administracji, jeden login i Polskie AI w 36 miesięcy.",
   "Pakiet alkoholowy bliski monopolu godzinowego przy państwowym, nie prywatnym rynku konopi.",
   "Etapowany 4-dniowy tydzień z progiem 250 pracowników i oceną po 18 miesiącach.",
   "Wspomagane zakończenie życia (komisja lekarska).",
   "Model nordycki wobec pracy seksualnej.",
   "Limit 3+1+3 kadencji poselskich i rejestr nepotyzmu (limit 3 kadencji pojawia się też u Unii Centrum IX 2026).",
+  "Państwowy holding budowlany (kolej i energetyka) jako mechanizm wykonawczy, nie tylko finansowy.",
+  "Fundusz Ubezpieczeń Twórców — pół składki dla zawodowych twórców finansowane opłatą 2% od honorariów.",
 ];
 
 /** Antymodele — co która partia zrobiłaby odwrotnie. */
