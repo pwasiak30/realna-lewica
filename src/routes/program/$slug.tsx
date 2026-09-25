@@ -1,5 +1,6 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ChapterCompare } from "@/components/compare";
 import { Prose } from "@/components/prose";
 import { ProgramDownload } from "@/components/program-download";
 import { Shell } from "@/components/shell";
@@ -33,7 +34,10 @@ function ChapterPage() {
       <Shell>
         <div className="mx-auto max-w-3xl px-5 py-20 sm:px-8">
           <h1 className="font-display text-4xl">Nie ma takiego rozdziału.</h1>
-          <Link to="/program" className="mt-6 inline-flex min-h-11 items-center font-semibold text-red">
+          <Link
+            to="/program"
+            className="mt-6 inline-flex min-h-11 items-center font-semibold text-red"
+          >
             Wróć do spisu
           </Link>
         </div>
@@ -58,7 +62,9 @@ function ChapterPage() {
                     params={{ slug: item.slug }}
                     className={
                       "flex min-h-11 items-baseline gap-3 py-1 text-sm " +
-                      (item.slug === slug ? "font-semibold text-red" : "text-graphite hover:text-red")
+                      (item.slug === slug
+                        ? "font-semibold text-red"
+                        : "text-graphite hover:text-red")
                     }
                     aria-current={item.slug === slug ? "page" : undefined}
                   >
@@ -73,7 +79,9 @@ function ChapterPage() {
 
         <article>
           <label className="mb-8 block lg:hidden">
-            <span className="text-xs font-semibold tracking-widest text-muted uppercase">Rozdział</span>
+            <span className="text-xs font-semibold tracking-widest text-muted uppercase">
+              Rozdział
+            </span>
             <select
               className="mt-2 min-h-11 w-full border border-line-strong bg-cream px-3"
               value={chapter.slug}
@@ -126,12 +134,16 @@ function ChapterPage() {
                 ) : null}
                 <p className="font-display text-2xl text-red">{point.n}</p>
                 <div>
-                  {point.title ? <h2 className="mb-3 font-display text-2xl">{point.title}</h2> : null}
+                  {point.title ? (
+                    <h2 className="mb-3 font-display text-2xl">{point.title}</h2>
+                  ) : null}
                   <Prose body={point.body} />
                 </div>
               </li>
             ))}
           </ol>
+
+          <ChapterCompare slug={chapter.slug} />
 
           <div className="mt-10 grid gap-3 sm:grid-cols-2">
             {prev ? (
@@ -142,7 +154,9 @@ function ChapterPage() {
               >
                 <ArrowLeft className="size-4 shrink-0" aria-hidden="true" />
                 <span>
-                  <span className="block text-xs tracking-widest text-muted uppercase">Poprzedni</span>
+                  <span className="block text-xs tracking-widest text-muted uppercase">
+                    Poprzedni
+                  </span>
                   <span className="font-display text-xl">{prev.title}</span>
                 </span>
               </Link>
@@ -156,7 +170,9 @@ function ChapterPage() {
                 className="flex min-h-11 items-center justify-between gap-3 border border-line px-4 py-4 text-right hover:border-ink sm:col-start-2"
               >
                 <span>
-                  <span className="block text-xs tracking-widest text-muted uppercase">Następny</span>
+                  <span className="block text-xs tracking-widest text-muted uppercase">
+                    Następny
+                  </span>
                   <span className="font-display text-xl">{next.title}</span>
                 </span>
                 <ArrowRight className="size-4 shrink-0" aria-hidden="true" />
