@@ -43,7 +43,12 @@ export function Shell({ children }: { children: ReactNode }) {
             <p>
               {PARTY.versionNote} · {PARTY.version}
             </p>
-            <p className="hidden sm:block">{PARTY.label}</p>
+            <p className="hidden sm:block">
+              <Link to="/o-nas" hash="projekt" className="hover:text-ink">
+                Projekt studencki
+              </Link>{" "}
+              · {PARTY.label}
+            </p>
           </div>
         </div>
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
@@ -154,7 +159,7 @@ export function Shell({ children }: { children: ReactNode }) {
               cel na dwie kadencje.
             </p>
             <p className="mt-4 text-sm text-gold">
-              {PARTY.versionNote}: {PARTY.version}
+              {PARTY.versionNote} · {PARTY.version}
             </p>
           </div>
         </div>
@@ -164,6 +169,7 @@ export function Shell({ children }: { children: ReactNode }) {
             <SocialLinks />
             <div className="md:text-right">
               <p>© {new Date().getFullYear()} Paweł Wasiak</p>
+              <p className="max-w-md md:ml-auto">{PARTY.project}</p>
               <p>
                 Zobacz więcej projektów na{" "}
                 <PortfolioLink className="font-semibold text-gold underline underline-offset-4 hover:text-cream" />
