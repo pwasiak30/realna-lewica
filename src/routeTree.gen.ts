@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ONasRouteImport } from './routes/o-nas'
+import { Route as PorownanieRouteImport } from './routes/porownanie'
 import { Route as PostulatyRouteImport } from './routes/postulaty'
 import { Route as RachunekRouteImport } from './routes/rachunek'
 import { Route as SkalaRouteImport } from './routes/skala'
@@ -25,6 +26,11 @@ const IndexRoute = IndexRouteImport.update({
 const ONasRoute = ONasRouteImport.update({
   id: '/o-nas',
   path: '/o-nas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PorownanieRoute = PorownanieRouteImport.update({
+  id: '/porownanie',
+  path: '/porownanie',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PostulatyRoute = PostulatyRouteImport.update({
@@ -56,6 +62,7 @@ const ProgramSlugRoute = ProgramSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/o-nas': typeof ONasRoute
+  '/porownanie': typeof PorownanieRoute
   '/postulaty': typeof PostulatyRoute
   '/rachunek': typeof RachunekRoute
   '/skala': typeof SkalaRoute
@@ -65,6 +72,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/o-nas': typeof ONasRoute
+  '/porownanie': typeof PorownanieRoute
   '/postulaty': typeof PostulatyRoute
   '/rachunek': typeof RachunekRoute
   '/skala': typeof SkalaRoute
@@ -75,6 +83,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/o-nas': typeof ONasRoute
+  '/porownanie': typeof PorownanieRoute
   '/postulaty': typeof PostulatyRoute
   '/rachunek': typeof RachunekRoute
   '/skala': typeof SkalaRoute
@@ -86,6 +95,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/o-nas'
+    | '/porownanie'
     | '/postulaty'
     | '/rachunek'
     | '/skala'
@@ -95,6 +105,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/o-nas'
+    | '/porownanie'
     | '/postulaty'
     | '/rachunek'
     | '/skala'
@@ -104,6 +115,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/o-nas'
+    | '/porownanie'
     | '/postulaty'
     | '/rachunek'
     | '/skala'
@@ -114,6 +126,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ONasRoute: typeof ONasRoute
+  PorownanieRoute: typeof PorownanieRoute
   PostulatyRoute: typeof PostulatyRoute
   RachunekRoute: typeof RachunekRoute
   SkalaRoute: typeof SkalaRoute
@@ -135,6 +148,13 @@ declare module '@tanstack/react-router' {
       path: '/o-nas'
       fullPath: '/o-nas'
       preLoaderRoute: typeof ONasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/porownanie': {
+      id: '/porownanie'
+      path: '/porownanie'
+      fullPath: '/porownanie'
+      preLoaderRoute: typeof PorownanieRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/postulaty': {
@@ -178,6 +198,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ONasRoute: ONasRoute,
+  PorownanieRoute: PorownanieRoute,
   PostulatyRoute: PostulatyRoute,
   RachunekRoute: RachunekRoute,
   SkalaRoute: SkalaRoute,
