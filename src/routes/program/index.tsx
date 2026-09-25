@@ -62,7 +62,7 @@ function ProgramIndex() {
         <div className="mt-6 flex flex-col items-start gap-2">
           <ProgramDownload />
           <p className="text-sm text-muted">
-            {PARTY.versionNote}: {PARTY.version}.
+            {PARTY.versionNote} · {PARTY.version}.
           </p>
         </div>
 
