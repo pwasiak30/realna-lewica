@@ -2,7 +2,16 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Shell } from "@/components/shell";
 import { ProgramDownload } from "@/components/program-download";
-import { CHAPTERS, chapterCountWord, HONEST, INTRO, LEDGER, PILLARS, POSTULATES } from "@/data/program";
+import {
+  CHAPTERS,
+  chapterCountWord,
+  HONEST,
+  INTRO,
+  LEDGER,
+  PILLARS,
+  POSTULATES,
+} from "@/data/program";
+import { SYNTHESIS, UNIQUES } from "@/data/porownanie";
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -20,7 +29,9 @@ function Home() {
       <section className="border-b border-line">
         <div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 sm:px-8 lg:grid-cols-12 lg:items-end lg:py-20">
           <div className="lg:col-span-7">
-            <p className="text-sm font-semibold tracking-widest text-red uppercase">Deklaracja programowa</p>
+            <p className="text-sm font-semibold tracking-widest text-red uppercase">
+              Deklaracja programowa
+            </p>
             <h1 className="mt-4 font-display text-5xl leading-none font-medium tracking-tight text-ink sm:text-7xl">
               Twoja pensja.
               <br />
@@ -46,13 +57,18 @@ function Home() {
               >
                 Pełny program
               </Link>
-              <a href="#spot" className="inline-flex min-h-11 items-center justify-center px-1 font-semibold text-red">
+              <a
+                href="#spot"
+                className="inline-flex min-h-11 items-center justify-center px-1 font-semibold text-red"
+              >
                 Spoty
               </a>
             </div>
           </div>
           <aside className="bg-graphite p-6 text-cream sm:p-8 lg:col-span-5">
-            <p className="text-xs font-semibold tracking-widest text-gold uppercase">Czego nie obiecujemy datą</p>
+            <p className="text-xs font-semibold tracking-widest text-gold uppercase">
+              Czego nie obiecujemy datą
+            </p>
             <ul className="mt-4 space-y-3">
               {HONEST.later.map((item) => (
                 <li key={item} className="border-t border-cream/15 pt-3">
@@ -61,14 +77,18 @@ function Home() {
               ))}
             </ul>
             <p className="mt-6 text-sm text-cream/70">
-              Przy 4-dniowym tygodniu i drodze do 7% PKB na zdrowie euro i 6% na armię w tej kadencji się nie
-              spina. Mówimy to tutaj, nie w przypisie.
+              Przy 4-dniowym tygodniu i drodze do 7% PKB na zdrowie euro i 6% na armię w tej
+              kadencji się nie spina. Mówimy to tutaj, nie w przypisie.
             </p>
           </aside>
         </div>
       </section>
 
-      <section id="spot" className="border-b border-line bg-ink text-cream" aria-labelledby="spot-tytul">
+      <section
+        id="spot"
+        className="border-b border-line bg-ink text-cream"
+        aria-labelledby="spot-tytul"
+      >
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:py-16">
           <p className="text-xs font-semibold tracking-widest text-gold uppercase">Spoty</p>
           <h2 id="spot-tytul" className="mt-3 max-w-xl font-display text-4xl leading-tight">
@@ -102,7 +122,8 @@ function Home() {
               </video>
               <figcaption className="mt-3 text-sm text-cream/70">
                 <span className="block font-semibold text-cream">Prawa i głos.</span>
-                Prezydent bez weta. 205 tysięcy podpisów zatrzymuje ustawę. 410 tysięcy zmienia konstytucję.
+                Prezydent bez weta. 205 tysięcy podpisów zatrzymuje ustawę. 410 tysięcy zmienia
+                konstytucję.
               </figcaption>
             </figure>
           </div>
@@ -131,7 +152,9 @@ function Home() {
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="text-xs font-semibold tracking-widest text-red uppercase">Kadencja, nie życzenia</p>
+              <p className="text-xs font-semibold tracking-widest text-red uppercase">
+                Kadencja, nie życzenia
+              </p>
               <h2 className="mt-2 max-w-3xl font-display text-4xl leading-tight">
                 Dwanaście zdań, które da się sprawdzić.
               </h2>
@@ -165,7 +188,9 @@ function Home() {
       <section className="mx-auto grid max-w-6xl gap-8 px-5 py-16 sm:px-8 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <p className="text-xs font-semibold tracking-widest text-red uppercase">Kim jesteśmy</p>
-          <h2 className="mt-3 font-display text-4xl leading-tight">Socjaldemokracja, która liczy.</h2>
+          <h2 className="mt-3 font-display text-4xl leading-tight">
+            Socjaldemokracja, która liczy.
+          </h2>
         </div>
         <div className="space-y-4 text-lg lg:col-span-8">
           {INTRO.paragraphs.slice(0, 2).map((paragraph) => (
@@ -178,11 +203,57 @@ function Home() {
         </div>
       </section>
 
+      <section className="border-t border-line bg-paper-2" aria-labelledby="sejm-tytul">
+        <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-12">
+          <div className="lg:col-span-6">
+            <p className="text-xs font-semibold tracking-widest text-red uppercase">Na tle Sejmu</p>
+            <h2 id="sejm-tytul" className="mt-3 font-display text-4xl leading-tight">
+              Nie „Nowa Lewica bis”. Nie „Konfederacja od lewej”.
+            </h2>
+            <p className="mt-4 text-lg">{SYNTHESIS[0].split(". ").slice(1).join(". ")}</p>
+            <Link
+              to="/porownanie"
+              className="mt-6 inline-flex min-h-11 items-center bg-ink px-5 font-semibold text-cream hover:bg-graphite"
+            >
+              Porównanie ze wszystkimi partiami
+              <ArrowRight className="ml-2 size-4" aria-hidden="true" />
+            </Link>
+          </div>
+          <div className="lg:col-span-6">
+            <p className="text-xs font-semibold tracking-widest text-muted uppercase">
+              Tego w tej formie nie ma nikt inny w Sejmie
+            </p>
+            <ol className="mt-3 border-t border-line-strong">
+              {UNIQUES.slice(0, 6).map((item, index) => (
+                <li
+                  key={item}
+                  className="grid grid-cols-[2.25rem_1fr] gap-2 border-b border-line-strong py-3"
+                >
+                  <span className="font-display text-xl text-red">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ol>
+            <Link
+              to="/porownanie"
+              hash="mapa"
+              className="mt-3 inline-flex min-h-11 items-center font-semibold text-red"
+            >
+              Wszystkie {UNIQUES.length} unikatów
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="border-y border-line bg-cream">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="text-xs font-semibold tracking-widest text-red uppercase">Część I i II</p>
+              <p className="text-xs font-semibold tracking-widest text-red uppercase">
+                Część I i II
+              </p>
               <h2 className="mt-2 font-display text-4xl">
                 {chapterCountWord(CHAPTERS.length)} rozdziałów. Żadnego wstępu zamiast treści.
               </h2>
@@ -201,7 +272,9 @@ function Home() {
                   className="grid grid-cols-[3rem_1fr] items-baseline gap-4 py-4 hover:bg-paper sm:grid-cols-[4rem_10rem_1fr] sm:gap-6"
                 >
                   <span className="font-display text-xl text-red">{pad(chapter.num)}</span>
-                  <span className="hidden text-sm tracking-wide text-muted uppercase sm:block">{chapter.kicker}</span>
+                  <span className="hidden text-sm tracking-wide text-muted uppercase sm:block">
+                    {chapter.kicker}
+                  </span>
                   <span className="font-display text-2xl">{chapter.title}</span>
                 </Link>
               </li>
@@ -213,8 +286,12 @@ function Home() {
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
         <div className="grid gap-8 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <p className="text-xs font-semibold tracking-widest text-red uppercase">Aneks kosztów</p>
-            <h2 className="mt-3 font-display text-4xl leading-tight">Każdy program obiecuje wszystko za darmo. My nie.</h2>
+            <p className="text-xs font-semibold tracking-widest text-red uppercase">
+              Aneks kosztów
+            </p>
+            <h2 className="mt-3 font-display text-4xl leading-tight">
+              Każdy program obiecuje wszystko za darmo. My nie.
+            </h2>
             <p className="mt-4 text-muted">{LEDGER.prices}</p>
             <Link
               to="/rachunek"

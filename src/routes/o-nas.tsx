@@ -3,6 +3,7 @@ import { ArrowRight, Download } from "lucide-react";
 import { Mark, Wordmark } from "@/components/mark";
 import { Shell } from "@/components/shell";
 import { BRAND_COLORS, chapterBySlug, INTRO, PARTY, PILLARS } from "@/data/program";
+import { CONVERGENCE, SYNTHESIS } from "@/data/porownanie";
 
 export const Route = createFileRoute("/o-nas")({
   head: () => ({
@@ -40,7 +41,10 @@ function About() {
             {INTRO.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
-            <p>Bez świętych krów w podatkach i bez udawania, że każdy postulat da się zrobić w cztery lata.</p>
+            <p>
+              Bez świętych krów w podatkach i bez udawania, że każdy postulat da się zrobić w cztery
+              lata.
+            </p>
           </div>
 
           <aside className="bg-ink p-6 text-cream sm:p-8 lg:col-span-5" aria-labelledby="znak">
@@ -56,7 +60,10 @@ function About() {
             <p className="mt-5 text-cream/85">{point("Znak")}</p>
             <dl className="mt-6 space-y-3 text-sm">
               {BRAND_COLORS.map((color) => (
-                <div key={color.name} className="flex items-center justify-between gap-4 border-t border-cream/15 pt-3">
+                <div
+                  key={color.name}
+                  className="flex items-center justify-between gap-4 border-t border-cream/15 pt-3"
+                >
                   <dt className="flex items-center gap-3">
                     <span
                       className="inline-block size-4 rounded-full ring-1 ring-cream/60"
@@ -85,12 +92,38 @@ function About() {
                 className="group bg-paper p-5 hover:bg-cream"
               >
                 <p className="font-display text-sm text-gold-ink">{pad(index + 1)}</p>
-                <h3 className="mt-2 font-display text-2xl">{PARTY.slogan[index]?.replace(/\.$/, "") ?? pillar.label}</h3>
+                <h3 className="mt-2 font-display text-2xl">
+                  {PARTY.slogan[index]?.replace(/\.$/, "") ?? pillar.label}
+                </h3>
                 <p className="mt-2 text-muted">{pillar.line}</p>
-                <p className="mt-3 text-sm font-semibold text-red group-hover:underline">Rozdział</p>
+                <p className="mt-3 text-sm font-semibold text-red group-hover:underline">
+                  Rozdział
+                </p>
               </Link>
             ))}
           </div>
+        </section>
+
+        <section className="mt-16 border-t border-line pt-10" aria-labelledby="gdzie-stoimy">
+          <h2 id="gdzie-stoimy" className="font-display text-3xl">
+            Gdzie stoimy w Sejmie
+          </h2>
+          <p className="mt-4 max-w-3xl text-lg">{SYNTHESIS[3]}</p>
+          <ul className="mt-6 grid gap-px bg-line md:grid-cols-3">
+            {CONVERGENCE.map((group) => (
+              <li key={group.title} className="bg-cream p-5">
+                <p className="font-display text-xl leading-snug">{group.title}</p>
+                <p className="mt-2 text-sm text-muted">{group.items[0]}</p>
+              </li>
+            ))}
+          </ul>
+          <Link
+            to="/porownanie"
+            className="mt-4 inline-flex min-h-11 items-center font-semibold text-red"
+          >
+            Porównanie ze wszystkimi partiami
+            <ArrowRight className="ml-2 size-4" aria-hidden="true" />
+          </Link>
         </section>
 
         <section className="mt-16 border-t border-line pt-10" aria-labelledby="logo">

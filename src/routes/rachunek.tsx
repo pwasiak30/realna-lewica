@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { LedgerChart } from "@/components/ledger-chart";
 import { Shell } from "@/components/shell";
 import { HONEST, LEDGER } from "@/data/program";
+import { COMPARE_LEDGER } from "@/data/porownanie";
 
 export const Route = createFileRoute("/rachunek")({
   head: () => ({
@@ -14,11 +15,15 @@ function Rachunek() {
   return (
     <Shell>
       <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-16">
-        <p className="text-xs font-semibold tracking-widest text-red uppercase">Część III · aneks</p>
+        <p className="text-xs font-semibold tracking-widest text-red uppercase">
+          Część III · aneks
+        </p>
         <h1 className="mt-3 max-w-3xl font-display text-5xl leading-tight">
           Rachunek, linia po linii. Bez owijania w bawełnę.
         </h1>
-        <p className="mt-4 max-w-2xl text-lg text-muted">{LEDGER.prices} Środek szacunku, nie ustawa budżetowa.</p>
+        <p className="mt-4 max-w-2xl text-lg text-muted">
+          {LEDGER.prices} Środek szacunku, nie ustawa budżetowa.
+        </p>
 
         <section className="mt-10 border border-line bg-cream p-5 sm:p-8">
           <div className="flex flex-wrap items-end justify-between gap-4">
@@ -73,22 +78,28 @@ function Rachunek() {
             <h2 className="font-display text-2xl">Najgrubsze nowe wydatki w 5. roku</h2>
             <ul className="mt-4">
               {LEDGER.spends.map((item) => (
-                <li key={item.name} className="flex items-baseline justify-between gap-4 border-b border-line py-3">
+                <li
+                  key={item.name}
+                  className="flex items-baseline justify-between gap-4 border-b border-line py-3"
+                >
                   <span>{item.name}</span>
                   <span className="shrink-0 font-semibold text-red">{item.range}</span>
                 </li>
               ))}
             </ul>
             <p className="mt-4 text-sm text-muted">
-              Przy 4-dniowym tygodniu albo mniej godzin przy tej samej pensji i presja na kadry — albo uczciwe
-              dopisanie etatów. Nie udajemy, że to koszt zerowy.
+              Przy 4-dniowym tygodniu albo mniej godzin przy tej samej pensji i presja na kadry —
+              albo uczciwe dopisanie etatów. Nie udajemy, że to koszt zerowy.
             </p>
           </div>
           <div className="bg-paper p-6 sm:p-8">
             <h2 className="font-display text-2xl">Największe nowe dochody poza skalą PIT</h2>
             <ul className="mt-4">
               {LEDGER.revenues.map((item) => (
-                <li key={item.name} className="flex items-baseline justify-between gap-4 border-b border-line py-3">
+                <li
+                  key={item.name}
+                  className="flex items-baseline justify-between gap-4 border-b border-line py-3"
+                >
                   <span>{item.name}</span>
                   <span className="shrink-0 font-semibold text-gold-ink">{item.range}</span>
                 </li>
@@ -120,6 +131,26 @@ function Rachunek() {
             </ul>
             <p className="mt-6 text-muted">{LEDGER.housing}</p>
           </div>
+        </section>
+
+        <section
+          className="mt-8 border-l-4 border-gold bg-gold-soft px-5 py-5 sm:px-8"
+          aria-labelledby="aneks-sejm"
+        >
+          <p className="text-xs font-semibold tracking-widest text-gold-ink uppercase">
+            Na tle Sejmu
+          </p>
+          <h2 id="aneks-sejm" className="mt-2 font-display text-2xl">
+            Reszta Sejmu nie liczy w tej formie
+          </h2>
+          <p className="mt-3 max-w-3xl">{COMPARE_LEDGER.intro}</p>
+          <Link
+            to="/porownanie"
+            hash="aneks"
+            className="mt-3 inline-flex min-h-11 items-center font-semibold text-red"
+          >
+            Aneks na tle innych partii
+          </Link>
         </section>
 
         <section className="mt-8 border-t border-line pt-8">
