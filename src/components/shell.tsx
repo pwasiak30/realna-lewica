@@ -12,6 +12,7 @@ const NAV = [
   { to: "/program", label: "Program" },
   { to: "/rachunek", label: "Aneks kosztów" },
   { to: "/skala", label: "Skala PIT" },
+  { to: "/porownanie", label: "Na tle Sejmu" },
   { to: "/o-nas", label: "Kim jesteśmy" },
 ] as const;
 
@@ -55,7 +56,8 @@ export function Shell({ children }: { children: ReactNode }) {
                 key={item.to}
                 to={item.to}
                 className={
-                  "px-3 py-2 text-sm font-semibold " + (isActive(path, item.to) ? "text-red" : "text-ink hover:text-red")
+                  "px-3 py-2 text-sm font-semibold " +
+                  (isActive(path, item.to) ? "text-red" : "text-ink hover:text-red")
                 }
                 aria-current={isActive(path, item.to) ? "page" : undefined}
               >
@@ -75,7 +77,11 @@ export function Shell({ children }: { children: ReactNode }) {
           </button>
         </div>
         {open ? (
-          <nav id="menu-mobilne" className="border-t border-line px-5 py-3 lg:hidden" aria-label="Mobilne">
+          <nav
+            id="menu-mobilne"
+            className="border-t border-line px-5 py-3 lg:hidden"
+            aria-label="Mobilne"
+          >
             {NAV.map((item) => (
               <Link
                 key={item.to}
@@ -122,6 +128,11 @@ export function Shell({ children }: { children: ReactNode }) {
                 </Link>
               </li>
               <li>
+                <Link to="/porownanie" className="hover:text-gold">
+                  Na tle Sejmu
+                </Link>
+              </li>
+              <li>
                 <Link to="/" hash="spot" className="hover:text-gold">
                   Spoty
                 </Link>
@@ -139,8 +150,8 @@ export function Shell({ children }: { children: ReactNode }) {
           <div className="md:col-span-4">
             <p className="text-xs tracking-widest text-gold uppercase">Na pierwszej stronie</p>
             <p className="mt-3 text-cream/80">
-              W tej kadencji nie ma daty euro ani skoku obrony do 6% PKB. Pełne 7% PKB na zdrowie to cel na dwie
-              kadencje.
+              W tej kadencji nie ma daty euro ani skoku obrony do 6% PKB. Pełne 7% PKB na zdrowie to
+              cel na dwie kadencje.
             </p>
             <p className="mt-4 text-sm text-gold">
               {PARTY.versionNote}: {PARTY.version}
