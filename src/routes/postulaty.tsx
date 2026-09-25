@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Shell } from "@/components/shell";
 import { PARTY, POSTULATES } from "@/data/program";
+import { Uniques } from "@/components/uniques";
 
 export const Route = createFileRoute("/postulaty")({
   head: () => ({
@@ -19,8 +20,8 @@ function Postulaty() {
           Dwanaście zdań. Każde ma rozdział, w którym da się je sprawdzić.
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-muted">
-          To nie skrót zamiast programu. To wejście. Reszta — podatki, szkoła, granica, ustrój — jest w deklaracji,
-          rozdział po rozdziale.
+          To nie skrót zamiast programu. To wejście. Reszta — podatki, szkoła, granica, ustrój —
+          jest w deklaracji, rozdział po rozdziale.
         </p>
 
         <ol className="mt-10 border-t border-line">
@@ -45,9 +46,12 @@ function Postulaty() {
             </li>
           ))}
         </ol>
+        <div className="mt-12">
+          <Uniques variant="box" />
+        </div>
 
         <p className="mt-10 max-w-2xl text-sm text-muted">
-          {PARTY.versionNote}: {PARTY.version}. {PARTY.disclaimer}
+          {PARTY.versionNote} · {PARTY.version}. {PARTY.disclaimer}
         </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <Link

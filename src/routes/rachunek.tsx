@@ -165,7 +165,9 @@ function Rachunek() {
           </dl>
           <div className="mt-8 max-w-3xl space-y-4 text-lg">
             <p>{LEDGER.spread}</p>
-            <p>{LEDGER.added}</p>
+            {LEDGER.added.map((line) => (
+              <p key={line}>{line}</p>
+            ))}
             <p>{LEDGER.atom}</p>
             <p>{LEDGER.excise}</p>
           </div>

@@ -52,6 +52,18 @@ function Porownanie() {
         <p className="mt-3 max-w-3xl text-lg text-graphite">{COMPARE.subtitle}</p>
         <p className="mt-6 max-w-3xl text-lg">{COMPARE.lead}</p>
 
+        <div className="mt-6 max-w-4xl border-l-4 border-gold bg-gold-soft px-5 py-4">
+          <p className="text-xs font-semibold tracking-widest text-gold-ink uppercase">
+            Aktualizacja do deklaracji v10
+          </p>
+          <p className="mt-2">{COMPARE.update.text}</p>
+          <ul className="mt-2 list-disc space-y-1 pl-5">
+            {COMPARE.update.bullets.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+
         <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
           <a
             href={`${BASE}${COMPARE.pdf.href}`}
@@ -216,6 +228,11 @@ function Porownanie() {
                 ))}
               </tbody>
             </table>
+          </div>
+          <div className="mt-6 max-w-4xl space-y-3 text-graphite">
+            {COMPARE_LEDGER.notes.map((note) => (
+              <p key={note}>{note}</p>
+            ))}
           </div>
           <Link
             to="/rachunek"

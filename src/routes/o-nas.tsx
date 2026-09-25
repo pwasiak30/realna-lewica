@@ -160,8 +160,22 @@ function About() {
           </ul>
         </section>
 
+        <section
+          id="projekt"
+          className="mt-16 scroll-mt-28 border-l-4 border-gold bg-gold-soft px-5 py-5 sm:px-8"
+          aria-labelledby="projekt-tytul"
+        >
+          <p className="text-xs font-semibold tracking-widest text-gold-ink uppercase">
+            O projekcie
+          </p>
+          <h2 id="projekt-tytul" className="mt-2 font-display text-2xl">
+            Projekt studencki
+          </h2>
+          <p className="mt-3 max-w-3xl">{PARTY.project}</p>
+        </section>
+
         <p className="mt-12 text-sm text-muted">
-          {PARTY.versionNote}: {PARTY.version}. {PARTY.disclaimer}
+          {PARTY.versionNote} · {PARTY.version}. {PARTY.disclaimer}
         </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <Link

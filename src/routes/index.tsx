@@ -8,10 +8,12 @@ import {
   HONEST,
   INTRO,
   LEDGER,
+  PARTY,
   PILLARS,
   POSTULATES,
 } from "@/data/program";
-import { SYNTHESIS, UNIQUES } from "@/data/porownanie";
+import { CONVERGENCE, SYNTHESIS, UNIQUES } from "@/data/porownanie";
+import { Uniques } from "@/components/uniques";
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -64,6 +66,14 @@ function Home() {
                 Spoty
               </a>
             </div>
+            <a
+              href="#unikaty"
+              className="mt-6 inline-flex items-center gap-3 border-l-4 border-gold bg-gold-soft px-4 py-3 font-semibold hover:bg-cream"
+            >
+              <span className="font-display text-3xl leading-none text-red">{UNIQUES.length}</span>
+              <span>rzeczy, których w tej formie nie ma żadna partia sejmowa</span>
+              <ArrowRight className="size-4 shrink-0 rotate-90 text-red" aria-hidden="true" />
+            </a>
           </div>
           <aside className="bg-graphite p-6 text-cream sm:p-8 lg:col-span-5">
             <p className="text-xs font-semibold tracking-widest text-gold uppercase">
@@ -83,6 +93,8 @@ function Home() {
           </aside>
         </div>
       </section>
+
+      <Uniques />
 
       <section
         id="spot"
@@ -196,6 +208,7 @@ function Home() {
           {INTRO.paragraphs.slice(0, 2).map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
+          <p className="border-l-2 border-gold pl-4 text-base text-muted">{PARTY.project}</p>
           <Link to="/o-nas" className="inline-flex min-h-11 items-center font-semibold text-red">
             Kim jesteśmy i co znaczy znak
             <ArrowRight className="ml-2 size-4" aria-hidden="true" />
@@ -221,27 +234,22 @@ function Home() {
           </div>
           <div className="lg:col-span-6">
             <p className="text-xs font-semibold tracking-widest text-muted uppercase">
-              Tego w tej formie nie ma nikt inny w Sejmie
+              Gdzie stoimy
             </p>
-            <ol className="mt-3 border-t border-line-strong">
-              {UNIQUES.slice(0, 6).map((item, index) => (
-                <li
-                  key={item}
-                  className="grid grid-cols-[2.25rem_1fr] gap-2 border-b border-line-strong py-3"
-                >
-                  <span className="font-display text-xl text-red">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <span>{item}</span>
+            <ul className="mt-3 border-t border-line-strong">
+              {CONVERGENCE.map((group) => (
+                <li key={group.title} className="border-b border-line-strong py-4">
+                  <p className="font-display text-xl leading-snug">{group.title}</p>
+                  <p className="mt-1 text-sm text-muted">{group.items[0]}</p>
                 </li>
               ))}
-            </ol>
+            </ul>
             <Link
               to="/porownanie"
               hash="mapa"
               className="mt-3 inline-flex min-h-11 items-center font-semibold text-red"
             >
-              Wszystkie {UNIQUES.length} unikatów
+              Mapa zbieżności — cały Sejm
             </Link>
           </div>
         </div>
