@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Shell } from "@/components/shell";
+import { BillList } from "@/components/bills";
 import { ProgramDownload } from "@/components/program-download";
 import { CHAPTERS, chapterCountWord, fold, PARTY, type PartId } from "@/data/program";
 
@@ -147,6 +148,8 @@ function ProgramIndex() {
             ))}
           </ol>
         )}
+
+        <BillList />
       </div>
     </Shell>
   );
