@@ -5,6 +5,8 @@
   Każdy wiersz ma `chapter` — slug rozdziału programu, przy którym się wyświetla.
 */
 
+import type { ProgramTarget } from "./program";
+
 export type BlocId = "rl" | "nl" | "ko" | "pis" | "konf";
 
 export type CompareCells = Record<BlocId, string>;
@@ -855,23 +857,91 @@ export const CONVERGENCE: { title: string; items: string[] }[] = [
 ];
 
 /** Unikaty Realnej Lewicy — nie ma ich w tej formie u żadnej partii sejmowej. */
-export const UNIQUES: string[] = [
-  "Osobny, twardy rozdział migracyjny z Agencją, Sądem, limitem ~3200, 10 tys. za powrót i progiem 90/75% mediany.",
-  "Aneks kosztów z dziurą 0,6–1% PKB i zakazem liczenia uszczelnienia.",
-  "Szwajcarski pakiet 410/205 tys. podpisów + obowiązkowe referendum konstytucyjne + weto ludowe.",
-  "Odebranie prezydentowi weta i prawa łaski — wprost przeciw R+ („szacunek dla prezydenta”) i praktyce 2026.",
-  "Ordynacja mieszana 230 JEDNO + lista kompensacyjna, 460 mandatów, wyjątek 3 okręgów.",
-  "Nuclear sharing i certyfikacja F-35 jako punkt programu, nie wzmianka.",
-  "Danina mieszkaniowa 1% funduszu płac jako jedyne źródło 25–40 tys. mieszkań.",
-  "Skala PIT 12/32/48/56/71 + danina → 60/75% oraz podatek majątkowy 1–8% od 7 mln.",
-  "Harmonogram Linuxa: 50 tys. / 80% administracji, jeden login i Polskie AI w 36 miesięcy.",
-  "Pakiet alkoholowy bliski monopolu godzinowego przy państwowym, nie prywatnym rynku konopi.",
-  "Etapowany 4-dniowy tydzień z progiem 250 pracowników i oceną po 18 miesiącach.",
-  "Wspomagane zakończenie życia (komisja lekarska).",
-  "Model nordycki wobec pracy seksualnej.",
-  "Limit 3+1+3 kadencji poselskich i rejestr nepotyzmu (limit 3 kadencji pojawia się też u Unii Centrum IX 2026).",
-  "Państwowy holding budowlany (kolej i energetyka) jako mechanizm wykonawczy, nie tylko finansowy.",
-  "Fundusz Ubezpieczeń Twórców — pół składki dla zawodowych twórców finansowane opłatą 2% od honorariów.",
+/**
+ * Unikaty Realnej Lewicy. `target` — miejsce w pełnym programie,
+ * `postulate` — numer postulatu na /postulaty, który tę rzecz zawiera.
+ */
+export const UNIQUES: { text: string; target: ProgramTarget; postulate: string }[] = [
+  {
+    text: "Osobny, twardy rozdział migracyjny z Agencją, Sądem, limitem ~3200, 10 tys. za powrót i progiem 90/75% mediany.",
+    target: { slug: "migracja" },
+    postulate: "16",
+  },
+  {
+    text: "Aneks kosztów z dziurą 0,6–1% PKB i zakazem liczenia uszczelnienia.",
+    target: { page: "/rachunek" },
+    postulate: "22",
+  },
+  {
+    text: "Szwajcarski pakiet 410/205 tys. podpisów + obowiązkowe referendum konstytucyjne + weto ludowe.",
+    target: { slug: "ustroj", hash: "p-15-2" },
+    postulate: "09",
+  },
+  {
+    text: "Odebranie prezydentowi weta i prawa łaski — wprost przeciw R+ („szacunek dla prezydenta”) i praktyce 2026.",
+    target: { slug: "ustroj", hash: "p-15-1" },
+    postulate: "09",
+  },
+  {
+    text: "Ordynacja mieszana 230 JEDNO + lista kompensacyjna, 460 mandatów, wyjątek 3 okręgów.",
+    target: { slug: "ustroj", hash: "p-15-3" },
+    postulate: "21",
+  },
+  {
+    text: "Nuclear sharing i certyfikacja F-35 jako punkt programu, nie wzmianka.",
+    target: { slug: "obrona", hash: "p-10" },
+    postulate: "20",
+  },
+  {
+    text: "Danina mieszkaniowa 1% funduszu płac jako jedyne źródło 25–40 tys. mieszkań.",
+    target: { slug: "mieszkanie", hash: "p-2" },
+    postulate: "06",
+  },
+  {
+    text: "Skala PIT 12/32/48/56/71 + danina → 60/75% oraz podatek majątkowy 1–8% od 7 mln.",
+    target: { slug: "gospodarka", hash: "p-1" },
+    postulate: "03",
+  },
+  {
+    text: "Harmonogram Linuxa: 50 tys. / 80% administracji, jeden login i Polskie AI w 36 miesięcy.",
+    target: { slug: "atom-krzem-stal", hash: "p-12" },
+    postulate: "13",
+  },
+  {
+    text: "Pakiet alkoholowy bliski monopolu godzinowego przy państwowym, nie prywatnym rynku konopi.",
+    target: { slug: "zdrowie", hash: "p-14" },
+    postulate: "12",
+  },
+  {
+    text: "Etapowany 4-dniowy tydzień z progiem 250 pracowników i oceną po 18 miesiącach.",
+    target: { slug: "praca", hash: "p-5" },
+    postulate: "01",
+  },
+  {
+    text: "Wspomagane zakończenie życia (komisja lekarska).",
+    target: { slug: "zdrowie", hash: "p-13" },
+    postulate: "17",
+  },
+  {
+    text: "Model nordycki wobec pracy seksualnej.",
+    target: { slug: "wolnosc", hash: "p-9" },
+    postulate: "19",
+  },
+  {
+    text: "Limit 3+1+3 kadencji poselskich i rejestr nepotyzmu (limit 3 kadencji pojawia się też u Unii Centrum IX 2026).",
+    target: { slug: "uczciwa-polityka", hash: "p-3" },
+    postulate: "18",
+  },
+  {
+    text: "Państwowy holding budowlany (kolej i energetyka) jako mechanizm wykonawczy, nie tylko finansowy.",
+    target: { slug: "atom-krzem-stal", hash: "p-16" },
+    postulate: "14",
+  },
+  {
+    text: "Fundusz Ubezpieczeń Twórców — pół składki dla zawodowych twórców finansowane opłatą 2% od honorariów.",
+    target: { slug: "praca", hash: "p-12" },
+    postulate: "15",
+  },
 ];
 
 /** Antymodele — co która partia zrobiłaby odwrotnie. */

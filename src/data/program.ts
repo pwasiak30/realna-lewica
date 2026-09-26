@@ -101,96 +101,168 @@ export const HONEST = {
   ],
 };
 
-export const POSTULATES: {
+/**
+ * Dokąd prowadzi link „W programie”: rozdział (slug + kotwica punktu, np. `p-5`, `p-15-3`)
+ * albo osobna strona (aneks kosztów). Bez `hash` — początek rozdziału.
+ */
+export type ProgramTarget = { slug: string; hash?: string } | { page: "/rachunek"; hash?: string };
+
+export type Postulate = {
   n: string;
   title: string;
   line: string;
-  slug: string;
-  hash: string;
-}[] = [
+  target: ProgramTarget;
+  /** Unikat — w tej formie nie ma tego żadna partia sejmowa (zob. UNIQUES w porownanie.ts). */
+  unique?: true;
+};
+
+export const POSTULATES: Postulate[] = [
   {
     n: "01",
+    unique: true,
     title: "Cztery dni, ta sama pensja",
     line: "Etapami: najpierw sektor publiczny i firmy powyżej 250 osób. Prawo do odłączenia się po godzinach — od pierwszego roku.",
-    slug: "praca",
-    hash: "p-5",
+    target: { slug: "praca", hash: "p-5" },
   },
   {
     n: "02",
     title: "Minimalna do 75% mediany",
     line: "Dziś około 63%. W kadencji co roku około 3 punkty procentowe. Potem rośnie z pensjami, nie z jednorazowej decyzji.",
-    slug: "praca",
-    hash: "p-6",
+    target: { slug: "praca", hash: "p-6" },
   },
   {
     n: "03",
+    unique: true,
     title: "PIT bez zmian do 300 tysięcy",
     line: "12% i 32% zostają. Powyżej — 48, 56 i 71%, tylko od nadwyżki. Danina solidarnościowa zostaje.",
-    slug: "gospodarka",
-    hash: "p-1",
+    target: { slug: "gospodarka", hash: "p-1" },
   },
   {
     n: "04",
     title: "Zdrowie: 7% PKB w dwóch kadencjach",
     line: "Nie w jednej. NFZ jako osobna kasa znika. Pierwsza wizyta u psychiatry — maksymalnie 14 dni.",
-    slug: "zdrowie",
-    hash: "p-1",
+    target: { slug: "zdrowie", hash: "p-1" },
   },
   {
     n: "05",
     title: "O ciele nie decyduje poseł",
     line: "Aborcja na żądanie do 12. tygodnia. Placówka publiczna nie odmawia zabiegu klauzulą sumienia.",
-    slug: "zdrowie",
-    hash: "p-7",
+    target: { slug: "zdrowie", hash: "p-7" },
   },
   {
     n: "06",
+    unique: true,
     title: "Mieszkanie z daniny, nie z powietrza",
     line: "25–40 tysięcy lokali rocznie. 1% funduszu płac, po połowie z pasku i od pracodawcy. Publiczne zostaje publiczne.",
-    slug: "mieszkanie",
-    hash: "p-1",
+    target: { slug: "mieszkanie", hash: "p-1" },
   },
   {
     n: "07",
     title: "480 dni przy dziecku",
     line: "Do 12. roku życia. 90 dni dla każdego rodzica, bez przekazania. Samotny rodzic dostaje całą pulę.",
-    slug: "opieka",
-    hash: "p-5",
+    target: { slug: "opieka", hash: "p-5" },
   },
   {
     n: "08",
     title: "Atom w 20–25 lat, nie na slajdzie",
     line: "Około 12 GW. Przyspieszamy Lubiatowo-Kopalino i Pątnów. Harmonogram sprawdzany co 3–4 lata.",
-    slug: "atom-krzem-stal",
-    hash: "p-1",
+    target: { slug: "atom-krzem-stal", hash: "p-1" },
   },
   {
     n: "09",
+    unique: true,
     title: "Koniec weta jednego człowieka",
     line: "Prezydent traci weto i prawo łaski. 205 tysięcy podpisów w 100 dni zatrzymuje ustawę. Konstytucję zmieniasz Ty.",
-    slug: "ustroj",
-    hash: "p-15-2",
+    target: { slug: "ustroj", hash: "p-15-2" },
   },
   {
     n: "10",
     title: "Obrona zostaje tam, gdzie jest",
     line: "Około 4,8–5,2% PKB. Sześć procent nie jest obietnicą tej kadencji.",
-    slug: "obrona",
-    hash: "p-1",
+    target: { slug: "obrona", hash: "p-1" },
   },
   {
     n: "11",
     title: "Euro bez daty",
     line: "Złoty zostaje. Przygotowania prawne — tak. ERM II dopiero po ścieżce fiskalnej z tego programu.",
-    slug: "gospodarka",
-    hash: "p-14",
+    target: { slug: "gospodarka", hash: "p-14" },
   },
   {
     n: "12",
+    unique: true,
     title: "Alkohol i konopie bez hipokryzji",
     line: "Koniec marketingu, małpek i alkoholu w sklepie spożywczym. Do 15 gramów przy sobie nie jest przestępstwem. Obrót konopi — państwowy.",
-    slug: "zdrowie",
-    hash: "p-14",
+    target: { slug: "zdrowie", hash: "p-14" },
+  },
+  {
+    n: "13",
+    unique: true,
+    title: "Państwo na Linuksie, nie na licencji",
+    line: "50 tysięcy stanowisk w pierwszym roku, 80% administracji w piątym. Jeden login do urzędu i lekarza. Pierwszy model „Polskiego AI” w 36 miesięcy.",
+    target: { slug: "atom-krzem-stal", hash: "p-12" },
+  },
+  {
+    n: "14",
+    unique: true,
+    title: "Państwo buduje, nie tylko zamawia",
+    line: "Państwowy holding budowlany od kolei i energetyki. Duże inwestycje częściowo własnymi rękami, żeby prywatny wykonawca nie dyktował ceny w połowie budowy.",
+    target: { slug: "atom-krzem-stal", hash: "p-16" },
+  },
+  {
+    n: "15",
+    unique: true,
+    title: "Twórca płaci pół składki",
+    line: "Drugą połowę pokrywa Fundusz Ubezpieczeń Twórców: 2% od honorarium, płacone przez wydawnictwa, teatry i galerie. Dla tych, dla których sztuka to główny zarobek.",
+    target: { slug: "praca", hash: "p-12" },
+  },
+  {
+    n: "16",
+    unique: true,
+    title: "Migracja z twardymi regułami",
+    line: "Praca od 90% mediany, 75% w zawodach deficytowych. Krajowa Agencja i Sąd Migracyjny. Limit uchodźców ustala Sejm — na start około 3200 rocznie. 10 tysięcy złotych za dobrowolny powrót.",
+    target: { slug: "migracja" },
+  },
+  {
+    n: "17",
+    unique: true,
+    title: "Prawo do godnego końca",
+    line: "Osoba nieuleczalnie chora i cierpiąca może złożyć wielokrotnie potwierdzony wniosek o wspomagane zakończenie życia. Weryfikuje go niezależna komisja lekarska.",
+    target: { slug: "zdrowie", hash: "p-13" },
+  },
+  {
+    n: "18",
+    unique: true,
+    title: "Trzy kadencje i przerwa",
+    line: "Po trzech kadencjach z rzędu poseł robi kadencję przerwy. Jawny rejestr powiązań rodzinnych w administracji i spółkach Skarbu Państwa.",
+    target: { slug: "uczciwa-polityka", hash: "p-3" },
+  },
+  {
+    n: "19",
+    unique: true,
+    title: "Kara za kupowanie, nie za świadczenie",
+    line: "Za usługę seksualną odpowiada ten, kto płaci. Osoby, które ją świadczą, nie są ścigane i dostają wsparcie, jeśli chcą odejść.",
+    target: { slug: "wolnosc", hash: "p-9" },
+  },
+  {
+    n: "20",
+    unique: true,
+    title: "Parasol jądrowy nad Polską",
+    line: "Pełny udział w natowskim nuclear sharing, z bronią Sojuszu na naszym terytorium. F-35 certyfikowane do jej przenoszenia — inaczej to tylko deklaracja.",
+    target: { slug: "obrona", hash: "p-10" },
+  },
+  {
+    n: "21",
+    unique: true,
+    title: "Dwa głosy przy urnie",
+    line: "230 posłów z okręgów jednomandatowych, a liczba mandatów partii — z głosu na listę. Próg 5%, ale trzy wygrane okręgi też otwierają drzwi do Sejmu.",
+    target: { slug: "ustroj", hash: "p-15-3" },
+  },
+  {
+    n: "22",
+    unique: true,
+    title: "Rachunek na wierzchu",
+    line: "Aneks kosztów linia po linii. Dziura 0,6–1% PKB podana wprost. Pieniędzy z uszczelnienia podatków nie wliczamy do wpływów.",
+    target: { page: "/rachunek" },
   },
 ];
 
@@ -1239,20 +1311,55 @@ export const LEDGER = {
 };
 
 /** Liczebnik z wielkiej litery do nagłówków: 17 → „Siedemnaście”. */
+const COUNT_WORDS: Record<number, string> = {
+  12: "Dwanaście",
+  13: "Trzynaście",
+  14: "Czternaście",
+  15: "Piętnaście",
+  16: "Szesnaście",
+  17: "Siedemnaście",
+  18: "Osiemnaście",
+  19: "Dziewiętnaście",
+  20: "Dwadzieścia",
+  21: "Dwadzieścia jeden",
+  22: "Dwadzieścia dwa",
+  23: "Dwadzieścia trzy",
+  24: "Dwadzieścia cztery",
+  25: "Dwadzieścia pięć",
+  26: "Dwadzieścia sześć",
+  27: "Dwadzieścia siedem",
+  28: "Dwadzieścia osiem",
+  29: "Dwadzieścia dziewięć",
+  30: "Trzydzieści",
+};
+
+/** Liczebnik słownie, z wielkiej litery (poza słownikiem — cyfry). */
+export function countWord(n: number) {
+  return COUNT_WORDS[n] ?? String(n);
+}
+
+/** Polska odmiana po liczebniku: 1 postulat, 2–4 / 22–24 postulaty, 5–21 / 25+ postulatów. */
+export function plural(n: number, one: string, few: string, many: string) {
+  if (n === 1) return one;
+  const lastTwo = n % 100;
+  const last = n % 10;
+  if (last >= 2 && last <= 4 && (lastTwo < 12 || lastTwo > 14)) return few;
+  return many;
+}
+
 export function chapterCountWord(n: number) {
-  const words: Record<number, string> = {
-    15: "Piętnaście",
-    16: "Szesnaście",
-    17: "Siedemnaście",
-    18: "Osiemnaście",
-    19: "Dziewiętnaście",
-    20: "Dwadzieścia",
-  };
-  return words[n] ?? String(n);
+  return countWord(n);
 }
 
 export function chapterBySlug(slug: string) {
   return CHAPTERS.find((c) => c.slug === slug);
+}
+
+/** Krótki opis celu linku, np. „Rozdział 3 · Migracja” albo „Aneks kosztów”. */
+export function targetLabel(target: ProgramTarget) {
+  if ("page" in target) return "Aneks kosztów";
+  const chapter = chapterBySlug(target.slug);
+  return chapter ? `Rozdział ${chapter.num} · ${chapter.title}` : "Pełny program";
 }
 
 export function neighbors(slug: string) {
