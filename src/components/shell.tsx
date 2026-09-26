@@ -43,11 +43,10 @@ export function Shell({ children }: { children: ReactNode }) {
             <p>
               {PARTY.versionNote} · {PARTY.version}
             </p>
-            <p className="hidden sm:block">
+            <p className="max-w-[14rem] text-right sm:max-w-none">
               <Link to="/o-nas" hash="projekt" className="hover:text-ink">
-                Projekt studencki
-              </Link>{" "}
-              · {PARTY.label}
+                {PARTY.projectShort}
+              </Link>
             </p>
           </div>
         </div>
@@ -140,6 +139,11 @@ export function Shell({ children }: { children: ReactNode }) {
               <li>
                 <Link to="/" hash="spot" className="hover:text-gold">
                   Spoty
+                </Link>
+              </li>
+              <li>
+                <Link to="/program" hash="ustawy" className="hover:text-gold">
+                  Projekty ustaw
                 </Link>
               </li>
               <li>
