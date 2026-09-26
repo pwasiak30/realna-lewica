@@ -865,7 +865,22 @@ export const UNIQUES: { text: string; target: ProgramTarget; postulate: string }
   {
     text: "Osobny, twardy rozdział migracyjny z Agencją, Sądem, limitem ~3200, 10 tys. za powrót i progiem 90/75% mediany.",
     target: { slug: "migracja" },
-    postulate: "16",
+    postulate: "01",
+  },
+  {
+    text: "Pakiet alkoholowy bliski monopolu godzinowego przy państwowym, nie prywatnym rynku konopi.",
+    target: { slug: "zdrowie", hash: "p-14" },
+    postulate: "02",
+  },
+  {
+    text: "Nuclear sharing i certyfikacja F-35 jako punkt programu, nie wzmianka.",
+    target: { slug: "obrona", hash: "p-10" },
+    postulate: "03",
+  },
+  {
+    text: "Szwajcarski pakiet 410/205 tys. podpisów + obowiązkowe referendum konstytucyjne + weto ludowe.",
+    target: { slug: "ustroj", hash: "p-15-2" },
+    postulate: "04",
   },
   {
     text: "Aneks kosztów z dziurą 0,6–1% PKB i zakazem liczenia uszczelnienia.",
@@ -873,14 +888,9 @@ export const UNIQUES: { text: string; target: ProgramTarget; postulate: string }
     postulate: "22",
   },
   {
-    text: "Szwajcarski pakiet 410/205 tys. podpisów + obowiązkowe referendum konstytucyjne + weto ludowe.",
-    target: { slug: "ustroj", hash: "p-15-2" },
-    postulate: "09",
-  },
-  {
     text: "Odebranie prezydentowi weta i prawa łaski — wprost przeciw R+ („szacunek dla prezydenta”) i praktyce 2026.",
     target: { slug: "ustroj", hash: "p-15-1" },
-    postulate: "09",
+    postulate: "04",
   },
   {
     text: "Ordynacja mieszana 230 JEDNO + lista kompensacyjna, 460 mandatów, wyjątek 3 okręgów.",
@@ -888,59 +898,49 @@ export const UNIQUES: { text: string; target: ProgramTarget; postulate: string }
     postulate: "21",
   },
   {
-    text: "Nuclear sharing i certyfikacja F-35 jako punkt programu, nie wzmianka.",
-    target: { slug: "obrona", hash: "p-10" },
-    postulate: "20",
-  },
-  {
     text: "Danina mieszkaniowa 1% funduszu płac jako jedyne źródło 25–40 tys. mieszkań.",
     target: { slug: "mieszkanie", hash: "p-2" },
-    postulate: "06",
+    postulate: "10",
   },
   {
     text: "Skala PIT 12/32/48/56/71 + danina → 60/75% oraz podatek majątkowy 1–8% od 7 mln.",
     target: { slug: "gospodarka", hash: "p-1" },
-    postulate: "03",
+    postulate: "07",
   },
   {
     text: "Harmonogram Linuxa: 50 tys. / 80% administracji, jeden login i Polskie AI w 36 miesięcy.",
     target: { slug: "atom-krzem-stal", hash: "p-12" },
-    postulate: "13",
-  },
-  {
-    text: "Pakiet alkoholowy bliski monopolu godzinowego przy państwowym, nie prywatnym rynku konopi.",
-    target: { slug: "zdrowie", hash: "p-14" },
-    postulate: "12",
+    postulate: "15",
   },
   {
     text: "Etapowany 4-dniowy tydzień z progiem 250 pracowników i oceną po 18 miesiącach.",
     target: { slug: "praca", hash: "p-5" },
-    postulate: "01",
+    postulate: "05",
   },
   {
     text: "Wspomagane zakończenie życia (komisja lekarska).",
     target: { slug: "zdrowie", hash: "p-13" },
-    postulate: "17",
+    postulate: "18",
   },
   {
     text: "Model nordycki wobec pracy seksualnej.",
     target: { slug: "wolnosc", hash: "p-9" },
-    postulate: "19",
+    postulate: "20",
   },
   {
     text: "Limit 3+1+3 kadencji poselskich i rejestr nepotyzmu (limit 3 kadencji pojawia się też u Unii Centrum IX 2026).",
     target: { slug: "uczciwa-polityka", hash: "p-3" },
-    postulate: "18",
+    postulate: "19",
   },
   {
     text: "Państwowy holding budowlany (kolej i energetyka) jako mechanizm wykonawczy, nie tylko finansowy.",
     target: { slug: "atom-krzem-stal", hash: "p-16" },
-    postulate: "14",
+    postulate: "16",
   },
   {
     text: "Fundusz Ubezpieczeń Twórców — pół składki dla zawodowych twórców finansowane opłatą 2% od honorariów.",
     target: { slug: "praca", hash: "p-12" },
-    postulate: "15",
+    postulate: "17",
   },
 ];
 
