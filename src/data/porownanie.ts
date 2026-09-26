@@ -28,27 +28,28 @@ export type CompareSection = {
 export const COMPARE = {
   title: "Porównanie programów",
   subtitle:
-    "Realna Lewica (deklaracja v10, 25 września 2026) wobec partii sejmowych X kadencji oraz Konfederacji Korony Polskiej",
-  date: "25 września 2026",
+    "Realna Lewica (deklaracja v11, 26 września 2026) wobec partii sejmowych X kadencji oraz Konfederacji Korony Polskiej",
+  date: "26 września 2026",
   pdf: {
     href: "porownanie.pdf",
     filename: "Porownanie_RL_partie_sejmowe_KKP_v10.pdf",
-    label: "Pobierz porównanie (PDF)",
+    label: "Pobierz porównanie (PDF, stan v10)",
   },
   lead: "Ten dokument zestawia każdy rozdział deklaracji Realnej Lewicy z analogicznymi punktami Nowej Lewicy, Razem, Koalicji Obywatelskiej, PSL, Polski 2050 / Unii Centrum, PiS, Rozwoju Plus, Konfederacji (Nowa Nadzieja + RN) i Konfederacji Korony Polskiej. Tam, gdzie partia nie ma precyzyjnego odpowiednika, jest to zaznaczone. Porównanie jest analityczne, nie agitacyjne.",
   sources:
     "RL / NL / Razem — jak w opracowaniu z 24.09.2026, zaktualizowane o deklarację RL v10 (25.09.2026); program KW NL 2023 + priorytety XII 2025 + „1000 dni”; deklaracja Razem XI 2025. KO: 100 konkretów 2023 + umowa koalicyjna 15.10 + praktyka rządu Tusk III do IX 2026. PSL / PL2050: program Trzeciej Drogi 2023, umowa koalicyjna, manifest Unii Centrum IX 2026. PiS: program 2023 i linia klubu 2024–26. Rozwój Plus: 10 filarów z 28.07.2026. Konfederacja: program prezydencki Mentzena 2025, stanowiska klubu 2024–26. KKP: program partii (konfederacjakoronypolskiej.pl), kampania prezydencka Brauna 2025, projekty IX 2026 (ustawa o agentach, „Polska za pokojem”).",
   update: {
-    text: "Aktualizacja z 25 września 2026. Poprzednia wersja tego opracowania odnosiła się do deklaracji RL w wersji 5 (24 września 2026). Wersje 6–9 wprowadziły przede wszystkim zmiany redakcyjne i porządkujące (numeracja, odsyłacze między rozdziałami) oraz kilka nowych pozycji odnotowanych już w poprzedniej wersji tego opracowania (Krajowa Agencja Migracyjna i Sąd Migracyjny — v6; odrzucenie umowy UE–Mercosur, pakiet anty-SLAPP, zniesienie przywilejów łowieckich — v7). Sam trzon programowy — podatki, migracja, zdrowie, mieszkania, ustrój, obrona — pozostał w wersji 10 identyczny co do liczb i mechanizmów. Przy weryfikacji całego tekstu v10 wykryto dwie zmiany opisane niżej:",
+    title: "Co wnosi deklaracja v11",
+    text: "Opracowanie tabelaryczne (PDF) jest z 25 września 2026 i opisuje deklarację v10. Wersja 11 z 26 września nie rusza podatków, migracji, zdrowia, mieszkań, ustroju ani liczb w aneksie. Dopisuje jedną pozycję, której nie ma w PDF:",
     bullets: [
-      "W autoprezentacji RL (“Kim jesteśmy”) dopisano, że państwo ma być “sprawne między władzą centralną a samorządem” — nowy akcent, którego nie było w opisie pozycjonowania w wersji 5.",
-      "Pozycja “B+R do 3% PKB”, którą poprzednia wersja tego opracowania przypisywała RL w rozdziale 9 (Nauka), nie znajduje potwierdzenia w tekście wersji 10 — deklaracja mówi o waloryzacji subwencji, gwarantowanym budżecie NCN/PAN i etacie dla doktorantów, ale nie stawia liczbowego celu B+R do 3% PKB. Usunięto tę pozycję z tabeli.",
+      "Rozdział 13, punkt 4: zakaz szerzenia współczesnej ideologii imperializmu rosyjskiego i amerykańskiego, analogicznie do art. 13 Konstytucji. Obejmuje partie, organizacje, ich finansowanie i publiczną propagandę programu stref wpływów, prawa silniejszego i wojny jako narzędzia polityki mocarstwowej. Nie obejmuje rzetelnej krytyki rządów, sojuszy, historii ani debaty o polityce zagranicznej. Zmiana ustrojowo-karna, bez nowej linii wydatku.",
+      "Z wersji 10 zostają dwie korekty wobec opracowania z 24 września: w „Kim jesteśmy” dopisano, że państwo ma być „sprawne między władzą centralną a samorządem”; pozycja „B+R do 3% PKB” nie występuje w tekście deklaracji i nie wraca.",
     ],
   },
   method:
     "Partie rządzące (KO, PSL, PL2050, NL) mają program 2023 złagodzony przez kompromis koalicyjny i weto prezydenta Nawrockiego. PiS po rozłamie VII 2026 nie opublikowało nowego programu kadencyjnego — używamy linii klubu i dziedzictwa 2015–23. R+ i KKP to formacje młode: R+ ma 10 filarów, nie 155 punktów; KKP ma program tożsamościowo-katolicki, nie tabelę wydatków. Gęstość liczbowa RL pozostaje unikatowa na tle całego Sejmu.",
   footnote:
-    "Opracowanie: porównanie analityczne, pierwotnie 24 września 2026 (deklaracja RL v5), zaktualizowane 25 września 2026 do deklaracji RL v10. Cytaty i liczby: deklaracja RL v10 (25.09.2026); program KW Nowa Lewica 2023; uchwała KK NL 14.12.2025; lewica.org.pl; „1000 dni Lewicy w rządzie” (IX 2026); deklaracja Razem 8–9.11.2025; Krytyka Polityczna 5.12.2025; 100 konkretów KO 2023; umowa koalicyjna 10.11.2023; 10 filarów Rozwoju Plus 28.07.2026; program prezydencki S. Mentzena 2025; program KKP i projekty IX 2026; skład Sejmu X kadencji na 25.09.2026 (kluby: KO, PiS, R+, PSL, PL2050/Centrum, NL, Konfederacja; koła: Razem, DB, KKP).",
+    "Opracowanie: porównanie analityczne, pierwotnie 24 września 2026 (deklaracja RL v5), zaktualizowane 25 września 2026 do deklaracji RL v10. Deklaracja v11 (26.09.2026) dopisuje rozdział 13 pkt 4 — zakaz ideologii imperializmu rosyjskiego i amerykańskiego — bez zmiany pozostałych liczb. Cytaty i liczby: deklaracja RL v11 (26.09.2026); program KW Nowa Lewica 2023; uchwała KK NL 14.12.2025; lewica.org.pl; „1000 dni Lewicy w rządzie” (IX 2026); deklaracja Razem 8–9.11.2025; Krytyka Polityczna 5.12.2025; 100 konkretów KO 2023; umowa koalicyjna 10.11.2023; 10 filarów Rozwoju Plus 28.07.2026; program prezydencki S. Mentzena 2025; program KKP i projekty IX 2026; skład Sejmu X kadencji na 25.09.2026 (kluby: KO, PiS, R+, PSL, PL2050/Centrum, NL, Konfederacja; koła: Razem, DB, KKP).",
 };
 
 /** Kolumny porównania: RL i cztery bloki sejmowe. */
@@ -696,6 +697,15 @@ export const COMPARE_SECTIONS: CompareSection[] = [
         konf: "Konf.: Mentzen — dalsze wsparcie UA pod warunkiem Wołynia; nie wspólna armia UE. KKP: „Polska za pokojem”, nie być stroną wojny, krytyka eskalacji.",
       },
       {
+        topic: "Zakaz ideologii imperialnej",
+        chapter: "europa",
+        rl: "Analogia do art. 13 Konstytucji: zakaz partii, organizacji, finansowania i publicznej propagandy współczesnego imperializmu rosyjskiego i amerykańskiego (strefy wpływów, prawo silniejszego, wojna jako narzędzie). Nie obejmuje krytyki rządów, sojuszy i polityki zagranicznej. Bez linii wydatku. Unikat v11.",
+        nl: "NL/Razem: krytyka imperializmu w języku lewicowym. Brak konstytucyjnego zakazu partii odwołujących się do imperializmu rosyjskiego i amerykańskiego na wzór art. 13.",
+        ko: "KO: sojusz z USA i UE jako fundament bezpieczeństwa, nie zakaz ideologii imperializmu amerykańskiego.",
+        pis: "PiS: antyrosyjskość plus sojusz z USA. R+: NATO i bazy USA. Żadna nie zakazuje obu imperializmów naraz.",
+        konf: "Konf.: sceptycyzm wobec UE, nie taki zakaz. KKP: suwerenność wobec UE i NATO-jako-eskalacji — odwrotny wektor niż zakaz imperializmu amerykańskiego w formule RL.",
+      },
+      {
         topic: "Wydatki obronne / rezerwa",
         chapter: "obrona",
         rl: "Zostają 4,8–5,2% PKB (MON+FWSZ). 6% poza kadencją. Dobrowolna płatna rezerwa: 500–800 zł gotowości, 300–400 zł/dzień. Kanał: WOT.",
@@ -821,7 +831,8 @@ export const COMPARE_LEDGER = {
     "Danina 1% (~15–18 mld) zamyka 25–40 tys. mieszkań rocznie. Nie zamyka kryterium 3% deficytu unijnego. Dlatego euro nie ma kalendarza — nie da się jednocześnie obiecywać przyjęcia euro i utrzymywać deficytu ponad unijny limit. Najgrubsze nowe linie wydatków w 5. roku: 4-dniowy tydzień w sektorze publicznym (25–45 mld), waloryzacja świadczeń poza emeryturami według wzrostu płac (20–25 mld) i połowa drogi do 7% PKB na zdrowie (10–15 mld). Największe nowe dochody poza skalą PIT: zniesienie limitu 30-krotności składek (8–12 mld), CIT 22% dla dużych firm (5–8 mld) i koniec ulg niezależnych od dochodu (5–7 mld). Największa oszczędność to stopniowe zrównanie wieku emerytalnego na 65 lat: w kadencji 3–6 mld rocznie, docelowo 20–30 mld.",
     "Nowe pozycje v6: Krajowa Agencja Migracyjna, Sąd Migracyjny, bezpłatne kursy języka polskiego i etaty w publicznych instytucjach kultury to wydatki rzędu pojedynczych miliardów zł rocznie; po stronie dochodów — zwężenie ulgi na powrót do zawodów deficytowych. Mieszczą się w podanym rozrzucie.",
     "Nowe pozycje v7: odrzucenie umowy UE–Mercosur, zapis anty-SLAPP oraz zniesienie przywilejów łowieckich to zmiany regulacyjne i ustrojowe — bez nowej linii wydatku w tym aneksie.",
-    "Nowe pozycje v8–v10: zmiany redakcyjne i porządkujące (spis treści, numeracja, odsyłacze między rozdziałami, dopisanie „sprawne między władzą centralną a samorządem” do autoprezentacji). Bez nowych linii kosztowych względem v7 — aneks kosztów w deklaracji nie wykazuje nowej pozycji od wersji 7.",
+    "Nowe pozycje v8–v10: zmiany redakcyjne i porządkujące (spis treści, numeracja, odsyłacze między rozdziałami, dopisanie „sprawne między władzą centralną a samorządem” do autoprezentacji). Bez nowych linii kosztowych względem v7.",
+    "Nowe pozycje v11: zakaz szerzenia współczesnej ideologii imperializmu rosyjskiego i amerykańskiego (rozdział 13, punkt 4), analogicznie do art. 13 Konstytucji — zmiana ustrojowo-karna, bez nowej linii wydatku.",
     "Atom: dług Funduszu Inwestycji Strategicznych, 12 GW w horyzoncie 20–25 lat — w statystyce długu publicznego widoczny, nie schowany. Przyrost akcyzy alkoholowej i konopnej ponad poziom z 2027 roku (około 3–5 mld rocznie) idzie na psychiatrię, nie na łatanie ogólnego deficytu budżetowego.",
   ],
 };
@@ -876,6 +887,11 @@ export const UNIQUES: { text: string; target: ProgramTarget; postulate: string }
     text: "Nuclear sharing i certyfikacja F-35 jako punkt programu, nie wzmianka.",
     target: { slug: "obrona", hash: "p-10" },
     postulate: "03",
+  },
+  {
+    text: "Zakaz szerzenia ideologii imperializmu rosyjskiego i amerykańskiego — analogia do art. 13 Konstytucji, nie do bieżącej kłótni o sojusze.",
+    target: { slug: "europa", hash: "p-4" },
+    postulate: "23",
   },
   {
     text: "Szwajcarski pakiet 410/205 tys. podpisów + obowiązkowe referendum konstytucyjne + weto ludowe.",

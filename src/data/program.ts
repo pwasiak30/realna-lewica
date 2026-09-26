@@ -16,21 +16,73 @@ export type Chapter = {
 
 export const PROGRAM_FILE = {
   href: "deklaracja.pdf",
-  filename: "DEKLARACJA_Realna_Lewica_v10.pdf",
+  filename: "DEKLARACJA_Realna_Lewica_v11.pdf",
   label: "Pobierz program (PDF)",
 };
+
+export type Bill = {
+  id: string;
+  href: string;
+  filename: string;
+  title: string;
+  /** Jedno zdanie, co ustawa robi. */
+  line: string;
+  /** Gdzie w programie jest jej miejsce — pokazywane przy pobraniu. */
+  covers: string;
+  /** Rozdziały z pełną kartą. */
+  chapters: string[];
+  /** Rozdziały z samym odsyłaczem (niedziela, „zob. rozdział 5”). */
+  also?: string[];
+};
+
+export const BILLS: Bill[] = [
+  {
+    id: "migracja",
+    href: "ustawy/RL_projekt_ustawy_migracja.pdf",
+    filename: "RL_projekt_ustawy_migracja.pdf",
+    title: "Projekt ustawy o migracji zarobkowej, ochronie i obywatelstwie",
+    line: "Próg 90/75% mediany, Krajowa Agencja Migracyjna, Sąd Migracyjny, limit uchodźców, łączenie rodzin, obywatelstwo po 9 latach.",
+    covers:
+      "Rozdział 3, punkty 1–19, oraz odesłanie z rozdziału 13, punkt 3. Wzór druku sejmowego z 26 września 2026, napisany przy deklaracji v10 — liczby i mechanizmy w v11 są te same. To nie jest akt obowiązujący i nie został wniesiony na ręce Marszałka Sejmu.",
+    chapters: ["migracja"],
+  },
+  {
+    id: "alkohol-konopie",
+    href: "ustawy/RL_projekt_ustawy_alkohol_konopie.pdf",
+    filename: "RL_projekt_ustawy_alkohol_konopie.pdf",
+    title: "Projekt ustawy o zdrowiu publicznym: alkohol i konopie",
+    line: "Koniec marketingu i małpek, punkty koncesjonowane 10:00–20:00, sucha niedziela, posiadanie 15/30 g poza przestępstwem, państwowy obrót konopi od 21 lat.",
+    covers:
+      "Rozdział 5, punkt 14; sucha niedziela z rozdziału 2, punkt 5; odesłanie z rozdziału 11, punkt 6. Wzór druku sejmowego z 26 września 2026, napisany przy deklaracji v10 — punkt 5.14 w v11 ma tę samą treść. To nie jest akt obowiązujący i nie został wniesiony na ręce Marszałka Sejmu.",
+    chapters: ["zdrowie"],
+    also: ["praca", "wolnosc"],
+  },
+];
+
+export function billsForChapter(slug: string) {
+  return BILLS.filter((bill) => bill.chapters.includes(slug));
+}
+
+export function billPointers(slug: string) {
+  return BILLS.filter((bill) => bill.also?.includes(slug));
+}
 
 export const PARTY = {
   name: "Realna Lewica",
   label: "Socjaldemokracja realistyczna",
   slogan: ["Twoja pensja.", "Twoje ciało.", "Twoje mieszkanie.", "Twoje bezpieczeństwo."],
-  version: "25 września 2026",
-  versionNote: "Wersja 10",
+  version: "26 września 2026",
+  versionNote: "Wersja 11",
   disclaimer:
     "To deklaracja programowa — nie rejestracja komitetu, nie zbiórka podpisów ani pieniędzy.",
-  /** Kontekst projektu — pokazywany w stopce, na stronie głównej i w „Kim jesteśmy”. */
+  /** Krótki podpis w belce. Pełny akapit jest w `project`. */
+  projectShort: "Studia psychologii · AHE w Łodzi",
+  /**
+   * Kontekst projektu — stopka, strona główna i „Kim jesteśmy”.
+   * Nie skrót „projekt studencki”: ma być wiadomo, kto pisze i na jakim kierunku.
+   */
   project:
-    "Realna Lewica to autorski projekt Pawła Wasiaka, realizowany w ramach studiów. Nie jest zarejestrowaną partią ani komitetem wyborczym.",
+    "Realna Lewica to autorski projekt programowy Pawła Wasiaka, pisany w trakcie studiów psychologii na Akademii Humanistyczno-Ekonomicznej w Łodzi. Psychologia jest tu narzędziem, nie ozdobą: program nazywa mechanizmy — czekanie na lekarza, lęk o pensję, czyjeś prawo do cudzego ciała — i przekłada je na przepisy, które da się policzyć. To nie jest zarejestrowana partia, komitet wyborczy ani zbiórka podpisów lub pieniędzy. Projekty ustaw na tej stronie są wzorami druków sejmowych do pobrania i konsultacji. Nie zostały wniesione na ręce Marszałka Sejmu.",
 };
 
 /** Kolory znaku — te same wartości co w src/styles.css i src/components/mark.tsx. */
@@ -263,6 +315,13 @@ export const POSTULATES: Postulate[] = [
     title: "Rachunek na wierzchu",
     line: "Aneks kosztów linia po linii. Dziura 0,6–1% PKB podana wprost. Pieniędzy z uszczelnienia podatków nie wliczamy do wpływów.",
     target: { page: "/rachunek" },
+  },
+  {
+    n: "23",
+    unique: true,
+    title: "Zakaz ideologii imperialnej",
+    line: "Art. 13 Konstytucji rozszerzamy analogicznie na współczesny imperializm rosyjski i amerykański: strefy wpływów, prawo silniejszego, wojna jako narzędzie. Nie obejmuje rzetelnej krytyki rządów i sojuszy.",
+    target: { slug: "europa", hash: "p-4" },
   },
 ];
 
@@ -1126,6 +1185,11 @@ export const CHAPTERS: Chapter[] = [
         title: "Migracja, azyl i granica — odsyłacz do rozdziału 3",
         body: "Zasady migracji, azylu i ochrony granicy opisujemy w rozdziale 3.",
       },
+      {
+        n: "4",
+        title: "Zakaz szerzenia imperializmu rosyjskiego i amerykańskiego — analogia do art. 13 Konstytucji",
+        body: "Konstytucja w art. 13 zakazuje partii i organizacji odwołujących się do totalitarnych metod i praktyk nazizmu, faszyzmu i komunizmu. Pod wpływem wydarzeń na świecie analogicznie rozszerzamy ten zakaz na współczesną ideologię imperializmu rosyjskiego i amerykańskiego — na program stref wpływów, prawa silniejszego i wojny jako narzędzia polityki mocarstwowej. Zakaz obejmuje partie, organizacje, ich finansowanie i publiczną propagandę takich idei. Nie obejmuje rzetelnej krytyki rządów, sojuszy, historii ani debaty o polityce zagranicznej. Polska nie jest terenem rekrutacji do cudzej imperii — ani wschodniej, ani zachodniej.",
+      },
     ],
   },
   {
@@ -1304,6 +1368,7 @@ export const LEDGER = {
   added: [
     "Nowe pozycje v6: Krajowa Agencja Migracyjna, Sąd Migracyjny, bezpłatne kursy języka polskiego i etaty w publicznych instytucjach kultury to wydatki rzędu pojedynczych miliardów zł rocznie; po stronie dochodów — zwężenie ulgi na powrót do zawodów deficytowych. Mieszczą się w podanym rozrzucie; dokładna wycena — w projekcie ustawy.",
     "Nowe pozycje v7: odrzucenie umowy UE–Mercosur, zapis anty-SLAPP oraz zniesienie przywilejów łowieckich to zmiany regulacyjne i ustrojowe — bez nowej linii wydatku w tym aneksie.",
+    "Nowe pozycje v11: zakaz szerzenia współczesnej ideologii imperializmu rosyjskiego i amerykańskiego (rozdział 13, punkt 4), analogicznie do art. 13 Konstytucji — zmiana ustrojowo-karna, bez nowej linii wydatku.",
   ],
   atom: "Atom: dług Funduszu Inwestycji Strategicznych, 12 GW w horyzoncie 20–25 lat. W statystyce długu będzie widoczny, nie schowany.",
   excise:
