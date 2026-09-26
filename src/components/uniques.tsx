@@ -1,11 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { UNIQUES } from "@/data/porownanie";
+import { ProgramLink } from "@/components/program-link";
+import { targetLabel } from "@/data/program";
 
 /**
  * Unikaty Realnej Lewicy — rzeczy, których w tej formie nie ma żadna partia sejmowa.
  * Źródło: porównanie programów (src/data/porownanie.ts).
- * `band` — pełna szerokość (strona główna), `box` — blok w kolumnie treści (postulaty).
+ * Każdy unikat linkuje do swojego miejsca w pełnym programie.
+ * `band` — pełna szerokość (strona główna), `box` — blok w kolumnie treści.
  */
 export function Uniques({
   variant = "band",
@@ -32,13 +35,22 @@ export function Uniques({
       <ol className="mt-8 grid gap-x-10 md:grid-cols-2">
         {UNIQUES.map((item, index) => (
           <li
-            key={item}
+            key={item.text}
             className="grid grid-cols-[2.5rem_1fr] gap-2 border-t border-cream/15 py-3"
           >
             <span className="font-display text-xl text-gold">
               {String(index + 1).padStart(2, "0")}
             </span>
-            <span>{item}</span>
+            <span>
+              <span className="block">{item.text}</span>
+              <ProgramLink
+                target={item.target}
+                className="mt-1 inline-flex min-h-11 items-center text-sm font-semibold text-gold underline-offset-4 hover:text-cream hover:underline"
+              >
+                {targetLabel(item.target)}
+                <ArrowRight className="ml-1.5 size-3.5 shrink-0" aria-hidden="true" />
+              </ProgramLink>
+            </span>
           </li>
         ))}
       </ol>
