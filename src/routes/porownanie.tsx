@@ -11,6 +11,8 @@ import {
   Verdict,
 } from "@/components/compare";
 import { Shell } from "@/components/shell";
+import { ProgramLink } from "@/components/program-link";
+import { targetLabel } from "@/data/program";
 import {
   ANTIMODELS,
   BLOCS,
@@ -270,13 +272,22 @@ function Porownanie() {
             <ol className="mt-6 grid gap-x-10 md:grid-cols-2">
               {UNIQUES.map((item, index) => (
                 <li
-                  key={item}
+                  key={item.text}
                   className="grid grid-cols-[2.25rem_1fr] gap-2 border-t border-cream/15 py-3"
                 >
                   <span className="font-display text-xl text-gold">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <span>{item}</span>
+                  <span>
+                    <span className="block">{item.text}</span>
+                    <ProgramLink
+                      target={item.target}
+                      className="mt-1 inline-flex min-h-11 items-center text-sm font-semibold text-gold underline-offset-4 hover:text-cream hover:underline"
+                    >
+                      {targetLabel(item.target)}
+                      <ArrowRight className="ml-1.5 size-3.5 shrink-0" aria-hidden="true" />
+                    </ProgramLink>
+                  </span>
                 </li>
               ))}
             </ol>

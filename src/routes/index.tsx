@@ -5,21 +5,26 @@ import { ProgramDownload } from "@/components/program-download";
 import {
   CHAPTERS,
   chapterCountWord,
+  countWord,
   HONEST,
   INTRO,
   LEDGER,
   PARTY,
   PILLARS,
+  plural,
   POSTULATES,
 } from "@/data/program";
 import { CONVERGENCE, SYNTHESIS, UNIQUES } from "@/data/porownanie";
 import { Uniques } from "@/components/uniques";
+import { ProgramLink, UniqueBadge } from "@/components/program-link";
 
 const BASE = import.meta.env.BASE_URL;
 
 export const Route = createFileRoute("/")({
   component: Home,
 });
+
+const POSTULATE_COUNT = POSTULATES.length;
 
 function pad(n: number) {
   return String(n).padStart(2, "0");
@@ -49,7 +54,8 @@ function Home() {
                 to="/postulaty"
                 className="inline-flex min-h-11 items-center justify-center bg-red px-5 font-semibold text-cream hover:bg-red-deep"
               >
-                Dwanaście postulatów
+                {countWord(POSTULATE_COUNT)}{" "}
+                {plural(POSTULATE_COUNT, "postulat", "postulaty", "postulatów").toLowerCase()}
                 <ArrowRight className="ml-2 size-4" aria-hidden="true" />
               </Link>
               <ProgramDownload tone="line" />
@@ -168,7 +174,8 @@ function Home() {
                 Kadencja, nie życzenia
               </p>
               <h2 className="mt-2 max-w-3xl font-display text-4xl leading-tight">
-                Dwanaście zdań, które da się sprawdzić.
+                {countWord(POSTULATE_COUNT)} {plural(POSTULATE_COUNT, "zdanie", "zdania", "zdań")},
+                które da się sprawdzić.
               </h2>
             </div>
             <Link to="/postulaty" className="inline-flex min-h-11 items-center font-semibold">
@@ -179,18 +186,19 @@ function Home() {
           <ol className="mt-10 grid border-t border-line md:grid-cols-2 md:gap-x-12">
             {POSTULATES.map((item) => (
               <li key={item.n} className="border-b border-line">
-                <Link
-                  to="/program/$slug"
-                  params={{ slug: item.slug }}
-                  hash={item.hash}
+                <ProgramLink
+                  target={item.target}
                   className="grid grid-cols-[2.75rem_1fr] gap-3 py-4"
                 >
                   <span className="font-display text-xl text-red">{item.n}</span>
                   <span>
-                    <span className="block font-display text-2xl">{item.title}</span>
+                    <span className="block font-display text-2xl">
+                      {item.title}
+                      {item.unique && <UniqueBadge />}
+                    </span>
                     <span className="mt-1 block text-muted">{item.line}</span>
                   </span>
-                </Link>
+                </ProgramLink>
               </li>
             ))}
           </ol>
