@@ -166,10 +166,10 @@ function About() {
           aria-labelledby="projekt-tytul"
         >
           <p className="text-xs font-semibold tracking-widest text-gold-ink uppercase">
-            O projekcie
+            Skąd jest ten program
           </p>
           <h2 id="projekt-tytul" className="mt-2 font-display text-2xl">
-            Projekt studencki
+            Psychologia na AHE w Łodzi, nie komitet wyborczy
           </h2>
           <p className="mt-3 max-w-3xl">{PARTY.project}</p>
         </section>

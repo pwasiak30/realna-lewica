@@ -56,7 +56,7 @@ function Porownanie() {
 
         <div className="mt-6 max-w-4xl border-l-4 border-gold bg-gold-soft px-5 py-4">
           <p className="text-xs font-semibold tracking-widest text-gold-ink uppercase">
-            Aktualizacja do deklaracji v10
+            {COMPARE.update.title}
           </p>
           <p className="mt-2">{COMPARE.update.text}</p>
           <ul className="mt-2 list-disc space-y-1 pl-5">
