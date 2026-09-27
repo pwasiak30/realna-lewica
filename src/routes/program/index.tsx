@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Shell } from "@/components/shell";
+import { PageHero } from "@/components/page-hero";
 import { BillList } from "@/components/bills";
 import { ProgramDownload } from "@/components/program-download";
 import { CHAPTERS, chapterCountWord, fold, PARTY, type PartId } from "@/data/program";
@@ -53,13 +54,14 @@ function ProgramIndex() {
 
   return (
     <Shell>
-      <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-16">
-        <p className="text-xs font-semibold tracking-widest text-red uppercase">Deklaracja</p>
-        <h1 className="mt-3 max-w-3xl font-display text-5xl leading-tight">Program, rozdział po rozdziale.</h1>
-        <p className="mt-4 max-w-2xl text-lg text-muted">
-          {chapterCountWord(CHAPTERS.length)} rozdziałów polityki i ustroju. Szukaj po haśle — płaca, aborcja, atom, euro, mieszkanie — bez
-          zgadywania, w którym akapicie to jest. Albo weź całość jednym plikiem.
+      <PageHero kicker="Deklaracja" title="Program, rozdział po rozdziale.">
+        <p>
+          {chapterCountWord(CHAPTERS.length)} rozdziałów polityki i ustroju. Szukaj po haśle — płaca,
+          aborcja, atom, euro, mieszkanie — bez zgadywania, w którym akapicie to jest. Albo weź
+          całość jednym plikiem.
         </p>
+      </PageHero>
+      <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-16">
         <div className="mt-6 flex flex-col items-start gap-2">
           <ProgramDownload />
           <p className="text-sm text-muted">

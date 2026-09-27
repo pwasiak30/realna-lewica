@@ -51,8 +51,19 @@ function ChapterPage() {
 
   return (
     <Shell>
+      <header className="bg-graphite text-cream">
+        <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-16">
+          <p className="text-xs font-semibold tracking-widest text-gold uppercase">
+            Część {chapter.part} · rozdział {pad(chapter.num)} · {chapter.kicker}
+          </p>
+          <h1 className="mt-4 max-w-4xl font-display text-5xl leading-[0.98] font-extrabold sm:text-7xl">
+            {chapter.title}
+          </h1>
+          <p className="mt-5 max-w-3xl text-lg text-cream/80">{chapter.lead}</p>
+        </div>
+      </header>
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-10 sm:px-8 lg:grid-cols-[16rem_1fr] lg:py-14">
-        <aside className="hidden lg:sticky lg:top-28 lg:block lg:self-start">
+        <aside className="hidden lg:sticky lg:top-36 lg:block lg:self-start">
           <p className="text-xs font-semibold tracking-widest text-muted uppercase">Spis</p>
           <nav className="mt-3" aria-label="Rozdziały">
             <ol className="max-h-[70vh] space-y-1 overflow-auto pr-2">
@@ -97,12 +108,7 @@ function ChapterPage() {
               ))}
             </select>
           </label>
-          <p className="text-xs font-semibold tracking-widest text-red uppercase">
-            Część {chapter.part} · rozdział {pad(chapter.num)} · {chapter.kicker}
-          </p>
-          <h1 className="mt-3 font-display text-5xl leading-tight">{chapter.title}</h1>
-          <p className="mt-5 max-w-3xl text-xl text-graphite">{chapter.lead}</p>
-          <div className="mt-4">
+          <div className="mb-8">
             <ProgramDownload tone="text" />
           </div>
           <ChapterBills slug={chapter.slug} />
