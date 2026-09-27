@@ -347,27 +347,56 @@ function Home() {
   );
 }
 
-type Slide =
-  | { kind: "poster"; src: string; alt: string; caption: string }
-  | { kind: "line"; n: string; title: string; line: string; dark: boolean };
+type Slide = {
+  src: string;
+  alt: string;
+  caption: string;
+  n?: string;
+  title?: string;
+  line?: string;
+};
+
+const PILLAR_FRAMES: Record<
+  (typeof PILLARS)[number]["id"],
+  { file: string; alt: string }
+> = {
+  pensja: {
+    file: "kadry/pensja.jpg",
+    alt: "Pracownicy wychodzą z zakładu po zmianie",
+  },
+  cialo: {
+    file: "kadry/cialo.jpg",
+    alt: "Rozmowa w gabinecie publicznej przychodni",
+  },
+  mieszkanie: {
+    file: "kadry/mieszkanie.jpg",
+    alt: "Para z kluczami w drzwiach skromnego mieszkania",
+  },
+  bezpieczenstwo: {
+    file: "kadry/bezpieczenstwo.jpg",
+    alt: "Spokojna linia granicy o świcie",
+  },
+};
 
 function CampaignFrame() {
   const slides: Slide[] = [
     {
-      kind: "poster",
       src: `${BASE}spot-wyborczy.jpg`,
       alt: "Znak Realnej Lewicy i hasło czterech zobowiązań",
       caption: "Znak",
     },
-    ...PILLARS.map((pillar, index) => ({
-      kind: "line" as const,
-      n: pad(index + 1),
-      title: pillar.label,
-      line: pillar.line,
-      dark: index % 2 === 1,
-    })),
+    ...PILLARS.map((pillar, index) => {
+      const frame = PILLAR_FRAMES[pillar.id];
+      return {
+        src: `${BASE}${frame.file}`,
+        alt: frame.alt,
+        caption: pillar.label,
+        n: pad(index + 1),
+        title: pillar.label,
+        line: pillar.line,
+      };
+    }),
     {
-      kind: "poster",
       src: `${BASE}spot-prawa-i-glos.jpg`,
       alt: "Pałac Prezydencki o świcie",
       caption: "Prawa i głos",
@@ -386,21 +415,23 @@ function CampaignFrame() {
   const slide = slides[index];
 
   return (
-    <div className="relative order-2 min-h-[22rem] min-w-0 overflow-hidden bg-graphite text-cream sm:min-h-[26rem] lg:order-1 lg:min-h-full">
-      {slide.kind === "poster" ? (
-        <img src={slide.src} alt={slide.alt} className="absolute inset-0 size-full object-cover" />
-      ) : (
-        <div className={"absolute inset-0 flex flex-col justify-end p-8 sm:p-12 " + (slide.dark ? "bg-ink" : "bg-red")}>
+    <div className="relative order-2 min-h-[40rem] min-w-0 overflow-hidden bg-graphite text-cream lg:order-1 lg:min-h-full">
+      <img
+        src={slide.src}
+        alt={slide.alt}
+        className="absolute inset-0 size-full object-cover object-[center_38%] lg:object-[center_42%]"
+      />
+      {slide.line ? (
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink from-20% via-ink/80 via-50% to-transparent px-6 pt-16 pb-16 sm:px-12 sm:pt-24">
           <p className="font-display text-sm tracking-[0.2em] text-cream/70">{slide.n}</p>
-          <p className="mt-3 font-display text-6xl leading-none font-extrabold sm:text-7xl">{slide.title}</p>
-          <p className="mt-4 max-w-md text-lg text-cream/85">{slide.line}</p>
+          <p className="mt-1 font-display text-4xl leading-none font-extrabold sm:mt-2 sm:text-6xl">{slide.title}</p>
+          <p className="mt-2 max-w-md text-sm text-cream/90 sm:mt-3 sm:text-lg">{slide.line}</p>
         </div>
-      )}
-      {slide.kind === "poster" ? (
+      ) : (
         <p className="absolute bottom-16 left-5 bg-ink/80 px-3 py-1 text-xs font-semibold tracking-[0.16em] text-cream uppercase">
           {slide.caption}
         </p>
-      ) : null}
+      )}
       <div className="absolute right-4 bottom-4 flex items-center gap-2">
         <button
           type="button"
@@ -422,7 +453,7 @@ function CampaignFrame() {
       <div className="absolute bottom-5 left-5 flex gap-1.5" aria-hidden="true">
         {slides.map((item, dot) => (
           <span
-            key={item.kind === "poster" ? item.caption : item.n}
+            key={item.caption}
             className={"h-1 " + (dot === index ? "w-8 bg-gold" : "w-3 bg-cream/50")}
           />
         ))}
