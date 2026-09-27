@@ -5,7 +5,6 @@ import appCss from "../styles.css?url";
 
 const APP_NAME = "Realna Lewica";
 const BASE = import.meta.env.BASE_URL;
-const SITE_URL = "https://realna-lewica.wasiakpawel.pl";
 const DESCRIPTION =
   "Deklaracja programowa Realnej Lewicy. Pensja, ciało, mieszkanie i bezpieczeństwo — z jawnym rachunkiem, bez obietnic, których nie da się sfinansować w tej kadencji.";
 
@@ -16,16 +15,7 @@ export const Route = createRootRoute({
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: `${APP_NAME} — socjaldemokracja realistyczna` },
       { name: "description", content: DESCRIPTION },
-      { name: "theme-color", content: "#2b3038" },
-      { property: "og:type", content: "website" },
-      { property: "og:site_name", content: APP_NAME },
-      { property: "og:title", content: `${APP_NAME} — socjaldemokracja realistyczna` },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:image", content: `${SITE_URL}/og.jpg` },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
-      { property: "og:locale", content: "pl_PL" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { name: "theme-color", content: "#870f57" },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: `${BASE}favicon.svg` },
@@ -44,7 +34,7 @@ export const Route = createRootRoute({
       },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap",
       },
     ],
   }),

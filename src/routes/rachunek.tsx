@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LedgerChart } from "@/components/ledger-chart";
 import { Shell } from "@/components/shell";
+import { PageHero } from "@/components/page-hero";
 import { HONEST, LEDGER } from "@/data/program";
 import { COMPARE_LEDGER } from "@/data/porownanie";
 
@@ -14,16 +15,10 @@ export const Route = createFileRoute("/rachunek")({
 function Rachunek() {
   return (
     <Shell>
+      <PageHero kicker="Część III · aneks" title="Rachunek, linia po linii. Bez owijania w bawełnę.">
+        <p>{LEDGER.prices} Środek szacunku, nie ustawa budżetowa.</p>
+      </PageHero>
       <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-16">
-        <p className="text-xs font-semibold tracking-widest text-red uppercase">
-          Część III · aneks
-        </p>
-        <h1 className="mt-3 max-w-3xl font-display text-5xl leading-tight">
-          Rachunek, linia po linii. Bez owijania w bawełnę.
-        </h1>
-        <p className="mt-4 max-w-2xl text-lg text-muted">
-          {LEDGER.prices} Środek szacunku, nie ustawa budżetowa.
-        </p>
 
         <section className="mt-10 border border-line bg-cream p-5 sm:p-8">
           <div className="flex flex-wrap items-end justify-between gap-4">

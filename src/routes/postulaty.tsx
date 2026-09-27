@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Shell } from "@/components/shell";
+import { PageHero } from "@/components/page-hero";
 import { ProgramLink, UniqueBadge } from "@/components/program-link";
 import { countWord, PARTY, plural, POSTULATES } from "@/data/program";
 
@@ -17,16 +18,16 @@ function Postulaty() {
   const n = POSTULATES.length;
   return (
     <Shell>
-      <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-16">
-        <p className="text-xs font-semibold tracking-widest text-red uppercase">Front programu</p>
-        <h1 className="mt-3 max-w-3xl font-display text-5xl leading-tight">
-          {countWord(n)} {plural(n, "zdanie", "zdania", "zdań")}. Każde da się sprawdzić w
-          programie.
-        </h1>
-        <p className="mt-4 max-w-2xl text-lg text-muted">
+      <PageHero
+        kicker="Front programu"
+        title={`${countWord(n)} ${plural(n, "zdanie", "zdania", "zdań")}. Każde da się sprawdzić w programie.`}
+      >
+        <p>
           To nie skrót zamiast programu. To wejście. Reszta — podatki, szkoła, granica, ustrój —
           jest w deklaracji, rozdział po rozdziale.
         </p>
+      </PageHero>
+      <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-16">
         <p className="mt-4 max-w-2xl border-l-4 border-gold bg-gold-soft px-4 py-3">
           <UniqueBadge spaced={false} /> {UNIQUE_COUNT} z {n} — tego w tej formie nie ma żadna
           partia sejmowa.{" "}

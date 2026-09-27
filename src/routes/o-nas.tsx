@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Download } from "lucide-react";
 import { Mark, Wordmark } from "@/components/mark";
 import { Shell } from "@/components/shell";
+import { PageHero } from "@/components/page-hero";
 import { BRAND_COLORS, chapterBySlug, INTRO, PARTY, PILLARS } from "@/data/program";
 import { CONVERGENCE, SYNTHESIS } from "@/data/porownanie";
 
@@ -30,11 +31,11 @@ function About() {
 
   return (
     <Shell>
+      <PageHero
+        kicker={INTRO.title}
+        title="Silne państwo przy tym, co jest życiem. Twarde tam, gdzie chaos zżera zaufanie."
+      />
       <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-16">
-        <p className="text-xs font-semibold tracking-widest text-red uppercase">{INTRO.title}</p>
-        <h1 className="mt-3 max-w-3xl font-display text-4xl leading-tight sm:text-5xl">
-          Silne państwo przy tym, co jest życiem. Twarde tam, gdzie chaos zżera zaufanie.
-        </h1>
 
         <div className="mt-8 grid gap-10 lg:grid-cols-12">
           <div className="space-y-5 text-lg lg:col-span-7">

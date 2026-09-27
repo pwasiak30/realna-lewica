@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { Shell } from "@/components/shell";
+import { PageHero } from "@/components/page-hero";
 import { chapterBySlug } from "@/data/program";
 import { compareIncome, formatEffective, formatPct, formatPln, REDUCTION, SLIDER_MAX } from "@/lib/pit";
 
@@ -24,15 +25,17 @@ function Skala() {
 
   return (
     <Shell>
+      <PageHero
+        kicker={`Rozdział ${chapterBySlug("gospodarka")?.num ?? ""} · punkt 1`}
+        title="Skala, nie hasło. Wpisz dochód."
+      >
+        <p>
+          Do 300 tysięcy złotych rocznie progi zostają: 12% i 32%. Powyżej stawka rośnie, ale tylko
+          od nadwyżki. Danina solidarnościowa 4% od dochodu ponad 1 milion zostaje — stąd realnie
+          60% i 75% na samej górze.
+        </p>
+      </PageHero>
       <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-16">
-        <p className="text-xs font-semibold tracking-widest text-red uppercase">
-          Rozdział {chapterBySlug("gospodarka")?.num} · punkt 1
-        </p>
-        <h1 className="mt-3 max-w-3xl font-display text-5xl leading-tight">Skala, nie hasło. Wpisz dochód.</h1>
-        <p className="mt-4 max-w-2xl text-lg text-muted">
-          Do 300 tysięcy złotych rocznie progi zostają: 12% i 32%. Powyżej stawka rośnie, ale tylko od nadwyżki.
-          Danina solidarnościowa 4% od dochodu ponad 1 milion zostaje — stąd realnie 60% i 75% na samej górze.
-        </p>
 
         <section className="mt-10 border border-line bg-cream p-5 sm:p-8">
           <label className="block" htmlFor="dochod">

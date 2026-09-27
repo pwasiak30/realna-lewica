@@ -11,6 +11,7 @@ import {
   Verdict,
 } from "@/components/compare";
 import { Shell } from "@/components/shell";
+import { PageHero } from "@/components/page-hero";
 import { ProgramLink } from "@/components/program-link";
 import { targetLabel } from "@/data/program";
 import {
@@ -46,12 +47,10 @@ function Porownanie() {
 
   return (
     <Shell>
+      <PageHero kicker="Na tle Sejmu" title={COMPARE.title}>
+        <p>{COMPARE.subtitle}</p>
+      </PageHero>
       <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-16">
-        <p className="text-xs font-semibold tracking-widest text-red uppercase">Na tle Sejmu</p>
-        <h1 className="mt-3 max-w-4xl font-display text-4xl leading-tight sm:text-5xl">
-          {COMPARE.title}
-        </h1>
-        <p className="mt-3 max-w-3xl text-lg text-graphite">{COMPARE.subtitle}</p>
         <p className="mt-6 max-w-3xl text-lg">{COMPARE.lead}</p>
 
         <div className="mt-6 max-w-4xl border-l-4 border-gold bg-gold-soft px-5 py-4">
@@ -127,7 +126,7 @@ function Porownanie() {
         </nav>
 
         {/* Pasek wyboru bloku — trzyma się pod nagłówkiem strony przy przewijaniu tabel. */}
-        <div className="z-30 -mx-5 mt-8 lg:sticky lg:top-[98px] border-b border-line bg-paper/95 px-5 py-3 backdrop-blur sm:-mx-8 sm:px-8">
+        <div className="z-30 -mx-5 mt-8 border-b border-line bg-paper/95 px-5 py-3 backdrop-blur sm:-mx-8 sm:px-8 lg:sticky lg:top-36">
           <div className="flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between">
             <p className="text-sm font-semibold">Porównaj Realną Lewicę z:</p>
             <BlocSwitch value={filter} onChange={setFilter} />
