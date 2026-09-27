@@ -4,7 +4,7 @@ Strona deklaracji programowej. Socjaldemokracja realistyczna.
 
 Twoja pensja. Twoje ciało. Twoje mieszkanie. Twoje bezpieczeństwo.
 
-Wersja złożona: 24 września 2026 (deklaracja v5).
+Wersja złożona: 27 września 2026 (deklaracja v12).
 
 ## Uruchomienie
 

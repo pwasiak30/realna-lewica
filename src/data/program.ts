@@ -16,7 +16,7 @@ export type Chapter = {
 
 export const PROGRAM_FILE = {
   href: "deklaracja.pdf",
-  filename: "DEKLARACJA_Realna_Lewica_v11.pdf",
+  filename: "DEKLARACJA_Realna_Lewica_v12.pdf",
   label: "Pobierz program (PDF)",
 };
 
@@ -43,7 +43,7 @@ export const BILLS: Bill[] = [
     title: "Projekt ustawy o migracji zarobkowej, ochronie i obywatelstwie",
     line: "Próg 90/75% mediany, Krajowa Agencja Migracyjna, Sąd Migracyjny, limit uchodźców, łączenie rodzin, obywatelstwo po 9 latach.",
     covers:
-      "Rozdział 3, punkty 1–19, oraz odesłanie z rozdziału 13, punkt 3. Wzór druku sejmowego z 26 września 2026, napisany przy deklaracji v10 — liczby i mechanizmy w v11 są te same. To nie jest akt obowiązujący i nie został wniesiony na ręce Marszałka Sejmu.",
+      "Rozdział 3, punkty 1–19, oraz odesłanie z rozdziału 14, punkt 3. Wzór druku sejmowego z 26 września 2026, napisany przy deklaracji v10 — liczby i mechanizmy bez zmian; w v12 ten rozdział ma numer 14. To nie jest akt obowiązujący i nie został wniesiony na ręce Marszałka Sejmu.",
     chapters: ["migracja"],
   },
   {
@@ -53,7 +53,7 @@ export const BILLS: Bill[] = [
     title: "Projekt ustawy o zdrowiu publicznym: alkohol i konopie",
     line: "Koniec marketingu i małpek, punkty koncesjonowane 10:00–20:00, sucha niedziela, posiadanie 15/30 g poza przestępstwem, państwowy obrót konopi od 21 lat.",
     covers:
-      "Rozdział 5, punkt 14; sucha niedziela z rozdziału 2, punkt 5; odesłanie z rozdziału 11, punkt 6. Wzór druku sejmowego z 26 września 2026, napisany przy deklaracji v10 — punkt 5.14 w v11 ma tę samą treść. To nie jest akt obowiązujący i nie został wniesiony na ręce Marszałka Sejmu.",
+      "Rozdział 5, punkt 14; sucha niedziela z rozdziału 2, punkt 5; odesłanie z rozdziału 12, punkt 6. Wzór druku sejmowego z 26 września 2026, napisany przy deklaracji v10 — punkt 5.14 ma tę samą treść; w v12 rozdział o wolności ma numer 12. To nie jest akt obowiązujący i nie został wniesiony na ręce Marszałka Sejmu.",
     chapters: ["zdrowie"],
     also: ["praca", "wolnosc"],
   },
@@ -71,8 +71,8 @@ export const PARTY = {
   name: "Realna Lewica",
   label: "Socjaldemokracja realistyczna",
   slogan: ["Twoja pensja.", "Twoje ciało.", "Twoje mieszkanie.", "Twoje bezpieczeństwo."],
-  version: "26 września 2026",
-  versionNote: "Wersja 11",
+  version: "27 września 2026",
+  versionNote: "Wersja 12",
   disclaimer:
     "To deklaracja programowa — nie rejestracja komitetu, nie zbiórka podpisów ani pieniędzy.",
   /** Krótki podpis w belce. Pełny akapit jest w `project`. */
@@ -145,6 +145,7 @@ export const HONEST = {
     "Płaca minimalna do 75% mediany — stopniowo",
     "Linux i polskie AI w administracji",
     "Nowy system migracyjny",
+    "Twórcza resocjalizacja: koniec demoralizacji od 10. roku życia",
   ],
   later: [
     "Data przyjęcia euro",
@@ -322,6 +323,13 @@ export const POSTULATES: Postulate[] = [
     title: "Zakaz ideologii imperialnej",
     line: "Art. 13 Konstytucji rozszerzamy analogicznie na współczesny imperializm rosyjski i amerykański: strefy wpływów, prawo silniejszego, wojna jako narzędzie. Nie obejmuje rzetelnej krytyki rządów i sojuszy.",
     target: { slug: "europa", hash: "p-4" },
+  },
+  {
+    n: "24",
+    unique: true,
+    title: "Dziecko nie jest sprawą karną",
+    line: "Koniec demoralizacji w wieku 10–12 lat. Szkoła nie oddaje trudnego ucznia sądowi. Zakaz krat. Zamiast żetonu — rola i praca, jak w licencji z Goniądza.",
+    target: { slug: "resocjalizacja" },
   },
 ];
 
@@ -770,7 +778,7 @@ export const CHAPTERS: Chapter[] = [
       {
         n: "10",
         title: "Szybki dostęp do psychiatry (14 dni / 72h w kryzysie)",
-        body: "Na pierwszą wizytę u psychiatry czeka się maksymalnie 14 dni, a w sytuacji kryzysowej pomoc jest dostępna w ciągu 72 godzin, bez potrzeby skierowania od innego lekarza. Rozwijamy sieć centrów zdrowia psychicznego działających w środowisku lokalnym. Dodatkowe pieniądze na ten rozwój pochodzą z podwyższonej akcyzy na alkohol i konopie (patrz punkt 14 niżej), nie z ogólnego budżetu.",
+        body: "Na pierwszą wizytę u psychiatry czeka się maksymalnie 14 dni, a w sytuacji kryzysowej pomoc jest dostępna w ciągu 72 godzin, bez potrzeby skierowania od innego lekarza. Rozwijamy sieć centrów zdrowia psychicznego działających w środowisku lokalnym. Dodatkowe pieniądze na ten rozwój pochodzą z podwyższonej akcyzy na alkohol i konopie (patrz punkt 14 niżej), nie z ogólnego budżetu. Gdy sygnał przychodzi ze szkoły — od kolegi, nauczyciela albo samego ucznia — pomoc przy bezpośrednim zagrożeniu życia startuje tego samego dnia, według skryptu z rozdziału 10, punkt 12. 72 godziny są sufitem wizyty, gdy kryzys nie jest natychmiastowy, nie celem na dzisiaj.",
       },
       {
         n: "11",
@@ -1010,7 +1018,7 @@ export const CHAPTERS: Chapter[] = [
       {
         n: "4",
         title: "Limit 20/25 uczniów w klasie",
-        body: "Klasa liczy maksymalnie 20 uczniów w klasach 1–3 i 25 w starszych. Zapewniamy realne wsparcie psychologiczno-pedagogiczne oraz jasne procedury reagowania na przemoc rówieśniczą, w tym przemoc w internecie.",
+        body: "Klasa liczy maksymalnie 20 uczniów w klasach 1–3 i 25 w starszych. Zapewniamy realne wsparcie psychologiczno-pedagogiczne oraz jasne procedury reagowania na przemoc rówieśniczą, w tym przemoc w internecie. Sygnał, że ktoś z klasy chce odebrać sobie życie, ma osobny skrypt — punkt 12. To nie jest „przemoc rówieśnicza” i nie obsługuje się go tą samą procedurą co bójki.",
       },
       {
         n: "5",
@@ -1042,10 +1050,110 @@ export const CHAPTERS: Chapter[] = [
         title: "Ustawowy limit czasu na dokumentację nauczyciela",
         body: "Czas, który nauczyciel poświęca na dokumentację, jest limitowany ustawowo, żeby nie zjadał czasu na uczenie.",
       },
+      {
+        n: "11",
+        group: "Umiejętności, nie tylko teoria",
+        title: "Rdzeń życiowy: szkoła uczy, co zrobić, nie tylko jak wygląda urząd",
+        body: "Szkoła tłumaczy ustrój samorządu i nie tłumaczy, co zrobić, gdy koleżanka mówi, że nie chce żyć. Wiedza o społeczeństwie zostaje. Nie zastępuje bloku, bez którego świadectwo jest puste.\n\nW ogólnokrajowym rdzeniu 70–80% (punkt 5) jest osobny blok umiejętności życiowych: od klasy 4, jedna godzina tygodniowo, te same scenariusze w każdej szkole. Nie ma sprawdzianu z definicji. Zaliczane jest przeprowadzenie scenariusza.\n\nW bloku, konkretnie:\n\n— kryzys kolegi albo koleżanki: skrypt z punktu 12, ćwiczone co najmniej dwa razy w roku szkolnym;\n— przemoc w domu i w sieci: komu powiedzieć; dorosły nie obiecuje tajemnicy, której nie może dotrzymać;\n— pieniądz i praca: czym różni się umowa o pracę od zlecenia, co jest na pasku, czym jest kaucja i dług — spójnie z rozdziałami 2 i 7, bez materiałów od banków i firm pożyczkowych;\n— zgoda i odmowa: ciało, zdjęcie, alkohol;\n— neuroróżnorodność, niepełnosprawność i choroba przewlekła: że to nie „charakter” i nie powód, żeby iść do sądu (rozdział 11).\n\nBlok prowadzą nauczyciel i psycholog szkolny razem. Godzina nie wypada jako pierwsza, gdy trzeba „dobić” podstawę z innego przedmiotu.",
+      },
+      {
+        n: "12",
+        title: "Gdy ktoś z klasy mówi, że chce umrzeć — jeden skrypt, nie ulotka",
+        body: "Standardy dla nauczycieli, które ministerstwo rozesłało w grudniu 2024, zostają. Nie wystarczają. Uczeń, który dowiaduje się pierwszy — z rozmowy, z kartki, z wiadomości — nie ma dziś obowiązku szkolnego, który mówiłby mu, co zrobić. Ma się „domyślić”. Tego nie zostawiamy dobrej woli pedagoga.\n\nOd klasy 4 każdy uczeń i każdy pracownik szkoły ma ten sam, krótki skrypt. Jest ćwiczone na lekcji. Nie jest rozdawane w dniu, w którym jest już za późno.\n\n1. Zostajesz. Nie zostawiasz osoby samej, żeby szukać dorosłego w pustej szkole.\n2. Nie obiecujesz tajemnicy. Mówisz wprost: „Nie mogę tego zatrzymać tylko dla siebie. Chcę, żebyś żył” — albo „żyła”.\n3. Mówisz konkretnemu dorosłemu z imienia i nazwiska: wychowawcy, psychologowi albo osobie dyżurnej wypisanej na drzwiach. Jeśli w budynku nie ma żadnego dorosłego z tej listy — dzwonisz pod 112 albo na Telefon Zaufania dla Dzieci i Młodzieży, 116 111.\n4. Nie oceniasz. Nie wypytujesz o szczegóły planu i nie powtarzasz ich klasie. Szczegóły planu nie są wiedzą, którą mają nosić rówieśnicy.\n\nSzkoła, tego samego dnia:\n\n— Dorosły, który dostał sygnał, przejmuje opiekę w ciągu tej samej godziny lekcyjnej. Nie czeka do jutra. Nie czeka na zgodę rodzica, żeby zapewnić bezpieczeństwo. Rodzic jest informowany, nie jest bramką.\n— Uczeń, który zgłosił, nie jest przesłuchiwany jak świadek winy i nie dostaje uwagi za „donoszenie”.\n— Gdy ryzyko jest bezpośrednie, pomoc psychiatryczna startuje tego samego dnia. 72 godziny z rozdziału 5, punkt 10, są sufitem na wizytę planową w kryzysie, nie celem, kiedy ktoś mówi, że chce umrzeć dzisiaj.\n— Po próbie: plan powrotu do szkoły w ciągu 7 dni od wypisu. Klasa dostaje rozmowę bez opisu sposobu. Nikt nie ogłasza „wstydu szkoły”.\n— Dwa razy w roku cała szkoła przerabia scenariusz „kolega napisał, że nie chce żyć”. To element podstawy programowej. Dyrektor, u którego tego nie ma, nie rozlicza się z „programu profilaktycznego” — rozlicza się z braku tego scenariusza.\n\nKartka na drzwiach psychologa: imię dyżurnego, numer 116 111, numer 112. Jedna strona, nie procedura na dwadzieścia.",
+      },
     ],
   },
   {
     num: 11,
+    slug: "resocjalizacja",
+    part: "I",
+    title: "Dziecko nie jest sprawą karną",
+    kicker: "Twórcza resocjalizacja",
+    lead: "Polska od dekad prowadzi dzieci tak, jakby karała małych dorosłych: akta, punkty, kraty, terapia pod przymusem. Około połowy dorosłych po zakładzie karnym wraca do przestępstwa. Dla nieletnich państwo nie publikuje porównywalnej liczby — szacunki z praktyki mówią o siedmiu powrotach na dziesięcioro. Od 1991 roku jest w Polsce inna metoda, sprawdzona najpierw w teatrze poza murami zakładu, potem w licencjonowanej placówce: głęboka relacja i nowa rola wśród ludzi, nie żeton za grzeczność. Ten rozdział robi z niej prawo. Psychologia jest tu mechanizmem przepisu, nie cytatem na okładce.",
+    pillars: ["cialo","bezpieczenstwo"],
+    points: [
+      {
+        n: "1",
+        group: "Prawo, które przestaje karać dzieciństwo",
+        title: "Ustawa z 2022 roku do wymiany, nie do kosmetyki",
+        body: "Ustawę z 9 czerwca 2022 r. o wspieraniu i resocjalizacji nieletnich uchylamy i piszemy od nowa: ustawa o wsparciu dziecka i o odpowiedzialności nieletnich za czyn. Tamta ustawa jest do wymiany, bo w jednym akcie zrobiła dwie rzeczy naraz. Wstawiła próg 10 lat tam, gdzie wcześniej progu nie było — i tym samym dała sądowi dziecko, które nie popełniło czynu. Jednocześnie usankcjonowała podział na „lepszych i gorszych” nieletnich, okręgowe ośrodki o logice zamknięcia i poprawczak, który w skrajnym przypadku sięga 24. roku życia.\n\nWcześniejszy brak progu nie był ochroną. Przed sądem mogło stanąć jeszcze młodsze dziecko. Nie wracamy do tej fikcji. Odwracamy kierunek.\n\nZ ustawy wypada słowo „demoralizacja” jako nazwa postępowania wobec zachowania, które nie jest czynem karalnym. Wagary, bunt, konflikt z nauczycielem, niezdiagnozowana niepełnosprawność — to nie jest paragraf. Z preambuły wypada „chrześcijański system wartości” jako podstawa wychowania państwowego. Państwo wychowuje według prawa i wiedzy, nie według katechizmu. Katecheza zostaje poza szkołą (rozdział 12, punkt 1).\n\nCzyn karalny zostaje. Odpowiedzialność za czyn popełniony po 13., a przed 17. rokiem życia zostaje. Nie obniżamy wieku odpowiedzialności karnej. Podnosimy próg izolacji i likwidujemy sąd nad dzieciństwem, które nikomu nie zrobiło krzywdy czynem.",
+      },
+      {
+        n: "2",
+        title: "Izolacja od 15. roku życia i tylko za ciężki czyn",
+        body: "Poniżej 15. roku życia nie ma umieszczenia w placówce — ani otwartej, ani zamkniętej. Poniżej 13. roku życia nie ma postępowania sądowego o zachowanie, które nie jest czynem karalnym.\n\nIzolacja (zakład poprawczy albo ośrodek zamknięty) tylko od ukończenia 15 lat, tylko za czyn przeciwko życiu, zdrowiu albo wolności seksualnej, i tylko gdy sąd napisze, dlaczego plan środowiskowy nie wystarcza albo jest niemożliwy. Czas jest oznaczony. Sąd sprawdza wykonanie co 3 miesiące i może je skrócić. Znika możliwość trzymania dziecka w placówce „do pełnoletności” za zachowanie z 10. albo 12. roku życia, często kilkaset kilometrów od domu. Znika przedłużanie środka poprawczego do 24. roku życia za czyn z czasu, gdy człowiek nie był pełnoletni.\n\nIzolacja chroni osobę poszkodowaną. Nie jest zemstą i nie jest programem wychowawczym. Program zaczyna się w środku izolacji tego samego dnia: relacja, nauka, plan wyjścia. Bez planu wyjścia izolacja produkuje recydywę, tylko drożej.\n\nDziecko w wieku 10–14 lat, które popełniło czyn, dostaje plan środowiskowy i — gdy trzeba — rodzinę zastępczą zawodową albo mały dom w tej samej gminie albo powiecie. Nie dostaje krat.",
+      },
+      {
+        n: "3",
+        title: "Koniec demoralizacji w wieku 10–12 lat. Wagary nie są ścieżką do placówki",
+        body: "Z ustawy znika domniemanie, że dziecko w wieku 10–12 lat jest zdemoralizowane. Ustawodawca nie może już zakładać demoralizacji w tym wieku — bo opuściło lekcje, pyskowało albo nie mieści się w regulaminie. W tym wieku osobowość i system wartości nie są domknięte. Stempel „zdemoralizowany” jest zakazany jako podstawa postępowania. Przed 13. rokiem życia nie ma sprawy sądowej o zachowanie, które nie jest czynem. Czyn karalny od 13. roku życia zostaje. Zostaje czyn, nie „charakter”.\n\nPolska należy do wąskiego grona państw europejskich — około trzech — które za absencję szkolną prowadzą ścieżkę o charakterze penalnym. Wychodzimy z tej grupy.\n\nSzacunek z praktyki, nie z rocznika GUS: około 30–40% nieletnich w placówkach trafiło tam od wagarów, bez rzetelnego zbadania przyczyny. GUS od drugiego roku ustawy publikuje tę liczbę co roku. Dopóki jej nie ma, nikt w rządzie nie mówi, że „system działa”.\n\nNowa reguła. Nieobecność nieusprawiedliwiona trwająca albo powtarzająca się uruchamia w ciągu 14 dni asystenta rodziny, nie policjanta i nie wniosek do sądu. Asystent sprawdza, w tej kolejności: czy w domu starcza na dojazd i buty, czy jest przemoc, czy jest lęk albo bullying, czy jest niezdiagnozowana niepełnosprawność, neuroróżnorodność albo choroba przewlekła, czy chory jest rodzic, czy szkoła sama nie wypchnęła dziecka regulaminem. Dopiero opis tych przyczyn, a nie sama liczba godzin nieobecności, może iść dalej. Do sądu — nigdy jako pierwszy krok i nigdy jako jedyny dokument.",
+      },
+      {
+        n: "4",
+        title: "Zakaz pozbywania się trudnego ucznia przez sąd",
+        body: "Szkoła nie może pozbyć się ucznia trudnego, neuroróżnorodnego albo z niepełnosprawnością, której nie widać, kierując sprawę do sądu rodzinnego pod pretekstem demoralizacji. To jest zakaz, nie wytyczna. Wniosek szkoły o wszczęcie sprawy albo o umieszczenie własnego ucznia jest niedopuszczalny, dopóki nie wyczerpie wszystkich dostępnych możliwości wsparcia w środowisku lokalnym i nie pokaże tego w aktach.\n\n„Wyczerpanie” znaczy co najmniej 90 dni udokumentowanej pomocy: psycholog, pedagog specjalny, dostosowanie wymagań, obiad, dojazd, rozmowa z rodzicem, plan frekwencji. Sąd odrzuca wniosek bez tego załącznika, bez wzywania dziecka na salę. Jeśli w gminie brakuje psychologa albo asystenta, brak ten obciąża organ, nie ucznia. Nie wolno napisać „wyczerpano środki”, gdy środków w ogóle nie było.\n\nNeuroróżnorodność, ADHD, spektrum autyzmu, niepełnosprawność — także taka, której nie widać na korytarzu — oraz choroba przewlekła nie są demoralizacją i nie mogą paść w uzasadnieniu wniosku. Szkoła, która mimo zakazu taki wniosek wyśle, łamie ustawę. Organ prowadzący cofa jej część subwencji oświatowej za tego ucznia do czasu planu naprawczego. Nie nagradzamy eksportu problemu.\n\nRzecznik Praw Dziecka ma legitymację do zaskarżenia takiego wniosku i do wejścia w sprawę z urzędu. To nie jest urząd od przemówień. To jest urząd, który zatrzymuje pismo.\n\nZakaz nie dotyczy czynu przeciwko życiu, zdrowiu albo wolności seksualnej. Tam szkoła zawiadamia od razu. Wsparcie środowiskowe i ochrona osoby poszkodowanej idą równolegle, nie zamiast zawiadomienia.",
+      },
+      {
+        n: "5",
+        title: "W jednej grupie maksymalnie trzy lata różnicy",
+        body: "W jednej grupie mieszkalnej różnica wieku nie jest większa niż 3 lata. Dziecko nie śpi, nie je i nie chodzi do szkoły wewnętrznej w grupie z kimś starszym o osiem lat. Państwo, które zamyka 10-latka z 18-latkiem, samo urządza demoralizację, a potem dziwi się wynikowi.\n\nGrupy są małe: do 8 wychowanków na stałego wychowawcę. Przepisy BHP placówki liczą etaty od tej normy, nie od „stanu średniego w województwie”.",
+      },
+      {
+        n: "6",
+        group: "Metoda, nie regulamin",
+        title: "Zamiast rygoru i żetonu: rola społeczna i stymulacja poznawcza",
+        body: "Rygor, regulamin, który ocenia osobowość, i ekonomia żetonowa — punkty, poziomy, „przywilej kina za zachowanie” — przestają być metodą resocjalizacji. W ustawie w ich miejsce wchodzą dwa narzędzia i tylko te dwa liczą się przy odnowieniu licencji: kreowanie konstruktywnych ról społecznych oraz stymulacja poznawcza.\n\nRola społeczna znaczy konkretnie: dziecko robi coś, co jest komuś potrzebne poza placówką. Uczy młodszych, gra, naprawia, gotuje dla ludzi z miasta, prowadzi trening. Nie zbiera punktów za ciszę na apelu.\n\nStymulacja poznawcza znaczy konkretnie: placówka dokłada informacji „umiem” i „jestem komuś potrzebny”. Nie dokłada informacji „jestem sprawą z akt”. To, co człowiek o sobie wie, w dużej części pochodzi z relacji, nie z pogadanki. Dlatego każda licencjonowana placówka ma plan zajęć, które budują kompetencję — nauka, warsztat, teatr, muzyka, sport — a nie tabelę kar.\n\nPod spodem zostają dwa obowiązki, bez których rola jest dekoracją. Pierwszy, relacyjny: zmiana idzie przez jakość więzi. Jeden stały wychowawca, maksimum 8 podopiecznych, ciągłość co najmniej 2 lata, chyba że dziecko samo prosi o zmianę albo wychowawca łamie prawo. Wychowawca, który odchodzi, przekazuje relację osobiście — nie „teczką”. Drugi: praca od zasobów i talentów, nie od listy deficytów. Cel to nowy sposób myślenia o sobie, nie wymuszona grzeczność.\n\nRegulamin bezpieczeństwa zostaje. Regulamin, który udaje osobowość, odpada. Terapia jest proponowana, nie wymierzana. Odmowa terapii nie przedłuża pobytu i nie obniża żadnych punktów, bo punktów nie ma. Terapia pod przymusem nie działa. Wyjątek nie jest resocjalizacją: bezpośrednie zagrożenie życia albo zdrowia, na zasadach ustawy o ochronie zdrowia psychicznego. To leczenie. Nie żeton i nie kara za „brak współpracy”.",
+      },
+      {
+        n: "7",
+        title: "Zakaz krat i zaspawanych okien. Placówka ma się otwierać, nie zamykać",
+        body: "Przed zmianą rządu w 2023 roku w placówkach resocjalizacyjnych nakazywano zaspawanie instalacji i montowanie krat, żeby dziecko w wieku 12–13 lat nie uciekło. To stało w sprzeczności z wcześniejszym trendem otwierania tych instytucji. Tego nakazu nie wolno powtórzyć. Zakaz jest ustawowy, nie okólnikiem, który następny minister wycofa.\n\nZakazane są kraty, zaspawane okna i każda instalacja, której jedynym celem jest uniemożliwienie ucieczki dziecku. Zakazana jest izolatka. Pokój wyciszenia tylko z obecnym dorosłym, nie dłużej niż 30 minut, każdy raz w rejestrze, który co miesiąc czyta sędzia rodzinny.\n\nPlacówka, z której się ucieka, jest źle prowadzona — nie za słabo zakratowana. Ucieczki publikujemy. Nie są kryterium sukcesu dyrektora i nie są powodem, żeby dozbroić budynek. Kryterium jest w punkcie 12.\n\nNormą lokalową jest mały dom, nie kampus za ogrodzeniem. Jak ten dom ma działać — mieszkanie w mieście, rola wśród ludzi, prawdziwa praca — mówi punkt 8. To nie jest dodatek do krat. To jest zamiast krat.",
+      },
+      {
+        n: "8",
+        title: "Licencja przepisuje Goniądz: dom w mieście, rola, prawdziwa praca",
+        body: "Pierwsza placówka w Polsce z licencją twórczej resocjalizacji — ośrodek w Goniądzu, prowadzony przez Sławomira Moczydłowskiego — przestaje być wyjątkiem jednego dyrektora. Jej sposób działania staje się minimum licencji. Kto tego minimum nie spełnia, licencji nie dostaje i jej nie odnawia.\n\nMieszkanie. Wychowanek mieszka w domu na terenie miasta, nie tylko w budynku ośrodka. Adres „wyłącznie za bramą” jest wyjątkiem: sąd pisze, dlaczego inaczej się nie da, i wraca do sprawy najpóźniej za 6 miesięcy.\n\nRola wśród ludzi. Wychowankowie organizują imprezy i zajęcia dla dzieci z okolicznych szkół — warsztat, trening, przedstawienie. To jest element programu, nie dzień otwarty raz w roku. Wyjazd sportowy, w tym obóz narciarski, jest finansowany jak wycieczka szkoły publicznej. Nie jest nagrodą z tabeli punktów, bo tabeli nie ma.\n\nPraca. Dyrektor razem z wychowankami prowadzi w mieście zwykły lokal, w którym produkują i sprzedają jedzenie mieszkańcom — albo inną usługę, którą da się zrobić w tej miejscowości. Praca jest umową, z pensją i składką, spójnie z rozdziałem 2. Zakaz darmowej „terapii zajęciowej” i zakaz bezpłatnego stażu. Zysk idzie na zajęcia i stypendia wyjściowe, według jawnego regulaminu. Nie do prywatnej kieszeni dyrektora.\n\nPartnerstwo. Relacja kadry z podopiecznym jest partnerska w tym, co nie dotyczy bezpieczeństwa: rada wychowanków współdecyduje o codzienności domu. Nie współdecyduje o tym, kto może wyjść, jeśli sąd zakazał. Student na praktykach ma zobaczyć koleżankę albo kolegę, z którymi da się pracować — nie eksponat na zajęcia z patologii. Jeśli dokumentacja placówki mówi o ludziach wyłącznie jak o problemie do ułożenia, rada licencyjna traktuje to jako niespełnienie tego punktu.\n\nUcieczki w takim ośrodku są rzadkie bez krat. To jest skutek, nie cel. Cel jest w punktach 6 i 12.",
+      },
+      {
+        n: "9",
+        title: "Blisko domu. Rodzeństwa się nie rozdziela",
+        body: "Placówka jest w tym samym województwie i nie dalej niż 80 km od miejsca zamieszkania. Dalej — tylko gdy sąd napisze, dlaczego bliżej się nie da, i wyznaczy datę ponownego rozpoznania, nie później niż za 6 miesięcy.\n\nPaństwo płaci dwa zjazdy rodziny w miesiącu albo jeden zjazd i połączenie wideo co tydzień. Dojazd nie zależy od portfela matki.\n\nRodzeństwa nie rozdziela się „dla porządku w aktach” i nie wywozi się siostry dwieście kilometrów dalej, bo tak wypadło z wolnego miejsca. Rozdzielenie tylko osobną decyzją sądu, gdy jedno dziecko zagraża drugiemu, z datą powrotu do sprawy. Ta sama zasada obowiązuje w pieczy zastępczej, nie tylko w resocjalizacji.",
+      },
+      {
+        n: "10",
+        title: "Pierwsze pytanie brzmi: co lubisz robić",
+        body: "Przez pierwszych 30 dni diagnoza jest diagnozą zasobów: co dziecko umie, czym się zajmuje, gdy nikt nie każe, jaką rolę już pełni — opieka nad rodzeństwem, sport, muzyka, rysunek, naprawianie, gotowanie, zwierzęta. Akta czyta się w tym czasie także, ale nie zamiast tego pytania. Wychowawca, który zaczyna od teczki i kończy na teczce, nie realizuje licencji.\n\nPaństwo finansuje rozwój tej umiejętności z budżetu placówki: lekcje, instrument, warsztat, klub, materiał. Nie ze zbiórki w internecie i nie „jak szkoła znajdzie sponsora”.\n\nPlacówka nie ma prawa zakończyć edukacji zdaniem „nie nadaje się, niech idzie na najkrótszy kurs”. Ścieżkę — liceum, szkoła artystyczna, technikum, nauka zawodu — ustala się według tego, co dziecko jest w stanie udźwignąć, nie według wygody etatu. Sprzeciw placówki albo szkoły wobec ścieżki, którą wskazuje diagnoza zasobów, rozstrzyga sąd rodzinny po opinii Rzecznika Praw Dziecka. Kurs zawodowy może być dobrym wyborem. Nie może być karą za to, że ktoś ma talent, którego akta nie przewidziały.",
+      },
+      {
+        n: "11",
+        title: "Wyjście jest zaprojektowane w dniu wejścia",
+        body: "W dniu przyjęcia powstaje plan na 24 miesiące po opuszczeniu: szkoła albo praca, dach nad głową, jedna osoba, która zostaje. Mentor po wyjściu nie jest kuratorem od kontroli zakazów. Jest od roli, którą człowiek ma utrzymać na wolności: praca, zespół, nauka, lokalna odpowiedzialność. Spotkanie co tydzień przez pierwsze 3 miesiące, potem co dwa tygodnie, do końca 24. miesiąca. Mentor jest płatny ze środka, o którym mówi punkt 15. Nie jest wolontariuszem „jak się znajdzie”.\n\nMieszkanie: pierwszeństwo w lokalu komunalnym albo treningowym z rozdziału 7, jeśli po wyjściu nie ma dokąd wrócić. „Najpierw mieszkanie” obowiązuje tu tak samo jak przy bezdomności dorosłych.\n\nŚrodki wychowawcze nie trafiają do Krajowego Rejestru Karnego. Zaświadczenie o niekaralności, o które pyta pracodawca, ich nie pokazuje. Akta sprawy o czyn przed 17. rokiem życia są niedostępne dla pracodawcy. Szkoła, która przyjmuje ucznia, dostaje informację o wsparciu, którego potrzebuje — nie dossier do odstraszania rady pedagogicznej. Pytanie rekrutacyjne o nieletność jest zakazane.\n\nWyjątek, którego nie chowamy: skazanie na zasadach kodeksu karnego, gdy sąd zastosował odpowiedzialność jak wobec dorosłego, zostaje w rejestrze na zwykłych zasadach. Nie ukrywamy ciężkiego wyroku. Ukrywamy pieczęć „byłeś w ośrodku”.\n\nTatuaż zrobiony w izolacji prymitywnym sprzętem zostawia bliznę i zamyka pracę. Państwo nie zmusza do usunięcia. Finansuje usunięcie albo pokrycie, gdy człowiek sam o to prosi, bo blizna zamyka mu zatrudnienie. Przeszłości się nie pieczętuje drugim piętnem. Uczy się ją nieść tak, żeby dało się z nią żyć wśród ludzi — i dostać umowę.",
+      },
+      {
+        n: "12",
+        group: "Kto odpowiada i ile to kosztuje",
+        title: "Licencja dyrektora. Trzy liczby, nie liczba krat",
+        body: "Placówki wychodzą spod logiki więziennej. Nadzór pedagogiczny prowadzi Krajowa Rada Twórczej Resocjalizacji przy ministrze edukacji. Nie przy więziennictwie. Sąd decyduje o wolności. Rada decyduje, kto w ogóle ma prawo prowadzić dom.\n\nDyrektor dostaje licencję na 4 lata. Odnowienie zależy od trzech liczb, publikowanych co roku dla każdej placówki:\n\n— ile wychowanków skończyło szkołę, którą zaczęli;\n— ilu rok po wyjściu uczy się albo pracuje legalnie;\n— ilu w ciągu 2 lat i ilu w ciągu 5 lat wróciło do czynu karalnego.\n\nLicencja spada, gdy trzecia liczba jest strukturalnie zła przy podobnej grupie czynów, a pierwsze dwie stoją. Nie spada za ucieczkę, której nie powstrzymała krata. Kadra bez szkolenia w tej metodzie nie prowadzi grupy. Szkolenie jest państwowe, płatne w czasie pracy, nie „kursem weekendowym na własny koszt”.\n\nUczelnie kształcące pedagogów, psychologów i pracowników socjalnych mają ten standard w obowiązkowym programie, nie jako fakultet dla chętnych. Praktyka odbywa się w placówce licencjonowanej. Praktyka w miejscu bez licencji nie zalicza roku.",
+      },
+      {
+        n: "13",
+        title: "Surowość kary nie jest polityką bezpieczeństwa",
+        body: "Od około stu lat badania nie pokazują związku między surowością groźby a spadkiem liczby czynów. Związek, który widać, dotyczy skuteczności wykrywania. Nie zaostrzamy prawa nieletnich, żeby „dać sygnał społeczeństwu”. Dziecko albo nastolatek, który popełnia ciężki czyn, zwykle nie kalkuluje widełek kodeksu. Sygnał, którego nie słyszy sprawca, a słyszy tylko publiczność, nie jest polityką bezpieczeństwa. Jest teatrem.\n\nResocjalizacja po ciężkim czynie jest możliwa i jest obowiązkiem państwa, nie łaską i nie „drugą szansą z telewizji”. Izolacja zostaje tam, gdzie trzeba chronić innych — krótka, sprawdzana, bez przedłużania dla przykładu. Dorośli po zakładzie karnym to inne zagadnienie: około 50% recydywy i osobna polityka karna, której ten rozdział nie udaje. Tu mówimy o człowieku, który w chwili czynu nie miał domkniętej osobowości. Państwo, które w tym momencie dopisuje mu tożsamość osadzonego, wykonuje pracę za przestępczość, którą potem samo statystycznie odkrywa.",
+      },
+      {
+        n: "14",
+        title: "Rocznik, którego dziś nie ma",
+        body: "Dziś recydywa dorosłych po zakładzie karnym to około 50%. Dla nieletnich nie ma porównywalnej, urzędowej liczby. Szacunki z praktyki — około 70% powrotów po placówce — traktujemy jako alarm, nie jako dogmat. Albo je potwierdzimy, albo obalimy. Nie będziemy ich cytować w nieskończoność zamiast pomiaru.\n\nOd drugiego roku obowiązywania ustawy GUS razem z radą z punktu 12 publikuje co roku:\n\n— ile dzieci jest w placówkach (dziś rząd wielkości około 7 tysięcy) i ile w izolacji;\n— ile spraw zaczęło się od wagarów;\n— ile dzieci poniżej 15. roku życia jest poza własnym domem z powodu tej ustawy;\n— powrót do czynu karalnego po 2 i po 5 latach, z rozbiciem na czyn, od którego się zaczęło;\n— ukończenie szkoły i pracę albo naukę rok po wyjściu.\n\nBez tej tabeli minister nie składa sprawozdania sejmowi. Sprawozdanie „o działaniach” bez tych pięciu liczb jest nieważne.",
+      },
+      {
+        n: "15",
+        title: "Koszt: drogie jest zamknięcie, nie asystent",
+        body: "Nie obiecujemy, że dobra placówka jest tania. Stały wychowawca przy ośmiu dzieciach kosztuje. Oszczędność jest gdzie indziej: dziecko, które dziś jedzie do ośrodka za wagary, zostaje w gminie z asystentem rodziny i psychologiem.\n\nZamknięta placówka resortu sprawiedliwości kosztuje około 36 tysięcy złotych miesięcznie na osobę (2025, dane ministerstwa za placówki, w których wykonywana jest izolacja). To nie jest argument, żeby izolacji w ogóle nie prowadzić, gdy chroni się czyjeś życie. To jest argument, żeby nie płacić tej stawki za absencję szkolną.\n\nNowa linia wydatku: szkolenie i licencje kadry, mentor przez 24 miesiące po wyjściu, zjazdy rodziny, rozwój umiejętności z punktu 10, asysta w gminie. Rząd wielkości — kilkaset milionów złotych rocznie. W aneksie kosztów mieści się w podanym rozrzucie. Nie jest nową dziurą obok 4-dniowego tygodnia.\n\nNie finansujemy tego kosztem psychiatrii. Psychiatria z rozdziału 5, punkt 10, i akcyza, która już na nią idzie, są warunkiem tego rozdziału, nie jego konkurencją. Dziecko w kryzysie samobójczym nie jest „przypadkiem resocjalizacji”. Jest pacjentem. Rozdział 10, punkt 12, i ten rozdział mają się nie mylić.",
+      },
+    ],
+  },
+  {
+    num: 12,
     slug: "wolnosc",
     part: "I",
     title: "Wolność, równość, solidarność",
@@ -1106,7 +1214,7 @@ export const CHAPTERS: Chapter[] = [
     ],
   },
   {
-    num: 12,
+    num: 13,
     slug: "przyroda",
     part: "I",
     title: "Przyroda",
@@ -1162,7 +1270,7 @@ export const CHAPTERS: Chapter[] = [
     ],
   },
   {
-    num: 13,
+    num: 14,
     slug: "europa",
     part: "I",
     title: "Silna Polska w Europie",
@@ -1193,7 +1301,7 @@ export const CHAPTERS: Chapter[] = [
     ],
   },
   {
-    num: 14,
+    num: 15,
     slug: "obrona",
     part: "I",
     title: "Odporne społeczeństwo",
@@ -1254,7 +1362,7 @@ export const CHAPTERS: Chapter[] = [
     ],
   },
   {
-    num: 15,
+    num: 16,
     slug: "ustroj",
     part: "II",
     title: "Ustrój państwa",
@@ -1285,7 +1393,7 @@ export const CHAPTERS: Chapter[] = [
     ],
   },
   {
-    num: 16,
+    num: 17,
     slug: "media",
     part: "II",
     title: "Media publiczne",
@@ -1306,7 +1414,7 @@ export const CHAPTERS: Chapter[] = [
     ],
   },
   {
-    num: 17,
+    num: 18,
     slug: "nazwa",
     part: "II",
     title: "Nazwa i symbolika",
@@ -1368,7 +1476,8 @@ export const LEDGER = {
   added: [
     "Nowe pozycje v6: Krajowa Agencja Migracyjna, Sąd Migracyjny, bezpłatne kursy języka polskiego i etaty w publicznych instytucjach kultury to wydatki rzędu pojedynczych miliardów zł rocznie; po stronie dochodów — zwężenie ulgi na powrót do zawodów deficytowych. Mieszczą się w podanym rozrzucie; dokładna wycena — w projekcie ustawy.",
     "Nowe pozycje v7: odrzucenie umowy UE–Mercosur, zapis anty-SLAPP oraz zniesienie przywilejów łowieckich to zmiany regulacyjne i ustrojowe — bez nowej linii wydatku w tym aneksie.",
-    "Nowe pozycje v11: zakaz szerzenia współczesnej ideologii imperializmu rosyjskiego i amerykańskiego (rozdział 13, punkt 4), analogicznie do art. 13 Konstytucji — zmiana ustrojowo-karna, bez nowej linii wydatku.",
+    "Nowe pozycje v11: zakaz szerzenia współczesnej ideologii imperializmu rosyjskiego i amerykańskiego (rozdział 14, punkt 4), analogicznie do art. 13 Konstytucji — zmiana ustrojowo-karna, bez nowej linii wydatku.",
+    "Nowe pozycje v12: rozdział 11 (twórcza resocjalizacja — koniec postępowania o „demoralizację”, izolacja dopiero od 15. roku życia i tylko za ciężki czyn, licencja metody, mentor po wyjściu) oraz punkty 11–12 rozdziału 10 (rdzeń życiowy i szkolny skrypt, gdy kolega mówi, że chce umrzeć). Dopisek do rozdziału 5, punkt 10: sygnał ze szkoły przy bezpośrednim zagrożeniu życia uruchamia pomoc tego samego dnia. Nowa linia wydatku: kilkaset milionów złotych rocznie. Mieści się w rozrzucie aneksu. Bez cięcia psychiatrii.",
   ],
   atom: "Atom: dług Funduszu Inwestycji Strategicznych, 12 GW w horyzoncie 20–25 lat. W statystyce długu będzie widoczny, nie schowany.",
   excise:

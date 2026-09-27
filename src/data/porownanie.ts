@@ -28,8 +28,8 @@ export type CompareSection = {
 export const COMPARE = {
   title: "Porównanie programów",
   subtitle:
-    "Realna Lewica (deklaracja v11, 26 września 2026) wobec partii sejmowych X kadencji oraz Konfederacji Korony Polskiej",
-  date: "26 września 2026",
+    "Realna Lewica (deklaracja v12, 27 września 2026) wobec partii sejmowych X kadencji oraz Konfederacji Korony Polskiej",
+  date: "27 września 2026",
   pdf: {
     href: "porownanie.pdf",
     filename: "Porownanie_RL_partie_sejmowe_KKP_v10.pdf",
@@ -39,17 +39,19 @@ export const COMPARE = {
   sources:
     "RL / NL / Razem — jak w opracowaniu z 24.09.2026, zaktualizowane o deklarację RL v10 (25.09.2026); program KW NL 2023 + priorytety XII 2025 + „1000 dni”; deklaracja Razem XI 2025. KO: 100 konkretów 2023 + umowa koalicyjna 15.10 + praktyka rządu Tusk III do IX 2026. PSL / PL2050: program Trzeciej Drogi 2023, umowa koalicyjna, manifest Unii Centrum IX 2026. PiS: program 2023 i linia klubu 2024–26. Rozwój Plus: 10 filarów z 28.07.2026. Konfederacja: program prezydencki Mentzena 2025, stanowiska klubu 2024–26. KKP: program partii (konfederacjakoronypolskiej.pl), kampania prezydencka Brauna 2025, projekty IX 2026 (ustawa o agentach, „Polska za pokojem”).",
   update: {
-    title: "Co wnosi deklaracja v11",
-    text: "Opracowanie tabelaryczne (PDF) jest z 25 września 2026 i opisuje deklarację v10. Wersja 11 z 26 września nie rusza podatków, migracji, zdrowia, mieszkań, ustroju ani liczb w aneksie. Dopisuje jedną pozycję, której nie ma w PDF:",
+    title: "Co wnosi deklaracja v12",
+    text: "Opracowanie tabelaryczne (PDF) jest z 25 września 2026 i opisuje deklarację v10. Wersja 11 dopisała zakaz ideologii imperialnej — dziś to rozdział 14, punkt 4, bo v12 wstawiła przed nim nowy rozdział. Wersja 12 z 27 września nie rusza podatków, migracji, mieszkań ani skali w aneksie. Dopisuje rozdział, którego nie ma w PDF porównania:",
     bullets: [
-      "Rozdział 13, punkt 4: zakaz szerzenia współczesnej ideologii imperializmu rosyjskiego i amerykańskiego, analogicznie do art. 13 Konstytucji. Obejmuje partie, organizacje, ich finansowanie i publiczną propagandę programu stref wpływów, prawa silniejszego i wojny jako narzędzia polityki mocarstwowej. Nie obejmuje rzetelnej krytyki rządów, sojuszy, historii ani debaty o polityce zagranicznej. Zmiana ustrojowo-karna, bez nowej linii wydatku.",
-      "Z wersji 10 zostają dwie korekty wobec opracowania z 24 września: w „Kim jesteśmy” dopisano, że państwo ma być „sprawne między władzą centralną a samorządem”; pozycja „B+R do 3% PKB” nie występuje w tekście deklaracji i nie wraca.",
+      "Rozdział 11, Twórcza resocjalizacja: koniec postępowania o demoralizację, w tym domniemania demoralizacji u dzieci w wieku 10–12 lat. Izolacja dopiero od 15. roku życia i tylko za ciężki czyn. Szkoła nie może oddać sądowi ucznia trudnego, neuroróżnorodnego albo z niepełnosprawnością, dopóki nie wyczerpie wsparcia w środowisku. Zakaz krat i zaspawanych instalacji, które przed 2023 rokiem montowano przeciw ucieczkom 12–13-latków. Zamiast rygoru i ekonomii żetonowej — konstruktywne role społeczne i stymulacja poznawcza. Minimum licencji bierze z ośrodka w Goniądzu: dom w mieście, zajęcia dla dzieci z okolicy, wyjazd sportowy, lokal z prawdziwą pracą, relacja partnerska.",
+      "Rozdział 10, punkty 11–12: rdzeń życiowy w szkole oraz jeden skrypt, gdy ktoś z klasy mówi, że chce umrzeć. Rozdział 5, punkt 10: przy bezpośrednim zagrożeniu życia pomoc ze szkoły startuje tego samego dnia.",
+      "Nowa linia wydatku: kilkaset milionów złotych rocznie (licencje, mentor po wyjściu, zjazdy, asysta w gminie). Mieści się w rozrzucie aneksu. Bez cięcia psychiatrii.",
+      "Z wersji 11 zostaje, po przesunięciu numeru: rozdział 14, punkt 4 — zakaz szerzenia współczesnej ideologii imperializmu rosyjskiego i amerykańskiego, analogicznie do art. 13 Konstytucji. Bez linii wydatku.",
     ],
   },
   method:
     "Partie rządzące (KO, PSL, PL2050, NL) mają program 2023 złagodzony przez kompromis koalicyjny i weto prezydenta Nawrockiego. PiS po rozłamie VII 2026 nie opublikowało nowego programu kadencyjnego — używamy linii klubu i dziedzictwa 2015–23. R+ i KKP to formacje młode: R+ ma 10 filarów, nie 155 punktów; KKP ma program tożsamościowo-katolicki, nie tabelę wydatków. Gęstość liczbowa RL pozostaje unikatowa na tle całego Sejmu.",
   footnote:
-    "Opracowanie: porównanie analityczne, pierwotnie 24 września 2026 (deklaracja RL v5), zaktualizowane 25 września 2026 do deklaracji RL v10. Deklaracja v11 (26.09.2026) dopisuje rozdział 13 pkt 4 — zakaz ideologii imperializmu rosyjskiego i amerykańskiego — bez zmiany pozostałych liczb. Cytaty i liczby: deklaracja RL v11 (26.09.2026); program KW Nowa Lewica 2023; uchwała KK NL 14.12.2025; lewica.org.pl; „1000 dni Lewicy w rządzie” (IX 2026); deklaracja Razem 8–9.11.2025; Krytyka Polityczna 5.12.2025; 100 konkretów KO 2023; umowa koalicyjna 10.11.2023; 10 filarów Rozwoju Plus 28.07.2026; program prezydencki S. Mentzena 2025; program KKP i projekty IX 2026; skład Sejmu X kadencji na 25.09.2026 (kluby: KO, PiS, R+, PSL, PL2050/Centrum, NL, Konfederacja; koła: Razem, DB, KKP).",
+    "Opracowanie: porównanie analityczne, pierwotnie 24 września 2026 (deklaracja RL v5), zaktualizowane 25 września 2026 do deklaracji RL v10. Deklaracja v11 (26.09.2026) dopisała zakaz ideologii imperializmu rosyjskiego i amerykańskiego — po v12 jest to rozdział 14, punkt 4. Deklaracja v12 (27.09.2026) dopisuje rozdział 11 (twórcza resocjalizacja) i dwa punkty szkoły. Cytaty i liczby: deklaracja RL v12 (27.09.2026); program KW Nowa Lewica 2023; uchwała KK NL 14.12.2025; lewica.org.pl; „1000 dni Lewicy w rządzie” (IX 2026); deklaracja Razem 8–9.11.2025; Krytyka Polityczna 5.12.2025; 100 konkretów KO 2023; umowa koalicyjna 10.11.2023; 10 filarów Rozwoju Plus 28.07.2026; program prezydencki S. Mentzena 2025; program KKP i projekty IX 2026; skład Sejmu X kadencji na 25.09.2026 (kluby: KO, PiS, R+, PSL, PL2050/Centrum, NL, Konfederacja; koła: Razem, DB, KKP).",
 };
 
 /** Kolumny porównania: RL i cztery bloki sejmowe. */
@@ -612,6 +614,59 @@ export const COMPARE_SECTIONS: CompareSection[] = [
         pis: "PiS: egzaminy, kanon, religia w siatce.",
         konf: "Konf./KKP: przeciw edukacji seksualnej jako „ideologii”; KKP — prawa rodziców absolutne.",
       },
+      {
+        topic: "Umiejętności życiowe / kryzys kolegi",
+        chapter: "szkola",
+        rl: "Od klasy 4 jedna godzina tygodniowo: skrypt, gdy ktoś mówi, że chce umrzeć (zostań, nie obiecuj tajemnicy, powiedz dorosłemu, 112 lub 116 111), przemoc, umowa o pracę, zgoda, neuroróżnorodność. Ćwiczone, nie ulotka. Ustrój gminy zostaje, nie zastępuje tego bloku.",
+        nl: "NL: edukacja zdrowotna i seksualna w programie. Brak ustawowego skryptu dla ucznia na sygnał samobójczy kolegi. Razem: zdrowie psychiczne młodzieży jako kierunek, bez tego protokołu.",
+        ko: "KO: standardy MEN dla nauczycieli (XII 2024) — dla kadry, nie dla ucznia. 2050: kompetencje, bez jednego skryptu w podstawie.",
+        pis: "PiS: profilaktyka i patriotyzm, nie skrypt rówieśniczy. R+: nie ten punkt.",
+        konf: "Konf./KKP: wychowanie w rodzinie. KKP — szkoła nie wchodzi w „ideologię” zdrowia psychicznego.",
+      },
+    ],
+  },
+  {
+    id: "resocjalizacja",
+    chapters: ["resocjalizacja"],
+    intro:
+      "Tego rozdziału nie ma w programach sejmowych jako pakietu: koniec demoralizacji od 10. roku życia, zakaz oddawania trudnego ucznia sądowi, zakaz krat, żeton zastąpiony rolą, licencja przepisana z Goniądza. Lewica mówi o prawach dziecka i świeckiej szkole. Prawica mówi o rygorze i odpowiedzialności. Nikt nie składa z tego jednego przepisu z progiem wieku, licencją i pomiarem recydywy.",
+    rows: [
+      {
+        topic: "Demoralizacja 10–12 lat / wagary",
+        chapter: "resocjalizacja",
+        rl: "Znika domniemanie demoralizacji w wieku 10–12 lat. Przed 13. rokiem życia nie ma sprawy o zachowanie, które nie jest czynem. Wagary uruchamiają asystenta rodziny w 14 dni, nie placówkę. Izolacja od 15. roku życia i tylko za czyn przeciwko życiu, zdrowiu albo wolności seksualnej.",
+        nl: "NL: prawa dziecka, Rzecznik, sprzeciw wobec zaostrzeń — bez progu „zero demoralizacji 10–12” i bez własnej ustawy o licencji metody. Razem: podobnie, nacisk na pieczę i szkołę, nie na standard placówki.",
+        ko: "KO: ustawa z 2022 r. (próg 10 lat, okręgowe ośrodki) weszła za rządu, który współtworzy. Brak projektu, który ten próg cofa.",
+        pis: "PiS: ustawa 2022 i linia „konsekwencja”. R+: porządek, nie zniesienie demoralizacji.",
+        konf: "Konf.: odpowiedzialność nieletnich raczej zaostrzać. KKP: wychowanie, rodzina, kara — antyteza zniesienia stempla.",
+      },
+      {
+        topic: "Szkoła nie oddaje ucznia sądowi",
+        chapter: "resocjalizacja",
+        rl: "Zakaz kierowania do sądu ucznia trudnego, neuroróżnorodnego albo z niepełnosprawnością, której nie widać, dopóki szkoła nie wyczerpie wsparcia w środowisku (co najmniej 90 dni w aktach). Sąd odrzuca wniosek bez załącznika. Wyjątek: czyn przeciwko życiu, zdrowiu, wolności seksualnej.",
+        nl: "NL/Razem: edukacja włączająca i sprzeciw wobec segregacji — kierunek zbieżny, bez tego zakazu procesowego i bez sankcji w subwencji.",
+        ko: "KO: orzeczenia i szkoły specjalne w praktyce oświatowej. Brak zakazu „eksportu” ucznia do sądu rodzinnego.",
+        pis: "PiS: dyscyplina szkoły, lex Czarnek. Trudny uczeń jest problemem porządku, nie zakazem dla dyrektora.",
+        konf: "Konf./KKP: prawo rodziców i szkoły do wymagań. KKP — nie państwo blokuje dyrektorowi drogę do sądu.",
+      },
+      {
+        topic: "Kraty / żeton / rola",
+        chapter: "resocjalizacja",
+        rl: "Zakaz krat, zaspawanych instalacji i izolatki — także praktyki sprzed 2023 r. wobec dzieci 12–13 lat. Zamiast rygoru i ekonomii żetonowej: konstruktywne role społeczne i stymulacja poznawcza. Jeden stały wychowawca, maksimum 8 osób.",
+        nl: "NL: krytyka represji wobec nieletnich, bez ustawowego zakazu żetonu i krat jako pary. Razem: prawa dziecka w izolacji, nie ten standard metody.",
+        ko: "KO: ośrodki działają na regulaminie i punktach. Brak projektu likwidacji ekonomii żetonowej.",
+        pis: "PiS: rygor i zabezpieczenie placówki jako odpowiedź na ucieczki. Antyteza zakazu krat.",
+        konf: "Konf./KKP: dyscyplina. KKP — kara i autorytet, nie rola społeczna jako metoda ustawy.",
+      },
+      {
+        topic: "Standard licencji (Goniądz)",
+        chapter: "resocjalizacja",
+        rl: "Minimum licencji z ośrodka w Goniądzu: dom w mieście, a nie tylko budynek za bramą; zajęcia dla dzieci z okolicznych szkół; wyjazd sportowy finansowany jak w szkole; lokal, w którym wychowankowie legalnie sprzedają jedzenie; relacja partnerska. Ucieczka nie jest kryterium dyrektora. Mierzymy szkołę, pracę rok po wyjściu i powrót do czynu po 2 i 5 latach.",
+        nl: "Brak odpowiednika: ani NL, ani Razem nie przepisują jednego ośrodka na minimum licencji krajowej.",
+        ko: "Placówki powiatowe i resortowe bez wspólnego minimum „dom w mieście + prawdziwa praca”.",
+        pis: "Model zamknięty i nadzór, nie licencja od wyniku recydywy.",
+        konf: "Brak. KKP nie buduje świeckiej licencji pedagogicznej.",
+      },
     ],
   },
   {
@@ -832,7 +887,8 @@ export const COMPARE_LEDGER = {
     "Nowe pozycje v6: Krajowa Agencja Migracyjna, Sąd Migracyjny, bezpłatne kursy języka polskiego i etaty w publicznych instytucjach kultury to wydatki rzędu pojedynczych miliardów zł rocznie; po stronie dochodów — zwężenie ulgi na powrót do zawodów deficytowych. Mieszczą się w podanym rozrzucie.",
     "Nowe pozycje v7: odrzucenie umowy UE–Mercosur, zapis anty-SLAPP oraz zniesienie przywilejów łowieckich to zmiany regulacyjne i ustrojowe — bez nowej linii wydatku w tym aneksie.",
     "Nowe pozycje v8–v10: zmiany redakcyjne i porządkujące (spis treści, numeracja, odsyłacze między rozdziałami, dopisanie „sprawne między władzą centralną a samorządem” do autoprezentacji). Bez nowych linii kosztowych względem v7.",
-    "Nowe pozycje v11: zakaz szerzenia współczesnej ideologii imperializmu rosyjskiego i amerykańskiego (rozdział 13, punkt 4), analogicznie do art. 13 Konstytucji — zmiana ustrojowo-karna, bez nowej linii wydatku.",
+    "Nowe pozycje v11: zakaz szerzenia współczesnej ideologii imperializmu rosyjskiego i amerykańskiego (rozdział 14, punkt 4), analogicznie do art. 13 Konstytucji — zmiana ustrojowo-karna, bez nowej linii wydatku.",
+    "Nowe pozycje v12: rozdział 11 (twórcza resocjalizacja) i punkty 11–12 rozdziału 10. Nowa linia: kilkaset milionów złotych rocznie. Mieści się w rozrzucie aneksu. Bez cięcia psychiatrii.",
     "Atom: dług Funduszu Inwestycji Strategicznych, 12 GW w horyzoncie 20–25 lat — w statystyce długu publicznego widoczny, nie schowany. Przyrost akcyzy alkoholowej i konopnej ponad poziom z 2027 roku (około 3–5 mld rocznie) idzie na psychiatrię, nie na łatanie ogólnego deficytu budżetowego.",
   ],
 };
@@ -873,6 +929,11 @@ export const CONVERGENCE: { title: string; items: string[] }[] = [
  * `postulate` — numer postulatu na /postulaty, który tę rzecz zawiera.
  */
 export const UNIQUES: { text: string; target: ProgramTarget; postulate: string }[] = [
+  {
+    text: "Twórcza resocjalizacja jako ustawa: koniec demoralizacji w wieku 10–12 lat, zakaz oddawania trudnego ucznia sądowi, zakaz krat, rola zamiast żetonu, licencja przepisana z Goniądza.",
+    target: { slug: "resocjalizacja" },
+    postulate: "24",
+  },
   {
     text: "Osobny, twardy rozdział migracyjny z Agencją, Sądem, limitem ~3200, 10 tys. za powrót i progiem 90/75% mediany.",
     target: { slug: "migracja" },
@@ -1005,7 +1066,7 @@ export const ANTIMODELS: { party: string; bloc: BlocId; text: string }[] = [
   {
     party: "Konfederacja Korony Polskiej",
     bloc: "konf",
-    text: "Obrona życia, Konkordat, religia w szkole, „Polska za pokojem”, rejestr obcych agentów, suwerenność wobec UE i NATO-jako-eskalacji. Światopoglądowo — pełna antyteza rozdziałów 5 i 11 RL. W granicy — twardsza niż RL, bez progu 90% mediany i bez furtki LGBT w limicie ONZ.",
+    text: "Obrona życia, Konkordat, religia w szkole, „Polska za pokojem”, rejestr obcych agentów, suwerenność wobec UE i NATO-jako-eskalacji. Światopoglądowo — pełna antyteza rozdziałów 5 i 12 RL. W granicy — twardsza niż RL, bez progu 90% mediany i bez furtki LGBT w limicie ONZ.",
   },
 ];
 
@@ -1014,7 +1075,7 @@ export const SYNTHESIS: string[] = [
   "Realna Lewica to nie jest „Nowa Lewica bis” ani „Konfederacja od lewej”. To jest Razem 2025 przepisane na język budżetu, granicy i konstytucji: ten sam szkielet industrialny i redystrybucyjny, plus twarda polityka migracyjna, plus szwajcarskie hamulce, plus nuclear sharing, plus aneks, który mówi, że 4-dniowy tydzień + 7% PKB na zdrowie + 6% na armię + euro w jednej kadencji się nie spina.",
   "W światopoglądzie (ciało, Kościół, LGBT, zwierzęta) RL stoi z Razem, NL i deklaracjami KO 2023 — czyli przeciw PSL, PiS, R+, Konfederacji i KKP. W granicy i substancjach (alkohol ostrzej, konopie ciaśniej) odchodzi od NL/Razem w stronę nordyckiego państwa opiekuńczego z monopolami i limitami; twardość granicy jest bliższa PiS/R+/Konfederacji niż Razem, ale narzędzie (równa płaca jako warunek wjazdu) jest lewicowe.",
   "W podatkach RL jest maksymalnie redystrybucyjna w całym Sejmie (71/75%). Antymodelem jest Konfederacja (ciąć stawki) i KO (0% na dole). W ustroju RL jest najbardziej antyprezydencka w izbie — w momencie, gdy R+ buduje tożsamość na szacunku dla Nawrockiego, a weto realnie zatrzymuje ustawy lewicy.",
-  "Jeśli czytać RL jako dokument polityczny, a nie jako partię zarejestrowaną: to próba zajęcia pola „lewica, która nie boi się granicy i Excela”. Programowo jest bliżej zaktualizowanego Razem niż rządzącej Nowej Lewicy — z wyjątkiem migracji, alkoholu i ustroju, gdzie RL jest osobnym bytem. Wobec reszty Sejmu jest albo sojusznikiem punktowym (atom z R+, Linux nikomu, 4 dni nikomu, 75% PIT nikomu), albo antymodelem (KKP w rozdziałach 5 i 11, Konfederacja w rozdziale 4, PSL w KRUS i Konkordacie).",
+  "Jeśli czytać RL jako dokument polityczny, a nie jako partię zarejestrowaną: to próba zajęcia pola „lewica, która nie boi się granicy i Excela”. Programowo jest bliżej zaktualizowanego Razem niż rządzącej Nowej Lewicy — z wyjątkiem migracji, alkoholu i ustroju, gdzie RL jest osobnym bytem. Wobec reszty Sejmu jest albo sojusznikiem punktowym (atom z R+, Linux nikomu, 4 dni nikomu, 75% PIT nikomu), albo antymodelem (KKP w rozdziałach 5 i 12, Konfederacja w rozdziale 4, PSL w KRUS i Konkordacie).",
 ];
 
 export function compareRowsFor(slug: string) {
