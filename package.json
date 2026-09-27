@@ -8,9 +8,10 @@
   },
   "scripts": {
     "dev": "node scripts/with-app-env.mjs vite dev --host 0.0.0.0 --port 8080",
-    "build": "node scripts/with-app-env.mjs vite build && npm run db:migrate",
+    "decode:ustawy": "node scripts/decode-ustawy.mjs",
+    "build": "npm run decode:ustawy && node scripts/with-app-env.mjs vite build && npm run db:migrate",
     "db:migrate": "node scripts/migrate.mjs",
-    "build:pages": "vite build --config vite.pages.config.ts && node scripts/pages-shell.mjs",
+    "build:pages": "npm run decode:ustawy && vite build --config vite.pages.config.ts && node scripts/pages-shell.mjs",
     "brand": "node scripts/brand-assets.mjs",
     "preview": "node scripts/with-app-env.mjs vite preview",
     "preview:restart": "node scripts/preview.mjs restart",

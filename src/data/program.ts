@@ -57,6 +57,16 @@ export const BILLS: Bill[] = [
     chapters: ["zdrowie"],
     also: ["praca", "wolnosc"],
   },
+  {
+    id: "resocjalizacja",
+    href: "ustawy/RL_projekt_ustawy_resocjalizacja.pdf",
+    filename: "RL_projekt_ustawy_resocjalizacja.pdf",
+    title: "Projekt ustawy o wsparciu dziecka i o odpowiedzialności nieletnich za czyn",
+    line: "Koniec demoralizacji od 10. roku życia. Izolacja od 15 lat i tylko za ciężki czyn. Licencja Goniądza, zakaz krat, mentor 24 miesiące, środki poza KRK.",
+    covers:
+      "Rozdział 11, punkty 1–15. Wzór druku sejmowego z 27 września 2026, przy deklaracji v12, z formularzem DSR (uchwała nr 51 Prezydium Sejmu). To nie jest akt obowiązujący i nie został wniesiony na ręce Marszałka Sejmu.",
+    chapters: ["resocjalizacja"],
+  },
 ];
 
 export function billsForChapter(slug: string) {

@@ -79,7 +79,7 @@ export function BillList() {
         Projekty ustaw
       </h2>
       <p className="mt-3 max-w-3xl text-lg text-muted">
-        Dwa rozdziały mają już wzór druku sejmowego. To dokumenty robocze do czytania i konsultacji, nie ustawy wniesione do Sejmu.
+        Trzy rozdziały mają już wzór druku sejmowego. To dokumenty robocze do czytania i konsultacji, nie ustawy wniesione do Sejmu.
       </p>
       <ul className="mt-6 grid gap-px bg-line md:grid-cols-2">
         {BILLS.map((bill) => (
