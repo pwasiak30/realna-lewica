@@ -62,7 +62,7 @@ export const BILLS: Bill[] = [
     href: "ustawy/RL_projekt_ustawy_resocjalizacja.pdf",
     filename: "RL_projekt_ustawy_resocjalizacja.pdf",
     title: "Projekt ustawy o wsparciu dziecka i o odpowiedzialności nieletnich za czyn",
-    line: "Koniec demoralizacji od 10. roku życia. Izolacja od 15 lat i tylko za ciężki czyn. Licencja Goniądza, zakaz krat, mentor 24 miesiące, środki poza KRK.",
+    line: "Koniec z pojęciem demoralizacji wobec dzieci do 12. roku życia. Izolacja od 15 lat i tylko za ciężki czyn. Licencja Goniądza, zakaz krat, mentor 24 miesiące, środki poza KRK.",
     covers:
       "Rozdział 11, punkty 1–15. Wzór druku sejmowego z 27 września 2026, przy deklaracji v12, z formularzem DSR (uchwała nr 51 Prezydium Sejmu). To nie jest akt obowiązujący i nie został wniesiony na ręce Marszałka Sejmu.",
     chapters: ["resocjalizacja"],
@@ -155,7 +155,7 @@ export const HONEST = {
     "Płaca minimalna do 75% mediany — stopniowo",
     "Linux i polskie AI w administracji",
     "Nowy system migracyjny",
-    "Twórcza resocjalizacja: koniec demoralizacji od 10. roku życia",
+    "Twórcza resocjalizacja: koniec z pojęciem demoralizacji wobec dzieci do 12. roku życia",
   ],
   later: [
     "Data przyjęcia euro",
@@ -338,7 +338,7 @@ export const POSTULATES: Postulate[] = [
     n: "24",
     unique: true,
     title: "Dziecko nie jest sprawą karną",
-    line: "Koniec demoralizacji w wieku 10–12 lat. Szkoła nie oddaje trudnego ucznia sądowi. Zakaz krat. Zamiast żetonu — rola i praca, jak w licencji z Goniądza.",
+    line: "Koniec z pojęciem demoralizacji wobec dzieci do 12. roku życia. Szkoła nie może pozbyć się trudnego ucznia, oddając go sądowi. Zakaz krat. Zamiast żetonu — rola i praca, jak w licencji z Goniądza.",
     target: { slug: "resocjalizacja" },
   },
 ];
@@ -1080,7 +1080,7 @@ export const CHAPTERS: Chapter[] = [
     title: "Dziecko nie jest sprawą karną",
     kicker: "Twórcza resocjalizacja",
     lead: "Polska od dekad prowadzi dzieci tak, jakby karała małych dorosłych: akta, punkty, kraty, terapia pod przymusem. Około połowy dorosłych po zakładzie karnym wraca do przestępstwa. Dla nieletnich państwo nie publikuje porównywalnej liczby — szacunki z praktyki mówią o siedmiu powrotach na dziesięcioro. Od 1991 roku jest w Polsce inna metoda, sprawdzona najpierw w teatrze poza murami zakładu, potem w licencjonowanej placówce: głęboka relacja i nowa rola wśród ludzi, nie żeton za grzeczność. Ten rozdział robi z niej prawo. Psychologia jest tu mechanizmem przepisu, nie cytatem na okładce.",
-    pillars: ["cialo","bezpieczenstwo"],
+    pillars: ["cialo", "bezpieczenstwo"],
     points: [
       {
         n: "1",
@@ -1095,7 +1095,8 @@ export const CHAPTERS: Chapter[] = [
       },
       {
         n: "3",
-        title: "Koniec demoralizacji w wieku 10–12 lat. Wagary nie są ścieżką do placówki",
+        title:
+          "Koniec z pojęciem demoralizacji wobec dzieci do 12. roku życia. Wagary nie są ścieżką do placówki",
         body: "Z ustawy znika domniemanie, że dziecko w wieku 10–12 lat jest zdemoralizowane. Ustawodawca nie może już zakładać demoralizacji w tym wieku — bo opuściło lekcje, pyskowało albo nie mieści się w regulaminie. W tym wieku osobowość i system wartości nie są domknięte. Stempel „zdemoralizowany” jest zakazany jako podstawa postępowania. Przed 13. rokiem życia nie ma sprawy sądowej o zachowanie, które nie jest czynem. Czyn karalny od 13. roku życia zostaje. Zostaje czyn, nie „charakter”.\n\nPolska należy do wąskiego grona państw europejskich — około trzech — które za absencję szkolną prowadzą ścieżkę o charakterze penalnym. Wychodzimy z tej grupy.\n\nSzacunek z praktyki, nie z rocznika GUS: około 30–40% nieletnich w placówkach trafiło tam od wagarów, bez rzetelnego zbadania przyczyny. GUS od drugiego roku ustawy publikuje tę liczbę co roku. Dopóki jej nie ma, nikt w rządzie nie mówi, że „system działa”.\n\nNowa reguła. Nieobecność nieusprawiedliwiona trwająca albo powtarzająca się uruchamia w ciągu 14 dni asystenta rodziny, nie policjanta i nie wniosek do sądu. Asystent sprawdza, w tej kolejności: czy w domu starcza na dojazd i buty, czy jest przemoc, czy jest lęk albo bullying, czy jest niezdiagnozowana niepełnosprawność, neuroróżnorodność albo choroba przewlekła, czy chory jest rodzic, czy szkoła sama nie wypchnęła dziecka regulaminem. Dopiero opis tych przyczyn, a nie sama liczba godzin nieobecności, może iść dalej. Do sądu — nigdy jako pierwszy krok i nigdy jako jedyny dokument.",
       },
       {
@@ -1305,7 +1306,8 @@ export const CHAPTERS: Chapter[] = [
       },
       {
         n: "4",
-        title: "Zakaz szerzenia imperializmu rosyjskiego i amerykańskiego — analogia do art. 13 Konstytucji",
+        title:
+          "Zakaz szerzenia imperializmu rosyjskiego i amerykańskiego — analogia do art. 13 Konstytucji",
         body: "Konstytucja w art. 13 zakazuje partii i organizacji odwołujących się do totalitarnych metod i praktyk nazizmu, faszyzmu i komunizmu. Pod wpływem wydarzeń na świecie analogicznie rozszerzamy ten zakaz na współczesną ideologię imperializmu rosyjskiego i amerykańskiego — na program stref wpływów, prawa silniejszego i wojny jako narzędzia polityki mocarstwowej. Zakaz obejmuje partie, organizacje, ich finansowanie i publiczną propagandę takich idei. Nie obejmuje rzetelnej krytyki rządów, sojuszy, historii ani debaty o polityce zagranicznej. Polska nie jest terenem rekrutacji do cudzej imperii — ani wschodniej, ani zachodniej.",
       },
     ],

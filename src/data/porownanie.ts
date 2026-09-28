@@ -42,7 +42,7 @@ export const COMPARE = {
     title: "Co wnosi deklaracja v12",
     text: "Opracowanie tabelaryczne (PDF) jest z 25 września 2026 i opisuje deklarację v10. Wersja 11 dopisała zakaz ideologii imperialnej — dziś to rozdział 14, punkt 4, bo v12 wstawiła przed nim nowy rozdział. Wersja 12 z 27 września nie rusza podatków, migracji, mieszkań ani skali w aneksie. Dopisuje rozdział, którego nie ma w PDF porównania:",
     bullets: [
-      "Rozdział 11, Twórcza resocjalizacja: koniec postępowania o demoralizację, w tym domniemania demoralizacji u dzieci w wieku 10–12 lat. Izolacja dopiero od 15. roku życia i tylko za ciężki czyn. Szkoła nie może oddać sądowi ucznia trudnego, neuroróżnorodnego albo z niepełnosprawnością, dopóki nie wyczerpie wsparcia w środowisku. Zakaz krat i zaspawanych instalacji, które przed 2023 rokiem montowano przeciw ucieczkom 12–13-latków. Zamiast rygoru i ekonomii żetonowej — konstruktywne role społeczne i stymulacja poznawcza. Minimum licencji bierze z ośrodka w Goniądzu: dom w mieście, zajęcia dla dzieci z okolicy, wyjazd sportowy, lokal z prawdziwą pracą, relacja partnerska.",
+      "Rozdział 11, Twórcza resocjalizacja: koniec postępowania o demoralizację i koniec z samym pojęciem demoralizacji wobec dzieci do 12. roku życia. Izolacja dopiero od 15. roku życia i tylko za ciężki czyn. Szkoła nie może pozbyć się ucznia trudnego, neuroróżnorodnego albo z niepełnosprawnością, oddając go sądowi, dopóki nie wyczerpie wsparcia w środowisku. Zakaz krat i zaspawanych instalacji, które przed 2023 rokiem montowano przeciw ucieczkom 12–13-latków. Zamiast rygoru i ekonomii żetonowej — konstruktywne role społeczne i stymulacja poznawcza. Minimum licencji bierze z ośrodka w Goniądzu: dom w mieście, zajęcia dla dzieci z okolicy, wyjazd sportowy, lokal z prawdziwą pracą, relacja partnerska.",
       "Rozdział 10, punkty 11–12: rdzeń życiowy w szkole oraz jeden skrypt, gdy ktoś z klasy mówi, że chce umrzeć. Rozdział 5, punkt 10: przy bezpośrednim zagrożeniu życia pomoc ze szkoły startuje tego samego dnia.",
       "Nowa linia wydatku: kilkaset milionów złotych rocznie (licencje, mentor po wyjściu, zjazdy, asysta w gminie). Mieści się w rozrzucie aneksu. Bez cięcia psychiatrii.",
       "Z wersji 11 zostaje, po przesunięciu numeru: rozdział 14, punkt 4 — zakaz szerzenia współczesnej ideologii imperializmu rosyjskiego i amerykańskiego, analogicznie do art. 13 Konstytucji. Bez linii wydatku.",
@@ -629,21 +629,21 @@ export const COMPARE_SECTIONS: CompareSection[] = [
     id: "resocjalizacja",
     chapters: ["resocjalizacja"],
     intro:
-      "Tego rozdziału nie ma w programach sejmowych jako pakietu: koniec demoralizacji od 10. roku życia, zakaz oddawania trudnego ucznia sądowi, zakaz krat, żeton zastąpiony rolą, licencja przepisana z Goniądza. Lewica mówi o prawach dziecka i świeckiej szkole. Prawica mówi o rygorze i odpowiedzialności. Nikt nie składa z tego jednego przepisu z progiem wieku, licencją i pomiarem recydywy.",
+      "Tego rozdziału nie ma w programach sejmowych jako pakietu: koniec z pojęciem demoralizacji wobec dzieci do 12. roku życia, zakaz pozbywania się trudnego ucznia ze szkoły przez oddanie go sądowi, zakaz krat, żeton zastąpiony rolą, licencja przepisana z Goniądza. Lewica mówi o prawach dziecka i świeckiej szkole. Prawica mówi o rygorze i odpowiedzialności. Nikt nie składa z tego jednego przepisu z progiem wieku, licencją i pomiarem recydywy.",
     rows: [
       {
-        topic: "Demoralizacja 10–12 lat / wagary",
+        topic: "Demoralizacja do 12. roku życia / wagary",
         chapter: "resocjalizacja",
-        rl: "Znika domniemanie demoralizacji w wieku 10–12 lat. Przed 13. rokiem życia nie ma sprawy o zachowanie, które nie jest czynem. Wagary uruchamiają asystenta rodziny w 14 dni, nie placówkę. Izolacja od 15. roku życia i tylko za czyn przeciwko życiu, zdrowiu albo wolności seksualnej.",
-        nl: "NL: prawa dziecka, Rzecznik, sprzeciw wobec zaostrzeń — bez progu „zero demoralizacji 10–12” i bez własnej ustawy o licencji metody. Razem: podobnie, nacisk na pieczę i szkołę, nie na standard placówki.",
+        rl: "Pojęcie demoralizacji przestaje dotyczyć dzieci do 12. roku życia. Przed 13. rokiem życia nie ma sprawy o zachowanie, które nie jest czynem. Wagary uruchamiają asystenta rodziny w 14 dni, nie placówkę. Izolacja od 15. roku życia i tylko za czyn przeciwko życiu, zdrowiu albo wolności seksualnej.",
+        nl: "NL: prawa dziecka, Rzecznik, sprzeciw wobec zaostrzeń — bez wyłączenia dzieci do 12. roku życia spod pojęcia demoralizacji i bez własnej ustawy o licencji metody. Razem: podobnie, nacisk na pieczę i szkołę, nie na standard placówki.",
         ko: "KO: ustawa z 2022 r. (próg 10 lat, okręgowe ośrodki) weszła za rządu, który współtworzy. Brak projektu, który ten próg cofa.",
         pis: "PiS: ustawa 2022 i linia „konsekwencja”. R+: porządek, nie zniesienie demoralizacji.",
         konf: "Konf.: odpowiedzialność nieletnich raczej zaostrzać. KKP: wychowanie, rodzina, kara — antyteza zniesienia stempla.",
       },
       {
-        topic: "Szkoła nie oddaje ucznia sądowi",
+        topic: "Szkoła nie pozbywa się ucznia przez sąd",
         chapter: "resocjalizacja",
-        rl: "Zakaz kierowania do sądu ucznia trudnego, neuroróżnorodnego albo z niepełnosprawnością, której nie widać, dopóki szkoła nie wyczerpie wsparcia w środowisku (co najmniej 90 dni w aktach). Sąd odrzuca wniosek bez załącznika. Wyjątek: czyn przeciwko życiu, zdrowiu, wolności seksualnej.",
+        rl: "Zakaz pozbywania się ze szkoły ucznia trudnego, neuroróżnorodnego albo z niepełnosprawnością, której nie widać, przez skierowanie go do sądu, dopóki szkoła nie wyczerpie wsparcia w środowisku (co najmniej 90 dni w aktach). Sąd odrzuca wniosek bez załącznika. Wyjątek: czyn przeciwko życiu, zdrowiu, wolności seksualnej.",
         nl: "NL/Razem: edukacja włączająca i sprzeciw wobec segregacji — kierunek zbieżny, bez tego zakazu procesowego i bez sankcji w subwencji.",
         ko: "KO: orzeczenia i szkoły specjalne w praktyce oświatowej. Brak zakazu „eksportu” ucznia do sądu rodzinnego.",
         pis: "PiS: dyscyplina szkoły, lex Czarnek. Trudny uczeń jest problemem porządku, nie zakazem dla dyrektora.",
@@ -930,7 +930,7 @@ export const CONVERGENCE: { title: string; items: string[] }[] = [
  */
 export const UNIQUES: { text: string; target: ProgramTarget; postulate: string }[] = [
   {
-    text: "Twórcza resocjalizacja jako ustawa: koniec demoralizacji w wieku 10–12 lat, zakaz oddawania trudnego ucznia sądowi, zakaz krat, rola zamiast żetonu, licencja przepisana z Goniądza.",
+    text: "Twórcza resocjalizacja jako ustawa: koniec z pojęciem demoralizacji wobec dzieci do 12. roku życia, zakaz pozbywania się trudnego ucznia ze szkoły przez oddanie go sądowi, zakaz krat, rola zamiast żetonu, licencja przepisana z Goniądza.",
     target: { slug: "resocjalizacja" },
     postulate: "24",
   },
