@@ -33,6 +33,8 @@ export type Bill = {
   chapters: string[];
   /** Rozdziały z samym odsyłaczem (niedziela, „zob. rozdział 5”). */
   also?: string[];
+  /** Osobny plik z samym formularzem DSR (art. 34 ust. 3a Regulaminu Sejmu). */
+  dsr?: { href: string; filename: string };
 };
 
 export const BILLS: Bill[] = [
@@ -62,12 +64,29 @@ export const BILLS: Bill[] = [
     href: "ustawy/RL_projekt_ustawy_resocjalizacja.pdf",
     filename: "RL_projekt_ustawy_resocjalizacja.pdf",
     title: "Projekt ustawy o wsparciu dziecka i o odpowiedzialności nieletnich za czyn",
-    line: "Koniec z pojęciem demoralizacji wobec dzieci do 12. roku życia. Izolacja od 15 lat i tylko za ciężki czyn. Licencja Goniądza, zakaz krat, mentor 24 miesiące, środki poza KRK.",
+    line: "Koniec z pojęciem demoralizacji wobec dzieci do 12. roku życia. Izolacja od 15 lat i tylko za ciężki czyn. Obrońca od pierwszej czynności, zakaz krat, mentor 24 miesiące, środki poza KRK.",
     covers:
-      "Rozdział 11, punkty 1–15. Wzór druku sejmowego z 27 września 2026, przy deklaracji v12, z formularzem DSR (uchwała nr 51 Prezydium Sejmu). To nie jest akt obowiązujący i nie został wniesiony na ręce Marszałka Sejmu.",
+      "Rozdział 11, punkty 1–15. Wersja 2 wzoru druku sejmowego z 28 września 2026, przy deklaracji v12: dopisany tryb postępowania i wykonywania izolacji, poprawione odesłania do ustaw zmienianych. Z formularzem DSR (uchwała nr 51 Prezydium Sejmu). To nie jest akt obowiązujący i nie został wniesiony na ręce Marszałka Sejmu.",
     chapters: ["resocjalizacja"],
+    dsr: { href: "ustawy/RL_DSR_resocjalizacja.pdf", filename: "RL_DSR_resocjalizacja.pdf" },
+  },
+  {
+    id: "imperializm",
+    href: "ustawy/RL_projekt_ustawy_imperializm.pdf",
+    filename: "RL_projekt_ustawy_imperializm.pdf",
+    title: "Projekt ustawy o zakazie propagowania ideologii imperialnej",
+    line: "Zakaz dla ideologii, która łączy roszczenie do cudzego państwa z wojną jako narzędziem. Nowy art. 256 § 1b Kodeksu karnego, sądowy zakaz organizacji, zakaz finansowania, wniosek do TK wobec partii. Krytyka rządów i sojuszy wyłączona wprost.",
+    covers:
+      "Rozdział 14, punkt 4. Wzór druku sejmowego z 28 września 2026, przy deklaracji v12, z formularzem DSR i towarzyszącym projektem zmiany art. 13 Konstytucji. To nie jest akt obowiązujący i nie został wniesiony na ręce Marszałka Sejmu.",
+    chapters: ["europa"],
+    dsr: { href: "ustawy/RL_DSR_imperializm.pdf", filename: "RL_DSR_imperializm.pdf" },
   },
 ];
+
+/** Liczba rozdziałów, które mają pełną kartę projektu ustawy. */
+export function billChapterCount() {
+  return new Set(BILLS.flatMap((bill) => bill.chapters)).size;
+}
 
 export function billsForChapter(slug: string) {
   return BILLS.filter((bill) => bill.chapters.includes(slug));
@@ -1498,6 +1517,17 @@ export const LEDGER = {
 
 /** Liczebnik z wielkiej litery do nagłówków: 17 → „Siedemnaście”. */
 const COUNT_WORDS: Record<number, string> = {
+  1: "Jeden",
+  2: "Dwa",
+  3: "Trzy",
+  4: "Cztery",
+  5: "Pięć",
+  6: "Sześć",
+  7: "Siedem",
+  8: "Osiem",
+  9: "Dziewięć",
+  10: "Dziesięć",
+  11: "Jedenaście",
   12: "Dwanaście",
   13: "Trzynaście",
   14: "Czternaście",
