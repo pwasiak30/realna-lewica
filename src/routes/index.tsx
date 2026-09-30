@@ -354,6 +354,8 @@ type Slide = {
   n?: string;
   title?: string;
   line?: string;
+  /** Grafika 16:9 z napisem — pokazywana w całości, nie przycinana do panelu. */
+  contain?: boolean;
 };
 
 const PILLAR_FRAMES: Record<
@@ -384,6 +386,7 @@ function CampaignFrame() {
       src: `${BASE}spot-wyborczy.jpg`,
       alt: "Znak Realnej Lewicy i hasło czterech zobowiązań",
       caption: "Znak",
+      contain: true,
     },
     ...PILLARS.map((pillar, index) => {
       const frame = PILLAR_FRAMES[pillar.id];
@@ -415,12 +418,25 @@ function CampaignFrame() {
   const slide = slides[index];
 
   return (
-    <div className="relative order-2 min-h-[40rem] min-w-0 overflow-hidden bg-graphite text-cream lg:order-1 lg:min-h-full">
-      <img
-        src={slide.src}
-        alt={slide.alt}
-        className="absolute inset-0 size-full object-cover object-[center_38%] lg:object-[center_42%]"
-      />
+    <div
+      className={
+        "relative order-2 min-h-[40rem] min-w-0 overflow-hidden text-cream lg:order-1 lg:min-h-full " +
+        (slide.contain ? "bg-[#1b1b1b]" : "bg-graphite")
+      }
+    >
+      {slide.contain ? (
+        <img
+          src={slide.src}
+          alt={slide.alt}
+          className="absolute top-1/2 -left-[17.5%] h-auto w-[135%] max-w-none -translate-y-1/2 [mask-image:linear-gradient(to_bottom,transparent,black_14%,black_86%,transparent)] sm:left-0 sm:w-full sm:max-w-full"
+        />
+      ) : (
+        <img
+          src={slide.src}
+          alt={slide.alt}
+          className="absolute inset-0 size-full object-cover object-[center_38%] lg:object-[center_42%]"
+        />
+      )}
       {slide.line ? (
         <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink from-20% via-ink/80 via-50% to-transparent px-6 pt-16 pb-16 sm:px-12 sm:pt-24">
           <p className="font-display text-sm tracking-[0.2em] text-cream/70">{slide.n}</p>
